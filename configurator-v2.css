@@ -1,0 +1,91 @@
+/* Parametric door assembly. This layer deliberately supersedes the earlier
+   decorative preview rules: every visible part belongs to one opening. */
+.door-scene{overflow:clip!important;isolation:isolate;perspective:1500px!important}
+#doorStage{position:relative!important;inset:auto!important;width:100%!important;height:100%!important;min-width:0!important;min-height:0!important;display:grid!important;place-items:center!important;justify-content:center!important;align-content:center!important;box-sizing:border-box!important;padding:0 88px 76px 0!important;transform:none!important;transform-origin:center!important}
+#threeDoorMount{position:absolute;left:max(0px,calc(var(--door-left,50%) - 210px));top:max(0px,calc(var(--door-top,80px) - 130px));right:max(88px,calc(100% - var(--door-left,50%) - var(--door-width,280px) - 8px));bottom:max(76px,calc(100% - var(--door-top,120px) - var(--door-height,480px) - 18px));z-index:3;pointer-events:none}
+#threeDoorMount canvas{display:block;width:100%!important;height:100%!important}
+#doorStage .wall-shadow{display:none!important}
+.door-model{position:relative!important;align-self:end!important;justify-self:center!important;margin-bottom:0!important;transform-style:preserve-3d;transform:rotateY(var(--view-angle,0deg));transform-origin:center center;transition:transform .45s cubic-bezier(.2,.8,.2,1);z-index:4;opacity:.02}
+#doorOpening.door-opening{position:absolute!important;inset:0!important;display:grid!important;align-items:stretch!important;justify-items:stretch!important;box-sizing:border-box!important;padding:var(--frame-stroke,8px)!important;background:linear-gradient(90deg,color-mix(in srgb,var(--frame-color) 66%,#000),color-mix(in srgb,var(--frame-color) 82%,#fff) 18%,var(--frame-color) 54%,color-mix(in srgb,var(--frame-color) 68%,#000))!important;border:1px solid color-mix(in srgb,var(--frame-color) 64%,#fff)!important;border-radius:0!important;overflow:visible!important;transform:translateZ(1px)!important}
+#doorOpening.casing-0{box-shadow:0 0 0 3px color-mix(in srgb,var(--casing-color) 76%,#fff),0 0 0 8px var(--casing-color),0 0 0 9px color-mix(in srgb,var(--casing-color) 56%,#000),0 20px 34px rgba(25,25,27,.28)!important}
+#doorOpening.casing-1{box-shadow:0 0 0 2px color-mix(in srgb,var(--casing-color) 72%,#fff),0 0 0 4px var(--casing-color),0 0 0 5px color-mix(in srgb,var(--casing-color) 52%,#000),0 20px 34px rgba(25,25,27,.28)!important}
+#doorOpening.casing-2{box-shadow:0 0 0 4px color-mix(in srgb,var(--casing-color) 70%,#fff),0 0 0 14px var(--casing-color),0 0 0 16px color-mix(in srgb,var(--casing-color) 54%,#000),0 20px 34px rgba(25,25,27,.28)!important}
+.door-depth-face{position:absolute;top:0;height:100%;width:var(--door-depth,18px);background:linear-gradient(90deg,color-mix(in srgb,var(--casing-color) 52%,#000),var(--casing-color) 42%,color-mix(in srgb,var(--casing-color) 72%,#fff));box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--casing-color) 58%,#fff);pointer-events:none;opacity:0;transition:opacity .25s}
+.depth-right{right:0;transform-origin:right center;transform:rotateY(90deg)}
+.depth-left{left:0;transform-origin:left center;transform:rotateY(-90deg)}
+.door-model.view-right .depth-left,.door-model.view-left .depth-right{opacity:1}
+#doorOpening .door-frame{position:relative!important;left:auto!important;bottom:auto!important;width:100%!important;height:100%!important;display:grid!important;isolation:isolate!important;filter:none!important;background:#25282a!important;overflow:hidden!important}
+#doorOpening .surface-map{position:absolute;inset:0;z-index:0;background-image:var(--finish-image);background-size:var(--finish-size);background-position:center center;background-repeat:no-repeat;background-color:#7f807c}
+#doorOpening .door-leaf{position:relative;z-index:1;min-width:0;height:100%;box-sizing:border-box;border:var(--frame-stroke,8px) solid var(--frame-color);border-bottom-width:0!important;background:transparent;overflow:hidden}
+#doorOpening .door-leaf+.door-leaf{border-left-width:0!important}
+#doorOpening .leaf-design{position:absolute;inset:0;z-index:1;pointer-events:none}
+#doorOpening .door-hardware{position:absolute;z-index:3;right:24px;top:auto;bottom:var(--hardware-bottom,180px);width:22px;height:100px;transform:none;border-radius:5px;background:linear-gradient(90deg,#111,#383d40 50%,#101214);box-shadow:1px 2px 5px rgba(0,0,0,.45)}
+#doorOpening .door-hardware.meeting-side{left:24px;right:auto}
+#doorOpening .door-hardware:before{content:'';position:absolute;left:-5px;right:-5px;top:14px;height:14px;border:1px solid #bba37e;border-radius:3px}
+#doorOpening .door-hardware i{position:absolute;left:8px;top:35px;width:6px;height:30px;border-radius:5px;background:#8b9396}
+#doorOpening .door-hardware b{position:absolute;left:8px;bottom:10px;width:6px;height:6px;border-radius:50%;background:#0b0b0b}
+#doorOpening .hardware-1{width:16px;height:56px;border-radius:2px;background:#292522}
+#doorOpening .hardware-1:before{top:8px;left:-24px;right:auto;width:25px;height:5px;border:0;border-radius:5px;background:#bdab92}
+#doorOpening .hardware-1 i,#doorOpening .hardware-1 b{display:none}
+#doorOpening .hardware-2{width:12px;height:116px;border-radius:8px;background:linear-gradient(90deg,#1b1b1c,#5b5c5c,#161718)}
+#doorOpening .hardware-2:before{display:none}
+#doorOpening .hardware-2 i{left:3px;top:12px;width:6px;height:92px;background:#a6a5a0}
+#doorOpening .hardware-2 b{display:none}
+
+/* Door patterns are geometry, not texture pixels. Profile thickness and
+   offsets stay physically stable while the material canvas reveals more area. */
+#doorOpening .design-x201b:before{content:'';position:absolute;inset:var(--design-inset) var(--design-inset-small);border:var(--profile-wide) double rgba(107,135,146,.42);outline:var(--profile) solid rgba(2,8,12,.44);background:repeating-linear-gradient(90deg,rgba(3,8,11,.2) 0 var(--profile),rgba(97,126,137,.3) var(--profile) var(--profile-wide),rgba(7,13,17,.24) var(--profile-wide) var(--profile-gap));box-shadow:inset 0 0 0 var(--profile-wide) rgba(1,7,10,.46),inset 0 0 22px rgba(0,0,0,.34)}
+#doorOpening .design-x201b:after{content:'';position:absolute;inset:calc(var(--design-inset) + var(--profile-gap)) calc(var(--design-inset-small) + var(--profile-gap));border:1px solid rgba(151,175,184,.26);box-shadow:0 0 0 var(--profile) rgba(3,9,12,.58)}
+#doorOpening .leaf-child .design-x201b:before{inset:var(--design-inset) var(--design-inset-child);background:none;border-color:rgba(111,141,151,.38);box-shadow:inset 0 0 0 var(--profile-wide) rgba(1,7,10,.34),inset 0 0 18px rgba(0,0,0,.22)}
+#doorOpening .leaf-child .design-x201b:after{inset:calc(var(--design-inset) + var(--profile-gap)) calc(var(--design-inset-child) + var(--profile-gap))}
+
+#doorOpening .design-ta:before{content:'';position:absolute;inset:var(--design-inset-small);border:1px solid rgba(255,255,255,.12);box-shadow:inset 0 0 20px rgba(66,55,43,.08)}
+#doorOpening .design-ta:after{content:'';position:absolute;top:0;bottom:0;right:0;width:var(--center-strip-half);background:linear-gradient(90deg,rgba(72,69,65,.58),rgba(49,49,48,.92));border-left:1px solid rgba(255,255,255,.12);box-shadow:0 0 12px rgba(0,0,0,.16)}
+#doorOpening .leaf-main .design-ta:after{left:0;right:auto;background:linear-gradient(90deg,rgba(49,49,48,.92),rgba(72,69,65,.58));border-left:0;border-right:1px solid rgba(255,255,255,.12)}
+
+#doorOpening .design-tb:before{content:'';position:absolute;top:0;bottom:0;right:0;width:var(--center-strip-half);background:linear-gradient(90deg,rgba(141,139,133,.52),rgba(226,220,207,.78));border-left:1px solid rgba(245,239,228,.24);box-shadow:0 0 12px rgba(0,0,0,.18)}
+#doorOpening .leaf-main .design-tb:before{left:0;right:auto;background:linear-gradient(90deg,rgba(226,220,207,.78),rgba(141,139,133,.52));border-left:0;border-right:1px solid rgba(245,239,228,.24)}
+#doorOpening .leaf-sidelight .design-ta:after,#doorOpening .leaf-sidelight .design-tb:before{display:none}
+#doorOpening .design-tb:after{content:'';position:absolute;inset:var(--design-inset-small);border:1px solid rgba(238,234,225,.08);box-shadow:inset 0 0 18px rgba(0,0,0,.08)}
+#doorOpening.type-0 .leaf-main .design-ta:after,#doorOpening.type-0 .leaf-main .design-tb:before{left:50%;right:auto;width:var(--center-strip-full);transform:translateX(-50%)}
+
+#doorOpening .design-a32d:before,#doorOpening .design-a32d:after{content:'';position:absolute;left:var(--design-inset);right:var(--design-inset);border:var(--profile-wide) double rgba(94,99,93,.34);outline:1px solid rgba(255,255,255,.35);box-shadow:inset 0 0 0 var(--profile) rgba(111,116,109,.13),0 0 0 var(--profile) rgba(255,255,255,.11)}
+#doorOpening .design-a32d:before{top:var(--design-inset);height:52%}
+#doorOpening .design-a32d:after{bottom:var(--design-inset);height:23%}
+
+#doorOpening .integrated-transom{position:relative;display:block!important;box-sizing:border-box;overflow:hidden;border-bottom:var(--frame-stroke,8px) solid var(--frame-color);background:linear-gradient(90deg,color-mix(in srgb,var(--frame-color) 68%,#000),var(--frame-color) 18%,var(--frame-color) 82%,color-mix(in srgb,var(--frame-color) 68%,#000));isolation:isolate}
+#doorOpening .transom-map{position:absolute;inset:var(--transom-inset);background-image:var(--finish-image);background-size:var(--finish-size);background-position:center top;background-repeat:no-repeat;background-color:#4b5152;box-shadow:inset 0 0 0 1px rgba(255,255,255,.16),inset 0 0 18px rgba(0,0,0,.32)}
+#doorOpening .transom-design{position:absolute;inset:var(--transom-inset);border:1px solid color-mix(in srgb,var(--frame-color) 62%,#fff);box-shadow:0 0 0 3px var(--frame-color),inset 0 0 16px rgba(0,0,0,.18)}
+#doorOpening .integrated-transom.design-x201b .transom-design{background:repeating-linear-gradient(90deg,rgba(3,8,11,.2) 0 var(--profile),rgba(97,126,137,.28) var(--profile) var(--profile-wide),rgba(7,13,17,.24) var(--profile-wide) var(--profile-gap))}
+#doorOpening .integrated-transom.design-ta .transom-design,#doorOpening .integrated-transom.design-tb .transom-design{background:none}
+#doorOpening .integrated-transom.design-a32d .transom-design{inset:var(--transom-inset-wide);border:var(--profile) double rgba(94,99,93,.3)}
+#doorOpening .glass-veil{position:absolute;inset:var(--transom-inset);background:linear-gradient(112deg,rgba(255,255,255,.07),transparent 38%,rgba(255,255,255,.025) 62%,rgba(0,0,0,.12));pointer-events:none}
+#doorOpening .transom-bars{display:none;position:absolute;inset:var(--transom-inset);pointer-events:none}
+#doorOpening .transom-0 .transom-map{filter:saturate(.9) brightness(.92)}
+#doorOpening .transom-1 .transom-map{filter:saturate(.45) brightness(.48);opacity:.88}
+#doorOpening .transom-1 .glass-veil{background:repeating-linear-gradient(90deg,rgba(209,229,229,.1) 0 2px,rgba(12,20,22,.08) 2px 9px),linear-gradient(112deg,rgba(255,255,255,.24),transparent 42%,rgba(170,201,202,.08) 70%,rgba(0,0,0,.18))}
+#doorOpening .transom-2 .transom-map{filter:saturate(.72) brightness(.72)}
+#doorOpening .transom-2 .transom-bars{display:block;background:repeating-linear-gradient(90deg,transparent 0 24px,color-mix(in srgb,var(--frame-color) 84%,#fff) 24px 28px),linear-gradient(transparent 44%,color-mix(in srgb,var(--frame-color) 78%,#fff) 44% 50%,transparent 50%);box-shadow:inset 0 0 0 3px var(--frame-color)}
+
+.view-angle-control{position:absolute;top:66px;left:50%;transform:translateX(-50%);z-index:9;display:flex;align-items:center;gap:2px;padding:4px;border:1px solid rgba(255,255,255,.92);border-radius:14px;background:rgba(245,245,247,.82);box-shadow:0 8px 24px rgba(0,0,0,.1);backdrop-filter:blur(18px);font-size:10px;color:#747478}
+.view-angle-control>span{padding:0 8px;color:#3c3c3f;font-weight:500}
+.view-angle-control button{min-width:42px;padding:7px 9px;border-radius:9px;color:#6e6e73;font-size:10px;transition:.2s}
+.view-angle-control button:hover,.view-angle-control button:focus-visible{background:#fff;color:#171717;outline:0}
+.view-angle-control button.selected{background:#1d1d1f;color:#fff;box-shadow:0 2px 7px rgba(0,0,0,.2)}
+.view-angle-control small{padding:0 8px 0 6px;color:#9b9b9f;font-size:8px}
+@media(prefers-reduced-motion:reduce){.door-model{transition:none}}
+
+/* Dimension rails stay attached to the generated sill and right jamb. */
+.scene-sliders{position:absolute!important;inset:0!important;width:auto!important;height:auto!important;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important;pointer-events:none;z-index:7!important}
+.scene-sliders label{pointer-events:auto!important;box-sizing:border-box!important;margin:0!important;background:rgba(255,255,255,.88)!important;border:1px solid rgba(255,255,255,.92)!important;box-shadow:0 8px 22px rgba(0,0,0,.12)!important;backdrop-filter:blur(16px)!important}
+.scene-sliders label:first-child{left:var(--door-left)!important;top:calc(var(--door-top) + var(--door-height) + 18px)!important;width:var(--door-width)!important;min-width:190px!important;height:38px!important;transform:none!important;display:grid!important;grid-template-columns:34px minmax(90px,1fr) 58px!important;align-items:center!important;padding:7px 10px!important}
+.scene-sliders label:last-child{left:calc(var(--door-left) + var(--door-width) + 18px)!important;top:var(--door-top)!important;width:50px!important;height:var(--door-height)!important;min-height:300px!important;transform:none!important;display:grid!important;grid-template:28px minmax(150px,1fr) 42px/1fr!important;justify-items:center!important;align-items:center!important;padding:8px 6px!important}
+.scene-sliders label:last-child input{writing-mode:vertical-lr;direction:rtl;width:18px!important;height:100%!important;min-height:150px;appearance:auto}
+.scene-sliders label:last-child output{font-size:8px!important;line-height:1.15;text-align:center!important;white-space:normal!important}
+.dimension-width,.dimension-height{display:none!important}
+.finish-swatch small{display:none!important}
+[data-group="finish"] .option-options{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}
+[data-group="finish"] .finish-swatch{height:78px!important;width:100%!important;background-position:center!important;background-size:cover!important;font-size:0!important;overflow:hidden!important}
+[data-group="finish"] .finish-swatch span{position:absolute;left:5px;right:5px;bottom:5px;padding:3px 4px;border-radius:4px;background:rgba(12,13,14,.72);color:#fff;font-size:8px;line-height:1.15;letter-spacing:0;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mini-door{height:145px;width:92px;position:absolute;left:calc(50% - 46px);bottom:0;border:8px solid var(--mini-frame);background:var(--mini-image) center/cover no-repeat;z-index:1}
+@media(max-width:1100px){.config-panel{width:290px!important}.scene-sliders label:first-child{min-width:170px!important}.scene-sliders label:last-child{width:46px!important}}

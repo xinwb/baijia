@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="雅帝乐门业门店展示与定制下单系统" />
+    <title>雅帝乐 · 门店定制中心</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./motion.css?v=20260746" />
+  <link rel="stylesheet" href="./configurator-v2.css?v=20260753" />
+  </head>
+  <body>
+    <div class="announcement"><span>雅帝乐 · 一种艺术，一种生活方式</span><span>全国门店 · 专业测量 · 终身服务</span></div>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="雅帝乐首页"><span class="brand-mark">Y</span><span><b>雅帝乐</b><small>YADILO DOOR</small></span></a>
+      <nav><a href="#showroom">产品展厅</a><a class="active" href="#configurator">私人定制</a><a href="#service">服务流程</a><a href="#stores">门店网络</a></nav>
+      <button class="header-order" data-open-order>我的方案 <span id="headerCount">0</span></button>
+    </header>
+
+    <main id="top">
+      <section class="hero" id="showroom">
+        <div class="hero-copy"><p class="eyebrow">YADILO PRIVATE COLLECTION · 2026</p><h1>让家的第一道风景<br /><em>由你定义</em></h1><p class="hero-desc">从门型、纹理到五金，每一处细节都为你的生活方式而生。探索雅帝乐全系产品，为家定制一扇真正属于你的门。</p><div class="hero-actions"><a class="button dark" href="#configurator">开始定制 <span>↗</span></a><a class="text-link" href="#service">了解定制流程 <span>→</span></a></div></div>
+        <div class="hero-image"><div class="hero-image-label"><b>01</b><span>无界 · 灵感入户</span></div></div>
+        <div class="hero-scroll">SCROLL TO EXPLORE <span></span></div>
+      </section>
+
+      <section class="collection section-pad"><div class="section-heading"><div><p class="eyebrow">EXPLORE THE COLLECTION</p><h2>雅帝乐全系门型</h2></div><p>每一扇门，都是建筑与生活的交汇。<br />从城市入户到私享别墅，找到与你相契的风格。</p></div><div class="collection-grid"><article class="collection-card large"><div class="card-image image-entry"></div><div class="card-footer"><div><small>COLLECTION 01</small><h3>入户门</h3></div><a href="#configurator">探索系列 ↗</a></div></article><article class="collection-card"><div class="card-image image-villa"></div><div class="card-footer"><div><small>COLLECTION 02</small><h3>别墅门</h3></div><a href="#configurator">探索系列 ↗</a></div></article><article class="collection-card"><div class="card-image image-system"></div><div class="card-footer"><div><small>COLLECTION 03</small><h3>系统门</h3></div><a href="#configurator">探索系列 ↗</a></div></article></div></section>
+
+      <section class="configurator section-pad" id="configurator"><div class="config-head"><div><p class="eyebrow">PRIVATE CONFIGURATOR</p><h2>配置你的专属入户门</h2><p class="config-subtitle">像设计一件家具一样，定义家的第一道风景。</p></div><div class="step-indicator"><span class="step active">01 <small>选择门型</small></span><i></i><span class="step">02 <small>定制细节</small></span><i></i><span class="step">03 <small>提交方案</small></span></div></div><div class="config-layout"><aside class="config-panel"><div class="panel-title"><span>选择配置</span><span id="configProgress">1 / 5</span></div><div id="optionGroups"></div><div class="dimension-fields"><div class="dimension-title"><span>门洞尺寸</span><small>Door opening</small></div><div class="dimension-inputs"><label>宽度 <input id="doorWidth" type="number" min="700" max="2400" value="960" /> <em>mm</em></label><label>高度 <input id="doorHeight" type="number" min="1900" max="3000" value="2200" /> <em>mm</em></label></div><div class="dimension-hint">可定制范围：700–2400 × 1900–3000 mm</div></div><button class="button dark full" data-open-order>查看我的方案 <span>→</span></button><p class="panel-note">价格为基础估算，最终报价以门店测量和方案确认结果为准。</p></aside><div class="preview-wrap"><div class="preview-top"><span><i class="live-dot"></i>实时预览</span><span class="preview-code" id="previewCode">YD-ENTRY-01</span></div><div class="door-scene" id="doorScene"><div class="scene-glow"></div><div class="view-angle-control" role="group" aria-label="观察角度"><span>观察角度</span><button type="button" data-view-angle="-12" aria-label="从左侧观察">左侧</button><button type="button" class="selected" data-view-angle="0" aria-label="正面观察">正面</button><button type="button" data-view-angle="12" aria-label="从右侧观察">右侧</button><small>拖动画面自由查看</small></div><div class="door-stage" id="doorStage"><div class="wall-shadow"></div><div class="door-model view-front" id="doorModel"><div class="door-opening" id="doorOpening"><div class="transom" id="transom"><div class="transom-glass"></div><span class="transom-cross horizontal"></span><span class="transom-cross vertical"></span></div><div class="door-frame" id="doorFrame"><div class="door-preview" id="doorPreview"><div class="door-panel"></div><div class="door-handle"><span></span></div><div class="door-lock"></div></div><div class="door-side left-side"></div><div class="door-side right-side"></div></div></div><i class="door-depth-face depth-left" aria-hidden="true"></i><i class="door-depth-face depth-right" aria-hidden="true"></i></div></div><div class="dimension dimension-width" id="dimensionWidth">W 960 mm</div><div class="dimension dimension-height" id="dimensionHeight">H 2200 mm</div><div class="scene-sliders"><label><span>宽度</span><input data-dimension="width" type="range" min="700" max="2400" value="960" /><output id="widthRangeValue">960 mm</output></label><label><span>高度</span><input data-dimension="height" type="range" min="1900" max="3000" value="2200" /><output id="heightRangeValue">2200 mm</output></label></div></div><div class="preview-bottom"><div><small>当前方案</small><strong id="previewName">云杉灰 · 单门</strong></div><div class="price"><small>预估起</small><strong id="previewPrice">¥ 11,280</strong></div></div></div></div></section>
+
+      <section class="service section-pad" id="service"><div class="service-intro"><p class="eyebrow">CRAFTED FOR YOUR HOME</p><h2>从测量到安装<br /><em>每一步都有雅帝乐</em></h2><a class="button outline" href="#stores">预约门店服务 <span>↗</span></a></div><div class="service-list"><div class="service-item"><b>01</b><div><h3>线上选定风格</h3><p>先在定制中心组合你的灵感方案，收藏并分享给家人。</p></div></div><div class="service-item"><b>02</b><div><h3>专业上门测量</h3><p>工程师赴产品使用现场，精准测量门洞尺寸。</p></div></div><div class="service-item"><b>03</b><div><h3>门店确认方案</h3><p>到店体验真实材质与五金，确认最终配置与报价。</p></div></div><div class="service-item"><b>04</b><div><h3>安心交付安装</h3><p>标准化生产、配送、安装，全程专人跟进。</p></div></div></div></section>
+
+      <section class="stores section-pad" id="stores"><div class="section-heading"><div><p class="eyebrow">VISIT A STORE</p><h2>到店体验真实质感</h2></div><p>触摸每一种纹理，感受每一次开合。<br />全国门店，为你提供面对面的专业服务。</p></div><div class="store-grid"><div class="store-feature"><div class="store-image"></div><div class="store-meta"><div><small>浙江 · 杭州</small><h3>雅帝乐杭州旗舰店</h3><p>杭州市拱墅区 · 红星美凯龙</p></div><a href="tel:400-826-1818">预约到店 ↗</a></div></div><div class="store-side"><p>全国门店覆盖<br /><strong>30<span>+</span></strong> 个城市</p><a class="button outline" href="http://www.yadilo.com/investment/story.html" target="_blank" rel="noreferrer">查找附近门店</a></div></div></section>
+    </main>
+    <footer><a class="brand" href="#top"><span class="brand-mark">Y</span><span><b>雅帝乐</b><small>YADILO DOOR</small></span></a><p>一种艺术 · 一种生活方式</p><span>© 2026 YADILO DOOR</span></footer>
+
+    <div class="drawer-backdrop" id="backdrop"></div><aside class="order-drawer" id="orderDrawer" aria-label="我的方案"><button class="drawer-close" data-close-order>×</button><p class="eyebrow">YOUR PRIVATE SCHEME</p><h2>我的定制方案</h2><div class="order-visual" id="orderVisual"></div><div class="order-summary"><div><span>门型</span><b id="orderType">单门</b></div><div><span>纹理</span><b id="orderTexture">云杉灰</b></div><div><span>气窗</span><b id="orderTransom">无气窗</b></div><div><span>门锁</span><b id="orderLock">曜石黑智能锁</b></div><div><span>门框 / 门套</span><b id="orderFrame">极窄黑 / 同色门套</b></div><div><span>门洞尺寸</span><b id="orderSize">960 × 2200 mm</b></div></div><div class="order-price"><span>预估价格</span><strong id="orderPrice">¥ 11,280</strong></div><div class="contact-fields"><label>称呼<input id="customerName" placeholder="请输入您的称呼" /></label><label>联系电话<input id="customerPhone" type="tel" placeholder="请输入手机号码" /></label></div><button class="button dark full" id="submitOrder">提交到店咨询 <span>↗</span></button><p class="drawer-note">提交后，雅帝乐顾问将在 1 个工作日内联系你确认尺寸与报价。</p></aside><div class="toast" id="toast">方案已保存，可随时继续配置</div>
+  <script type="module" src="./app.js?v=20260753"></script>
+  </body>
+</html>

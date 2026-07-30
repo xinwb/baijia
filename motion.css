@@ -1,0 +1,443 @@
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.reveal.visible{opacity:1;transform:none}
+.reveal:nth-child(2){transition-delay:.08s}
+.reveal:nth-child(3){transition-delay:.16s}
+.reveal:nth-child(4){transition-delay:.24s}
+.config-layout{align-items:start}
+.preview-wrap{height:min(720px,calc(100vh - 92px));min-height:620px;position:sticky;top:72px;align-self:start;background:#f5f5f7}
+.door-scene{min-height:0;perspective:none;cursor:default}
+.door-scene:active{cursor:default}
+.door-stage{width:520px;height:520px;transform:scale(.7) scaleX(var(--door-scale-x,1)) scaleY(var(--door-scale-y,1))!important;transform-origin:bottom center;transform-style:flat;display:flex;align-items:center;justify-content:flex-end;flex-direction:column}
+.wall-shadow{bottom:-7px;transform:none}
+.door-frame{position:relative;left:auto;bottom:auto;transform:none!important;transform-style:flat!important;filter:drop-shadow(14px 20px 18px rgba(65,65,70,.28))}
+.door-preview,.door-side{transform:none!important}
+.door-preview:after{background:linear-gradient(90deg,#fff4,transparent 25%,transparent 76%,#0003)}
+.dimension-width{bottom:22px;left:50%;transform:translateX(-50%)}
+.dimension-height{right:13%;top:50%;transform:translateY(-50%)}
+.door-opening{width:270px;padding:8px;background:var(--door-frame,#191817);display:flex;flex-direction:column;align-items:center;box-shadow:0 18px 22px #5555}
+.door-opening.door-type-0{width:270px}.door-opening.door-type-1{width:330px}.door-opening.door-type-2{width:410px}.door-opening.door-type-3{width:360px}.door-opening.door-type-4{width:470px}
+.door-opening .transom{width:100%;background:transparent;box-shadow:none;padding:8px 0;height:76px}
+.door-opening .door-frame{width:100%;height:430px}
+.scene-sliders{position:absolute;right:22px;bottom:20px;width:180px;padding:12px 14px;background:#ffffffb8;border:1px solid #ffffffd9;border-radius:14px;backdrop-filter:blur(14px);z-index:4;box-shadow:0 8px 25px #00000012}
+.scene-sliders label{display:grid;grid-template-columns:34px 1fr 54px;align-items:center;gap:7px;color:#66666b;font-size:10px}.scene-sliders label+label{margin-top:8px}.scene-sliders input{width:100%;accent-color:#171717}.scene-sliders output{text-align:right;color:#171717;font-size:9px;white-space:nowrap}
+.conditional-group.disabled{opacity:.42}
+.conditional-group.disabled .option{pointer-events:none}
+.type-preview,.type-preview:hover,.type-preview.selected{width:78px;height:92px;padding:58px 6px 6px;background:#fff;border-radius:8px;position:relative;overflow:hidden}
+.type-preview:before{content:"";position:absolute;left:50%;top:8px;width:28px;height:44px;transform:translateX(-50%);background:linear-gradient(90deg,#8d5739,#d19b70 55%,#7a432d);border:4px solid #171717;box-shadow:inset 0 0 0 1px #ffffff55}
+.type-preview:after{content:"";position:absolute;left:14px;right:14px;top:6px;height:50px;border:2px solid #16a56b;pointer-events:none}
+.type-preview.type-1:before{width:34px;background:linear-gradient(90deg,#3c2630 0 34%,#151515 35% 37%,#3c2630 38%)}
+.type-preview.type-2:before{width:46px;background:linear-gradient(90deg,#ba6a3c 0 49%,#151515 50% 52%,#ba6a3c 53%)}
+.type-preview.type-3:before{width:48px;background:linear-gradient(90deg,#2d3234 0 30%,#151515 31% 33%,#b68245 34%)}
+.type-preview.type-4:before{width:58px;background:linear-gradient(90deg,#eadfd0 0 21%,#151515 22% 24%,#69252a 25% 75%,#151515 76% 78%,#eadfd0 79%)}
+.type-preview span{display:block;font-weight:600}
+.type-preview small{white-space:nowrap}
+.door-frame.door-type-0,.transom.door-type-0{--opening-width:270px;--slab-width:200px;--side-width:0px}
+.door-frame.door-type-1,.transom.door-type-1{--opening-width:330px;--slab-width:220px;--side-width:64px}
+.door-frame.door-type-2,.transom.door-type-2{--opening-width:410px;--slab-width:340px;--side-width:0px}
+.door-frame.door-type-3,.transom.door-type-3{--opening-width:360px;--slab-width:220px;--side-width:86px}
+.door-frame.door-type-4,.transom.door-type-4{--opening-width:470px;--slab-width:300px;--side-width:72px}
+.door-frame{width:var(--opening-width,270px)}
+.door-preview{width:var(--slab-width,200px)}
+.door-frame.has-left .left-side{display:block;width:var(--side-width);left:18px}
+.door-frame.has-left .door-preview{margin-left:calc(var(--side-width) + 10px)}
+.door-frame.has-double-side .left-side,.door-frame.has-double-side .right-side{display:block;width:var(--side-width)}
+.door-frame.has-double-side .left-side{left:18px}
+.door-frame.has-double-side .right-side{right:18px}
+.door-frame.has-double-side .door-preview{margin-inline:calc(var(--side-width) + 10px)}
+.door-frame.door-type-2 .door-preview:after,.door-frame.door-type-4 .door-preview:after{background:linear-gradient(90deg,#fff4,transparent 25%,#0005 49.5%,#fff5 50%,#0005 50.5%,transparent 76%,#0003)}
+.door-preview.photo{background-image:var(--door-texture);background-size:cover;background-position:center}
+.door-preview.photo .door-panel{display:none}
+.door-preview.photo:before{inset:12px;border-color:#ffffff26}
+.door-preview.photo .door-handle,.door-preview.photo .door-lock{z-index:2}
+.door-frame.door-type-2 .door-handle{right:calc(50% + 10px);box-shadow:2px 3px 5px #0006,80px 0 0 -1px #252525}
+.door-frame.door-type-2 .door-lock{right:calc(50% + 5px);box-shadow:80px 0 0 -1px #1c1b18}
+.door-frame.door-type-4 .door-handle{right:calc(50% + 10px)}
+.transom{position:relative;width:var(--opening-width,270px);height:76px;margin:0;padding:8px;background:var(--door-frame,#191817);display:none;box-shadow:0 8px 12px #5554;z-index:2}
+.transom.visible{display:block}
+.transom-glass{height:100%;background:linear-gradient(135deg,#c8d2d2,#edf3f1 48%,#a4b4b4);border:1px solid #ffffff99}
+.transom-cross{position:absolute;background:#ffffff99;z-index:1}
+.transom-cross.horizontal{left:8px;right:8px;top:50%;height:1px}
+.transom-cross.vertical{top:8px;bottom:8px;left:50%;width:1px}
+.transom-0 .transom-glass{background:repeating-linear-gradient(90deg,#d2dddd 0 5px,#f4f7f5 5px 9px)}
+.transom-1 .transom-glass{background:linear-gradient(135deg,#dcebed,#fff)}
+.transom-2 .transom-glass{background:radial-gradient(circle at 20% 30%,#ffffffaa 0 8%,transparent 9%),linear-gradient(135deg,#c7d4d1,#f4f5ee)}
+.mini-transom{display:none;position:absolute;width:92px;height:30px;left:calc(50% - 46px);bottom:138px;border:6px solid #191817;background:linear-gradient(135deg,#c8d2d2,#f5f5f0);z-index:2}
+.mini-transom.visible{display:block}
+@media(max-width:900px){.preview-wrap{position:relative;top:auto;height:620px}.door-stage{transform:scale(.76) scaleX(var(--door-scale-x,1)) scaleY(var(--door-scale-y,1))!important}}
+@media(max-width:600px){.preview-wrap{height:560px;min-height:560px}.door-stage{transform:scale(.64) scaleX(var(--door-scale-x,1)) scaleY(var(--door-scale-y,1))!important}.dimension-height{right:7%}}
+.door-stage{transform:scale(.56) scaleX(var(--door-scale-x,1)) scaleY(var(--door-scale-y,1))!important}
+@media(max-width:900px){.door-stage{transform:scale(.6) scaleX(var(--door-scale-x,1)) scaleY(var(--door-scale-y,1))!important}}
+@media(max-width:600px){.door-stage{transform:scale(.52) scaleX(var(--door-scale-x,1)) scaleY(var(--door-scale-y,1))!important}}
+.door-preview.photo{background-repeat:no-repeat;background-size:calc(520px / var(--door-scale-x,1)) calc(980px / var(--door-scale-y,1));background-position:center top;background-color:#8c8178}
+.door-preview.photo .door-handle,.door-preview.photo .door-lock{transform:scaleX(calc(1 / var(--door-scale-x,1))) scaleY(calc(1 / var(--door-scale-y,1)));}
+.door-preview.photo .door-handle{top:calc(211px / var(--door-scale-y,1));right:calc(18px / var(--door-scale-x,1));bottom:auto;}
+.door-preview.photo .door-lock{top:calc(188px / var(--door-scale-y,1));right:calc(13px / var(--door-scale-x,1));bottom:auto;}
+.door-frame.door-type-2 .door-handle{right:calc(50% + 10px / var(--door-scale-x,1));}
+.door-frame.door-type-2 .door-lock{right:calc(50% + 5px / var(--door-scale-x,1));box-shadow:calc(80px / var(--door-scale-x,1)) 0 0 -1px #1c1b18;}
+.door-stage{transform:scale(.72) scaleX(var(--door-scale-x,1)) scaleY(var(--door-scale-y,1))!important}
+.door-frame .door-side{background-color:var(--door-frame,#191817);background-image:var(--door-texture,url('assets/texture-double-rib.jpg?v=2'));background-repeat:no-repeat;background-size:calc(520px / var(--door-scale-x,1)) calc(980px / var(--door-scale-y,1));background-position:center top;opacity:1;border:1px solid #0005;}
+.door-frame.door-type-2 .door-preview.photo{background-image:var(--door-texture),var(--door-texture);background-repeat:no-repeat;background-size:calc(260px / var(--door-scale-x,1)) calc(980px / var(--door-scale-y,1)),calc(260px / var(--door-scale-x,1)) calc(980px / var(--door-scale-y,1));background-position:left top,right top;}
+@media(max-width:900px){.door-stage{transform:scale(.68) scaleX(var(--door-scale-x,1)) scaleY(var(--door-scale-y,1))!important}}
+@media(max-width:600px){.door-stage{transform:scale(.6) scaleX(var(--door-scale-x,1)) scaleY(var(--door-scale-y,1))!important}}
+.configurator.section-pad{padding:78px 3vw 34px}
+.config-head{margin-bottom:28px}
+.config-layout{grid-template-columns:minmax(285px,26%) minmax(0,74%);min-height:calc(100vh - 170px)}
+.config-layout{overflow:visible}
+.preview-wrap{height:calc(100vh - 110px);min-height:640px}
+.door-stage{transform:scale(.82) scaleX(var(--door-scale-x,1)) scaleY(var(--door-scale-y,1))!important}
+@media(max-width:1100px){.configurator.section-pad{padding-inline:2vw}.config-layout{grid-template-columns:minmax(270px,32%) minmax(0,68%)}.door-stage{transform:scale(.76) scaleX(var(--door-scale-x,1)) scaleY(var(--door-scale-y,1))!important}}
+@media(max-width:900px) and (min-width:601px){.configurator.section-pad{padding:64px 2vw 28px}.config-layout{grid-template-columns:34% 66%}.config-panel{border-right:1px solid var(--line);border-bottom:0;padding:28px 22px}.preview-wrap{position:sticky;top:72px;height:calc(100vh - 120px);min-height:620px}.door-stage{transform:scale(.7) scaleX(var(--door-scale-x,1)) scaleY(var(--door-scale-y,1))!important}.scene-sliders{right:12px;width:160px}}
+.configurator.section-pad{padding:0;min-height:calc(100vh - 90px)}
+.configurator .config-head{display:none}
+.config-layout{position:relative;display:block;height:calc(100vh - 90px);min-height:680px;border-radius:0;overflow:hidden;background:#e9e9eb}
+.config-panel{position:absolute;left:24px;top:24px;bottom:24px;width:330px;z-index:6;overflow:auto;border:1px solid #ffffffaa;border-radius:22px;background:#f5f5f7e8;backdrop-filter:blur(22px);box-shadow:0 20px 60px #0002}
+.preview-wrap{position:relative;top:auto;width:100%;height:100%;min-height:0;background:#f5f5f7}
+.preview-top{position:absolute;left:0;right:0;top:0;z-index:5;background:#f5f5f7c9;backdrop-filter:blur(16px)}
+.door-scene{height:100%;min-height:0}
+.door-stage{transform:scale(1.02) scaleX(var(--door-scale-x,1)) scaleY(var(--door-scale-y,1))!important}
+.preview-bottom{position:absolute;left:24px;right:24px;bottom:24px;z-index:5;border:1px solid #ffffffaa;border-radius:18px;background:#f5f5f7d9;backdrop-filter:blur(18px);box-shadow:0 12px 30px #0001}
+.preview-bottom{left:auto;right:24px;width:310px}
+.scene-sliders{bottom:150px}
+.preview-bottom{top:76px;bottom:auto;right:24px;width:280px}
+.door-opening{padding:4px}
+.door-preview{border-width:8px}
+.door-frame.door-type-0 .door-preview{width:230px}
+.door-frame.door-type-2 .door-preview{width:376px}
+.door-frame.door-type-2 .door-preview:after{background:linear-gradient(90deg,#fff4,transparent 24%,#0007 49.5%,#fff7 50%,#0007 50.5%,transparent 76%,#0003)}
+.door-preview.texture-1{background-position:center center}
+.door-preview.texture-2{background-position:center bottom;background-size:calc(520px / var(--door-scale-x,1)) calc(1120px / var(--door-scale-y,1))}
+.door-frame.texture-1 .door-side{background-position:center center}
+.door-frame.texture-2 .door-side{background-position:center bottom;background-size:calc(520px / var(--door-scale-x,1)) calc(1120px / var(--door-scale-y,1))}
+@media(max-width:900px) and (min-width:601px){.preview-bottom{top:64px;right:12px;width:250px}}
+@media(max-width:1100px){.config-panel{width:290px;left:16px;top:16px;bottom:16px}.door-stage{transform:scale(.88) scaleX(var(--door-scale-x,1)) scaleY(var(--door-scale-y,1))!important}}
+@media(max-width:900px) and (min-width:601px){.configurator.section-pad{padding:0}.config-layout{height:calc(100vh - 90px);min-height:620px}.config-panel{width:280px;left:12px;top:12px;bottom:12px}.door-stage{transform:scale(.78) scaleX(var(--door-scale-x,1)) scaleY(var(--door-scale-y,1))!important}.preview-bottom{left:12px;right:12px;bottom:12px}}
+html,body{height:100%;overflow:hidden}
+main#top{height:calc(100vh - 32px);padding-top:58px;box-sizing:border-box}
+.hero,.collection,.service,.stores,footer{display:none!important}
+.site-header{position:fixed;left:0;right:0;top:32px;z-index:20}
+nav a{display:none}nav a.active{display:block}
+.door-frame.door-type-2 .door-preview.photo.texture-1{background-size:calc(260px / var(--door-scale-x,1)) calc(980px / var(--door-scale-y,1)),calc(260px / var(--door-scale-x,1)) calc(980px / var(--door-scale-y,1));background-position:left center,right center}
+.door-frame.door-type-2 .door-preview.photo.texture-2{background-size:calc(260px / var(--door-scale-x,1)) calc(1120px / var(--door-scale-y,1)),calc(260px / var(--door-scale-x,1)) calc(1120px / var(--door-scale-y,1));background-position:left bottom,right bottom}
+
+/* One continuous texture map for every opening. Door leaves and sidelights
+   become windows onto the same map instead of independently centering it. */
+.door-frame.texture-0,.door-frame.texture-1,.door-frame.texture-2{
+  background-image:var(--door-texture);
+  background-repeat:no-repeat;
+  background-position:center top;
+  background-size:calc(520px / var(--door-scale-x,1)) calc(980px / var(--door-scale-y,1));
+}
+.door-frame.texture-2{background-position:center bottom;background-size:calc(520px / var(--door-scale-x,1)) calc(1120px / var(--door-scale-y,1))}
+.door-frame.texture-1{background-position:center center}
+.door-frame.texture-0,.door-frame.texture-1,.door-frame.texture-2{background-size:cover}
+.door-frame.texture-0 .door-preview.photo,
+.door-frame.texture-1 .door-preview.photo,
+.door-frame.texture-2 .door-preview.photo,
+.door-frame.texture-0 .door-side,
+.door-frame.texture-1 .door-side,
+.door-frame.texture-2 .door-side{
+  background-image:none;
+  background-color:transparent;
+}
+
+/* The supplied ribbed map is a complete double-leaf design. For another
+   opening type, expose one leaf from the map instead of squeezing both
+   leaves into a single slab. The default remains the real double-door view. */
+.config-layout.texture-mismatch .door-frame.texture-0{
+  /* Scale the source map uniformly so the centre stile stays outside the
+     single-leaf viewing window; never squeeze the two-leaf map horizontally. */
+  background-size:auto 140%;
+  background-position:left top;
+}
+.config-layout.texture-mismatch .door-frame.texture-0 .door-preview,
+.config-layout.texture-mismatch .door-frame.texture-0 .door-side{
+  background-image:none;
+}
+
+/* The transom belongs inside the same opening as the door. Its surface keeps
+   the selected door map underneath a restrained glass veil, so it reads as
+   integrated architectural glazing instead of a bright pasted rectangle. */
+.door-opening > .transom{
+  box-sizing:border-box;
+  width:100%;
+  margin:0;
+  padding:5px;
+  background:var(--door-frame,#191817);
+  border:0;
+  overflow:hidden;
+}
+.door-opening > .transom .transom-glass{
+  position:relative;
+  height:100%;
+  border:1px solid rgba(255,255,255,.22);
+  background-image:
+    linear-gradient(rgba(111,104,96,.52),rgba(233,225,214,.34)),
+    var(--door-texture);
+  background-repeat:no-repeat;
+  background-position:center top;
+  background-size:cover;
+  opacity:.96;
+  filter:saturate(.72) contrast(.9);
+}
+.door-opening > .transom .transom-glass:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(105deg,rgba(255,255,255,.18),transparent 36%,rgba(53,48,43,.12));
+  pointer-events:none;
+}
+.door-opening > .transom.transom-0 .transom-glass{
+  background-image:
+    linear-gradient(rgba(120,112,104,.48),rgba(238,229,216,.3)),
+    repeating-linear-gradient(90deg,rgba(255,255,255,.16) 0 2px,rgba(55,51,47,.12) 2px 5px),
+    var(--door-texture);
+  background-size:cover,100% 100%,cover;
+}
+.door-opening > .transom .transom-cross{
+  background:rgba(255,255,255,.28);
+  opacity:.55;
+}
+
+/* Keep the preview large; dimensions are applied to the opening/frame above,
+   while this scale only controls how much of the preview canvas is occupied. */
+.door-stage{transform:scale(var(--preview-scale,1.55))!important}
+@media(max-width:1100px){.door-stage{transform:scale(1.18)!important}}
+@media(max-width:900px) and (min-width:601px){.door-stage{transform:scale(1)!important}}
+
+/* Side leaves and sidelights are complete framed units. The continuous map
+   remains underneath, while each additional leaf gets its own visible jamb
+   so child-mother and side-door layouts do not read as a frameless cutout. */
+.door-frame.has-left .left-side,
+.door-frame.has-double-side .left-side,
+.door-frame.has-double-side .right-side{
+  box-sizing:border-box;
+  border:8px solid var(--door-frame,#191817);
+  background-color:#8c8178;
+  background-image:var(--door-texture);
+  background-repeat:no-repeat;
+  background-size:calc(520px / var(--door-scale-x,1)) calc(980px / var(--door-scale-y,1));
+  background-position:center top;
+  background-clip:padding-box;
+  box-shadow:inset 0 0 0 1px #ffffff22, inset 0 0 18px #0005;
+}
+.door-frame.has-left .left-side{background-position:left top}
+.door-frame.has-double-side .right-side{background-position:right top}
+.door-frame.texture-1.has-left .left-side{background-position:left center}
+.door-frame.texture-1.has-double-side .left-side{background-position:left center}
+.door-frame.texture-1.has-double-side .right-side{background-position:right center}
+.door-frame.texture-2.has-left .left-side,
+.door-frame.texture-2.has-double-side .left-side,
+.door-frame.texture-2.has-double-side .right-side{
+  background-size:calc(520px / var(--door-scale-x,1)) calc(1120px / var(--door-scale-y,1));
+  background-position:left bottom;
+}
+.door-frame.texture-2.has-double-side .right-side{background-position:right bottom}
+
+/* Hardware is mounted to the door at fixed millimetre-like offsets. The
+   opening may grow, but the handle and lock must not drift or resize with it. */
+.door-preview.photo .door-handle,
+.door-preview.photo .door-lock{
+  transform:none;
+}
+.door-preview.photo .door-handle{top:211px;right:18px}
+.door-preview.photo .door-lock{top:188px;right:13px}
+.door-frame.door-type-2 .door-handle{right:calc(50% + 10px)}
+.door-frame.door-type-2 .door-lock{right:calc(50% + 5px);box-shadow:80px 0 0 -1px #1c1b18}
+
+/* Texture maps are fixed-scale windows. Growing the opening reveals more of
+   the supplied map; it never stretches the grain, seams or metal inlays. */
+.door-frame.texture-0,
+.door-frame.texture-1,
+.door-frame.texture-2{
+  background-size:520px 980px;
+  background-repeat:no-repeat;
+}
+.door-frame.texture-2{background-size:520px 1120px}
+.door-frame .door-side{background-size:520px 980px}
+.door-frame.texture-2 .door-side{background-size:520px 1120px}
+.door-opening > .transom .transom-glass{background-size:520px 980px}
+.door-opening > .transom.transom-0 .transom-glass{background-size:100% 100%,100% 100%,520px 980px}
+
+/* Preview hotspots support press-and-hold navigation to the matching option. */
+.door-preview .door-lock,
+.door-preview .door-handle,
+.door-opening > .transom,
+.door-opening{touch-action:none}
+.long-press-active{filter:brightness(1.12);transition:filter .15s ease}
+.long-press-triggered{animation:hotspotPulse .65s ease both}
+.hotspot-focus{animation:optionFocus 1.3s ease both}
+@keyframes hotspotPulse{0%{filter:brightness(1)}45%{filter:brightness(1.45) drop-shadow(0 0 10px #c19b68)}100%{filter:brightness(1)}}
+@keyframes optionFocus{0%{background-color:#eadcc8;box-shadow:0 0 0 0 #b0937266}35%{background-color:#f7efe4;box-shadow:0 0 0 5px #b0937244}100%{background-color:transparent;box-shadow:0 0 0 0 transparent}}
+
+/* One physical-looking frame stroke for every visible boundary. Keep this
+   value independent from the dimension scale variables. */
+:root{--frame-stroke:8px}
+.door-opening{box-sizing:border-box;padding:var(--frame-stroke)!important}
+.door-opening > .transom{box-sizing:border-box;padding:var(--frame-stroke)!important;border:0!important}
+.door-frame .door-preview{box-sizing:border-box;border-width:var(--frame-stroke)!important}
+.door-frame.has-left .left-side,
+.door-frame.has-double-side .left-side,
+.door-frame.has-double-side .right-side{box-sizing:border-box;border-width:var(--frame-stroke)!important}
+.door-opening > .transom .transom-glass{box-sizing:border-box;border-width:1px}
+
+/* Put the dimension controls on the door itself: width below the sill and
+   height beside the right jamb, instead of in a detached bottom-right card. */
+.scene-sliders{
+  position:absolute!important;
+  inset:0!important;
+  width:auto!important;
+  height:auto!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  backdrop-filter:none!important;
+  pointer-events:none;
+}
+.scene-sliders label{
+  position:absolute;
+  display:grid;
+  grid-template-columns:34px 120px 58px;
+  gap:7px;
+  width:219px;
+  padding:9px 11px;
+  border:1px solid #ffffffd9;
+  border-radius:12px;
+  background:#ffffffd9;
+  box-shadow:0 8px 20px #00000014;
+  backdrop-filter:blur(14px);
+  pointer-events:auto;
+}
+.scene-sliders label:first-child{
+  left:var(--ruler-left,50%);
+  top:var(--ruler-bottom,75%);
+  transform:translateX(-50%);
+}
+.scene-sliders label:last-child{
+  left:var(--ruler-right,78%);
+  top:var(--ruler-top,50%);
+  transform:translateY(-50%);
+}
+@media(max-width:1100px){.scene-sliders label{grid-template-columns:30px 100px 54px;width:196px}.scene-sliders label:last-child{left:var(--ruler-right,82%)}}
+@media(max-width:900px) and (min-width:601px){.scene-sliders label{grid-template-columns:30px 88px 50px;width:178px}.scene-sliders label:last-child{left:var(--ruler-right,84%)}}
+
+/* Child-and-mother doors are one finished-height assembly: the narrow child
+   leaf must reach exactly the same sill and head as the mother leaf. */
+.door-frame.has-left{
+  align-items:stretch;
+}
+.door-frame.has-left .door-preview,
+.door-frame.has-left .left-side{
+  height:100%!important;
+  min-height:0;
+  align-self:stretch;
+}
+.door-frame.has-left .left-side{
+  top:0!important;
+  bottom:0!important;
+  height:auto!important;
+}
+.door-frame.has-double-side .left-side,
+.door-frame.has-double-side .right-side{
+  top:0!important;
+  bottom:0!important;
+  height:auto!important;
+}
+
+/* Keep the complete scaled assembly inside the preview scene. */
+.door-stage{
+  width:560px;
+  height:560px;
+  transform:translateX(clamp(120px,17vw,165px)) scaleY(calc(1.18 / var(--door-scale-y,1)))!important;
+}
+.door-frame .door-preview{
+  height:100%!important;
+}
+
+/* The active full-door map fills the default opening completely. Larger
+   sizes switch to the larger source map in app.js instead of cropping a
+   fixed 520x980 window. */
+.door-frame.texture-0,
+.door-frame.texture-1,
+.door-frame.texture-2{
+  background-size:100% 100%!important;
+  background-position:center top!important;
+  background-repeat:no-repeat!important;
+}
+
+/* Child leaves and sidelights are real framed parts of the same opening;
+   never leave them as an empty transparent cut-out. */
+.door-frame.texture-0 .door-side,
+.door-frame.texture-1 .door-side,
+.door-frame.texture-2 .door-side{
+  background-image:var(--door-texture)!important;
+  background-size:100% 100%!important;
+  background-position:center top!important;
+  background-color:#8c8178!important;
+}
+.door-frame.has-left .left-side,
+.door-frame.has-double-side .left-side,
+.door-frame.has-double-side .right-side{
+  top:0!important;
+  bottom:0!important;
+  height:auto!important;
+}
+
+/* The transom is inside the outer frame and borrows the selected door map;
+   the veil keeps it translucent instead of reading as a pasted white box. */
+.door-opening > .transom{
+  width:100%!important;
+  box-sizing:border-box;
+  overflow:hidden;
+}
+.door-opening > .transom .transom-glass{
+  background-image:
+    linear-gradient(rgba(76,72,68,.28),rgba(228,224,214,.18)),
+    var(--door-texture)!important;
+  background-size:100% 100%,100% 100%!important;
+  background-blend-mode:multiply,normal;
+  opacity:.82;
+  filter:saturate(.72) contrast(.92);
+}
+
+/* Product-type cards use real door references, not abstract color blocks. */
+.type-preview.type-0:before{background:url('./assets/real-door-arch-wood.jpg') center/cover}
+.type-preview.type-1:before{background:url('http://www.yadilo.com/web/upload/2022/12/19/16714294844934jucd5.jpg') center/cover}
+.type-preview.type-2:before{background:url('./assets/real-door-double-line.jpg') center/cover}
+.type-preview.type-3:before{background:url('./assets/real-door-mountain-band.jpg') center/cover}
+.type-preview.type-4:before{background:url('./assets/door-assembly-double-rib-v1.png') center/cover}
+
+/* K9GBF-B-X201B reference assembly from the official detail page: a narrow
+   child leaf and a wider mother leaf inside one dark-blue frame. */
+.door-frame.door-type-1.texture-0{
+  background-color:#11161a!important;
+  background-image:none!important;
+}
+.door-frame.door-type-1.texture-0 .left-side{
+  background-image:url('http://www.yadilo.com/web/upload/2022/12/19/16714294896689ldg1r.jpg')!important;
+  background-size:cover!important;
+  background-position:left top!important;
+}
+.door-frame.door-type-1.texture-0 .door-preview{
+  background-image:url('http://www.yadilo.com/web/upload/2022/12/19/16714294897009ldg1r.jpg')!important;
+  background-size:cover!important;
+  background-position:center top!important;
+}
+
+/* A transom adds height to the complete assembly, so scale the whole unit
+   against the scene rather than scaling the door leaf alone. */
+.door-stage:has(.transom.visible){
+  transform:translateX(clamp(120px,17vw,165px)) scaleY(calc(1.05 / var(--door-scale-y,1)))!important;
+}
+
+/* K9GBF material atlas: each third is a complete, non-repeating leaf skin. */
+.door-frame.texture-1,.door-frame.texture-1 .door-side{background-image:var(--door-texture)!important;background-size:300% 100%!important;background-position:left top!important}
+.door-frame.texture-2,.door-frame.texture-2 .door-side{background-image:var(--door-texture)!important;background-size:300% 100%!important;background-position:center top!important}
+.door-frame.texture-3,.door-frame.texture-3 .door-side{background-image:var(--door-texture)!important;background-size:300% 100%!important;background-position:right top!important}
+.door-frame.texture-1 .door-preview.photo,.door-frame.texture-2 .door-preview.photo,.door-frame.texture-3 .door-preview.photo{background-image:none!important;background-color:transparent!important}
+
+/* Let the buyer choose a real reference model, rather than anonymous swatches. */
+[data-group="texture"] .option-options{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+[data-group="texture"] .swatch{width:100%;height:74px;font-size:0;background-position:center;background-size:cover;overflow:hidden}
+[data-group="texture"] .swatch span{position:absolute;left:6px;right:6px;bottom:5px;padding:3px 4px;border-radius:4px;background:#111b;color:#fff;font-size:8px;line-height:1.2;letter-spacing:0;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
