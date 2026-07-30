@@ -1,5 +1,26 @@
 import * as THREE from 'https://unpkg.com/three@0.165.0/build/three.module.js';
 
+// 图片懒加载 - 延迟加载非首屏背景图
+const lazyImages = document.querySelectorAll('.image-entry, .image-villa, .image-system, .store-image');
+const imageObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const computedStyle = window.getComputedStyle(el);
+      const bgImage = computedStyle.backgroundImage;
+      // 触发浏览器预加载背景图
+      if (bgImage && bgImage !== 'none') {
+        const url = bgImage.slice(5, -2);
+        const img = new Image();
+        img.src = url;
+      }
+      observer.unobserve(el);
+    }
+  });
+}, { rootMargin: '100px' });
+
+lazyImages.forEach(img => imageObserver.observe(img));
+
 const TYPE_DATA=[
   {name:'单门',note:'现代平板',width:960,height:2200,minW:800,maxW:1200,minH:2000,maxH:2600,transom:0,layout:[['main',1]]},
   {name:'子母门',note:'X201B · 一体气窗',width:1200,height:2200,minW:1050,maxW:1600,minH:2100,maxH:2800,transom:1,layout:[['child',.34],['main',.66]]},
