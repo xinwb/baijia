@@ -29,10 +29,10 @@ const TYPE_DATA=[
   {name:'双边边门',note:'双边门 + 双扇',width:1800,height:2400,minW:1600,maxW:2400,minH:2200,maxH:3000,transom:0,layout:[['sidelight',.18],['passive',.32],['main',.32],['sidelight',.18]]}
 ];
 const FINISH_DATA=[
-  {name:'K9GBF-B-X201B',note:'星空蓝 · 双框竖肋',thumb:'http://www.yadilo.com/web/upload/2022/12/19/16714294844934jucd5.jpg',asset:'assets/k9-material-x201b-v1.png',design:'x201b',mapScale:1.02,frameTone:'#11191e'},
-  {name:'K9GBF-0102TA',note:'香槟灰平板 · 深色中梃',thumb:'http://www.yadilo.com/web/upload/2025/05/08/17466682986756zhu7q.jpg',asset:'assets/k9-material-0102ta-v2.png',design:'ta',mapScale:1.08,stripMm:170,frameTone:'#625d56'},
-  {name:'K9GBF-0102TB',note:'岩灰平板 · 亮色中梃',thumb:'http://www.yadilo.com/web/upload/2025/05/08/17466682362304d80sj.jpg',asset:'assets/k9-material-0102tb-v1.png',design:'tb',mapScale:1.1,stripMm:120,frameTone:'#282a29'},
-  {name:'K9GBF-A32D',note:'油绿灰 · 四框线',thumb:'http://www.yadilo.com/web/upload/2025/05/07/17466054178681u6m0k.jpg',asset:'assets/k9-material-a32d-v2.png',design:'a32d',mapScale:1.04,frameTone:'#697067'}
+  {name:'K9GBF-B-X201B',note:'星空蓝 · 双框竖肋',thumb:'assets/thumb-x201b.jpg',asset:'assets/k9-material-x201b-v1.png',design:'x201b',mapScale:1.02,frameTone:'#11191e'},
+  {name:'K9GBF-0102TA',note:'香槟灰平板 · 深色中梃',thumb:'assets/thumb-0102ta.jpg',asset:'assets/k9-material-0102ta-v2.png',design:'ta',mapScale:1.08,stripMm:170,frameTone:'#625d56'},
+  {name:'K9GBF-0102TB',note:'岩灰平板 · 亮色中梃',thumb:'assets/thumb-0102tb.jpg',asset:'assets/k9-material-0102tb-v1.png',design:'tb',mapScale:1.1,stripMm:120,frameTone:'#282a29'},
+  {name:'K9GBF-A32D',note:'油绿灰 · 四框线',thumb:'assets/thumb-a32d.jpg',asset:'assets/k9-material-a32d-v2.png',design:'a32d',mapScale:1.04,frameTone:'#697067'}
 ];
 const LOCKS=[['曜石黑智能锁','指纹 / 密码 / NFC',2600],['静音机械锁','经典机械锁体',900],['极简隐藏锁','嵌入式拉手',3800]];
 const FRAMES=[['极窄黑','哑光金属门框',0,'#17191a'],['香槟金','细腻拉丝门框',600,'#a88b66'],['同色门框','与门扇一体',800,'#55504b']];
