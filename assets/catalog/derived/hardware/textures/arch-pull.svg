@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="460" height="1420" viewBox="0 0 460 1420">
+  <defs>
+    <filter id="white-to-alpha" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  -1 -1 -1 0 3" />
+    </filter>
+  </defs>
+  <image x="-170" y="-105" width="1046" height="1600" preserveAspectRatio="none" filter="url(#white-to-alpha)" xlink:href="../hardware-arch-pull-smartlock-v1.png" />
+</svg>
