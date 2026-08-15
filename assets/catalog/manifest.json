@@ -1,0 +1,3071 @@
+{
+  "generatedAt": "2026-08-15T13:41:02.429887+00:00",
+  "maxImageSize": 1800,
+  "sourceAssetsPreserved": true,
+  "count": 433,
+  "assets": [
+    {
+      "source": "assets/generated/hardware/textures/arch-lock.svg",
+      "path": "assets/catalog/derived/hardware/textures/arch-lock.svg",
+      "width": null,
+      "height": null,
+      "bytes": 498
+    },
+    {
+      "source": "assets/generated/hardware/textures/arch-pull.svg",
+      "path": "assets/catalog/derived/hardware/textures/arch-pull.svg",
+      "width": null,
+      "height": null,
+      "bytes": 500
+    },
+    {
+      "source": "assets/generated/hardware/textures/circular-lock-ai-v1.png",
+      "path": "assets/catalog/derived/hardware/textures/circular-lock-ai-v1.png",
+      "width": 1800,
+      "height": 1800,
+      "bytes": 3217970
+    },
+    {
+      "source": "assets/generated/hardware/textures/hinge-ai-v1.png",
+      "path": "assets/catalog/derived/hardware/textures/hinge-ai-v1.png",
+      "width": 1800,
+      "height": 1800,
+      "bytes": 2197889
+    },
+    {
+      "source": "assets/generated/hardware/textures/hinge-metal.svg",
+      "path": "assets/catalog/derived/hardware/textures/hinge-metal.svg",
+      "width": null,
+      "height": null,
+      "bytes": 272
+    },
+    {
+      "source": "assets/generated/hardware/textures/mountain-recess.svg",
+      "path": "assets/catalog/derived/hardware/textures/mountain-recess.svg",
+      "width": null,
+      "height": null,
+      "bytes": 498
+    },
+    {
+      "source": "assets/generated/hardware/textures/pull-handle-ai-v1.png",
+      "path": "assets/catalog/derived/hardware/textures/pull-handle-ai-v1.png",
+      "width": 900,
+      "height": 1800,
+      "bytes": 535978
+    },
+    {
+      "source": "assets/generated/hardware/textures/smart-lock-ai-v1.png",
+      "path": "assets/catalog/derived/hardware/textures/smart-lock-ai-v1.png",
+      "width": 873,
+      "height": 1800,
+      "bytes": 494722
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/aige/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/d90/aige/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 386016
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/aige/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/d90/aige/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 295557
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/aige/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/d90/aige/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 354983
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/aige/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/d90/aige/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 197716
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/guanmin/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/d90/guanmin/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 382133
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/guanmin/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/d90/guanmin/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 573819
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/guanmin/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/d90/guanmin/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 367352
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/guanmin/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/d90/guanmin/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 202810
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/jinqu/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/d90/jinqu/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 288673
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/jinqu/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/d90/jinqu/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 355695
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/jinqu/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/d90/jinqu/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 243720
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/jinqu/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/d90/jinqu/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 205282
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/lansheng/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/d90/lansheng/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 355251
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/lansheng/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/d90/lansheng/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 364563
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/lansheng/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/d90/lansheng/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 319651
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/lansheng/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/d90/lansheng/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 207498
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/lunyi/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/d90/lunyi/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 294813
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/lunyi/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/d90/lunyi/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 354806
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/lunyi/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/d90/lunyi/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 248564
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/lunyi/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/d90/lunyi/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 214332
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/manyu/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/d90/manyu/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 332836
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/manyu/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/d90/manyu/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 267056
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/manyu/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/d90/manyu/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 267092
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/manyu/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/d90/manyu/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 218781
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/qionghua/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/d90/qionghua/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 327265
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/qionghua/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/d90/qionghua/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 493572
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/qionghua/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/d90/qionghua/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 366972
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/qionghua/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/d90/qionghua/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 220434
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/shicui/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/d90/shicui/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 281447
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/shicui/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/d90/shicui/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 318725
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/shicui/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/d90/shicui/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 240195
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/shicui/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/d90/shicui/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 185347
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/shirui/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/d90/shirui/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 276817
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/shirui/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/d90/shirui/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 228039
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/shirui/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/d90/shirui/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 287113
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/shirui/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/d90/shirui/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 234837
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/songge/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/d90/songge/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 248431
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/songge/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/d90/songge/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 269606
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/songge/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/d90/songge/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 186263
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/songge/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/d90/songge/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 191339
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/yaozhen/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/d90/yaozhen/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 281418
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/yaozhen/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/d90/yaozhen/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 257824
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/yaozhen/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/d90/yaozhen/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 235582
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/yaozhen/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/d90/yaozhen/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 238399
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/yongshe/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/d90/yongshe/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 377375
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/yongshe/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/d90/yongshe/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 328239
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/yongshe/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/d90/yongshe/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 334121
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/yongshe/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/d90/yongshe/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 204706
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/yunjian/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/d90/yunjian/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 311478
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/yunjian/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/d90/yunjian/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 320915
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/yunjian/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/d90/yunjian/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 262566
+    },
+    {
+      "source": "assets/generated/pdf-previews/d90/yunjian/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/d90/yunjian/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 198023
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/cuican/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/cuican/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 516567
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/cuican/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/cuican/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 398729
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/cuican/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/cuican/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 449142
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/cuican/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/cuican/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 207626
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/fengya/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/fengya/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 350926
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/fengya/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/fengya/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 421909
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/fengya/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/fengya/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 265771
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/fengya/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/fengya/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 182085
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/hanjie/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/hanjie/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 259486
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/hanjie/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/hanjie/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 191469
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/hanjie/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/hanjie/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 190344
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/hanjie/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/hanjie/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 179849
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/heya/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/heya/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 446696
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/heya/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/heya/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 353275
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/heya/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/heya/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 315159
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/heya/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/heya/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 189872
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/jiangchuanfu/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/jiangchuanfu/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 559962
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/jiangchuanfu/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/jiangchuanfu/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 303909
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/jiangchuanfu/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/jiangchuanfu/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 388616
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/jiangchuanfu/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/jiangchuanfu/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 201613
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/jiangyue/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/jiangyue/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 525398
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/jiangyue/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/jiangyue/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 414830
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/jiangyue/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/jiangyue/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 468278
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/jiangyue/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/jiangyue/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 200554
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/jianya/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/jianya/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 306138
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/jianya/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/jianya/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 353049
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/jianya/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/jianya/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 254080
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/jianya/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/jianya/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 197434
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/jinghongfu/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/jinghongfu/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 746325
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/jinghongfu/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/jinghongfu/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 498215
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/jinghongfu/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/jinghongfu/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 578129
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/jinghongfu/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/jinghongfu/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 224706
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/jinlunfu/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/jinlunfu/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 601354
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/jinlunfu/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/jinlunfu/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 311678
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/jinlunfu/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/jinlunfu/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 408395
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/jinlunfu/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/jinlunfu/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 205362
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/jintanfu/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/jintanfu/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 300446
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/jintanfu/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/jintanfu/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 308042
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/jintanfu/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/jintanfu/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 307966
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/jintanfu/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/jintanfu/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 200975
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/liujing/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/liujing/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 383917
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/liujing/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/liujing/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 272191
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/liujing/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/liujing/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 473240
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/liujing/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/liujing/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 191350
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/liuying/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/liuying/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 409558
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/liuying/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/liuying/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 343254
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/liuying/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/liuying/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 491025
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/liuying/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/liuying/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 205790
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/longteng/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/longteng/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 564511
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/longteng/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/longteng/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 288826
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/longteng/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/longteng/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 504716
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/longteng/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/longteng/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 217705
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/moyifu/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/moyifu/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 693881
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/moyifu/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/moyifu/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 388957
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/moyifu/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/moyifu/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 275424
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/moyifu/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/moyifu/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 193107
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/ouya/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/ouya/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 418703
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/ouya/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/ouya/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 255612
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/ouya/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/ouya/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 282000
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/ouya/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/ouya/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 205888
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/qinghuafu/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/qinghuafu/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 598143
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/qinghuafu/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/qinghuafu/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 540501
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/qinghuafu/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/qinghuafu/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 285357
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/qinghuafu/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/qinghuafu/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 207054
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/ruojian/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/ruojian/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 282578
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/ruojian/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/ruojian/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 339608
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/ruojian/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/ruojian/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 279144
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/ruojian/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/ruojian/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 192204
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/ruoya/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/ruoya/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 457282
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/ruoya/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/ruoya/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 348766
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/ruoya/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/ruoya/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 288222
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/ruoya/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/ruoya/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 196546
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/ruoyun/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/ruoyun/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 417857
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/ruoyun/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/ruoyun/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 284189
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/ruoyun/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/ruoyun/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 443005
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/ruoyun/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/ruoyun/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 218529
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/shanyun/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/shanyun/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 346752
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/shanyun/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/shanyun/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 329674
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/shanyun/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/shanyun/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 295094
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/shanyun/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/shanyun/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 178740
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/shuangyingfu/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/shuangyingfu/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 402132
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/shuangyingfu/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/shuangyingfu/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 411863
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/shuangyingfu/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/shuangyingfu/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 367414
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/shuangyingfu/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/shuangyingfu/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 212734
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/songjie/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/songjie/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 581733
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/songjie/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/songjie/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 421312
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/songjie/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/songjie/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 402510
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/songjie/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/songjie/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 207112
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/songya/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/songya/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 348180
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/songya/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/songya/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 314820
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/songya/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/songya/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 238544
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/songya/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/songya/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 197147
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/suya/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/suya/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 263914
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/suya/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/suya/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 228338
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/suya/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/suya/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 166367
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/suya/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/suya/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 195498
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/tangya/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/tangya/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 526658
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/tangya/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/tangya/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 382976
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/tangya/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/tangya/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 442173
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/tangya/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/tangya/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 199615
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/wangshan/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/wangshan/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 530470
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/wangshan/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/wangshan/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 322456
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/wangshan/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/wangshan/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 265411
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/wangshan/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/wangshan/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 208245
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/weilan/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/weilan/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 370626
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/weilan/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/weilan/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 268368
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/weilan/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/weilan/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 369828
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/weilan/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/weilan/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 197343
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/wenyi/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/wenyi/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 467076
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/wenyi/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/wenyi/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 353003
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/wenyi/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/wenyi/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 336822
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/wenyi/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/wenyi/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 200965
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/xinghai/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/xinghai/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 469353
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/xinghai/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/xinghai/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 442769
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/xinghai/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/xinghai/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 422322
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/xinghai/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/xinghai/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 221367
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/xinghui/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/xinghui/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 263149
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/xinghui/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/xinghui/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 234296
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/xinghui/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/xinghui/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 285850
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/xinghui/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/xinghui/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 199737
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/xingkong/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/xingkong/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 543194
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/xingkong/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/xingkong/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 412807
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/xingkong/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/xingkong/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 342279
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/xingkong/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/xingkong/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 215363
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/xinglvfu/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/xinglvfu/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 341756
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/xinglvfu/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/xinglvfu/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 427761
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/xinglvfu/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/xinglvfu/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 221489
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/xinglvfu/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/xinglvfu/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 192194
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/xinlan/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/xinlan/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 757861
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/xinlan/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/xinlan/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 487196
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/xinlan/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/xinlan/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 245018
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/xinlan/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/xinlan/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 255258
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yanlan/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yanlan/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 546951
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yanlan/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yanlan/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 359476
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yanlan/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yanlan/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 422014
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yanlan/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yanlan/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 217375
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yijian/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yijian/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 376634
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yijian/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yijian/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 299561
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yijian/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yijian/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 337014
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yijian/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yijian/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 195133
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yinglun/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yinglun/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 307996
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yinglun/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yinglun/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 327813
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yinglun/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yinglun/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 193367
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yinglun/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yinglun/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 197907
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yixiangfu/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yixiangfu/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 295238
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yixiangfu/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yixiangfu/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 457668
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yixiangfu/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yixiangfu/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 203280
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yixiangfu/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yixiangfu/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 181587
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yiya/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yiya/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 532147
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yiya/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yiya/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 437494
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yiya/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yiya/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 342743
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yiya/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yiya/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 198800
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yuanyin/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yuanyin/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 578565
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yuanyin/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yuanyin/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 344781
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yuanyin/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yuanyin/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 372991
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yuanyin/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yuanyin/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 212819
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yuechuan/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yuechuan/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 258678
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yuechuan/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yuechuan/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 205522
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yuechuan/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yuechuan/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 235494
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yuechuan/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yuechuan/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 193768
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yuegui/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yuegui/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 554729
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yuegui/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yuegui/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 299936
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yuegui/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yuegui/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 412933
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yuegui/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yuegui/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 206351
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yunlinfu/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yunlinfu/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 388922
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yunlinfu/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yunlinfu/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 481714
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yunlinfu/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yunlinfu/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 288565
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/yunlinfu/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/yunlinfu/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 201092
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/zhiya/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/zhiya/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 291196
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/zhiya/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/zhiya/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 311399
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/zhiya/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/zhiya/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 241668
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/zhiya/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/zhiya/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 185419
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/zhongya/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/zhongya/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 255641
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/zhongya/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/zhongya/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 271343
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/zhongya/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/zhongya/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 313412
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/zhongya/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/zhongya/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 196084
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/zhuyu/page-01.jpg",
+      "path": "assets/catalog/pdf-previews/k80/zhuyu/page-01.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 264386
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/zhuyu/page-02.jpg",
+      "path": "assets/catalog/pdf-previews/k80/zhuyu/page-02.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 167171
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/zhuyu/page-03.jpg",
+      "path": "assets/catalog/pdf-previews/k80/zhuyu/page-03.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 171934
+    },
+    {
+      "source": "assets/generated/pdf-previews/k80/zhuyu/page-04.jpg",
+      "path": "assets/catalog/pdf-previews/k80/zhuyu/page-04.jpg",
+      "width": 1273,
+      "height": 1800,
+      "bytes": 196214
+    },
+    {
+      "source": "assets/generated/series/d90/textures/d90-aige-clean-ai-v1.png",
+      "path": "assets/catalog/derived/d90/textures/d90-aige-clean-ai-v1.png",
+      "width": 1101,
+      "height": 1800,
+      "bytes": 1970165
+    },
+    {
+      "source": "assets/generated/series/d90/textures/d90-guanmin-clean-ai-v1.png",
+      "path": "assets/catalog/derived/d90/textures/d90-guanmin-clean-ai-v1.png",
+      "width": 927,
+      "height": 1800,
+      "bytes": 2477327
+    },
+    {
+      "source": "assets/generated/series/d90/textures/d90-jinqu-clean-ai-v1.png",
+      "path": "assets/catalog/derived/d90/textures/d90-jinqu-clean-ai-v1.png",
+      "width": 1101,
+      "height": 1800,
+      "bytes": 2373414
+    },
+    {
+      "source": "assets/generated/series/d90/textures/d90-shicui-clean-ai-v1.png",
+      "path": "assets/catalog/derived/d90/textures/d90-shicui-clean-ai-v1.png",
+      "width": 1121,
+      "height": 1800,
+      "bytes": 1904519
+    },
+    {
+      "source": "assets/generated/series/d90/textures/d90-shicui-clean-ai-v1.png",
+      "path": "assets/catalog/derived/d90/textures/d90-shicui-base-ai-v1.png",
+      "width": 725,
+      "height": 2170,
+      "bytes": 1358385,
+      "kind": "texture-base",
+      "treatment": "hardware-free-base"
+    },
+    {
+      "source": "assets/generated/series/d90/textures/d90-shirui-clean-ai-v1.png",
+      "path": "assets/catalog/derived/d90/textures/d90-shirui-clean-ai-v1.png",
+      "width": 1800,
+      "height": 1412,
+      "bytes": 2553964
+    },
+    {
+      "source": "assets/generated/series/d90/textures/d90-songge-clean-ai-v1.png",
+      "path": "assets/catalog/derived/d90/textures/d90-songge-clean-ai-v1.png",
+      "width": 1112,
+      "height": 1800,
+      "bytes": 1928606
+    },
+    {
+      "source": "assets/generated/series/k80/textures/k80-jiang-chuan-clean-ai-v1.png",
+      "path": "assets/catalog/derived/k80/textures/k80-jiang-chuan-clean-ai-v1.png",
+      "width": 1133,
+      "height": 1800,
+      "bytes": 2570109
+    },
+    {
+      "source": "assets/generated/series/k80/textures/k80-jiang-chuan.jpg",
+      "path": "assets/catalog/derived/k80/textures/k80-jiang-chuan.jpg",
+      "width": 1133,
+      "height": 1800,
+      "bytes": 452808
+    },
+    {
+      "source": "assets/generated/series/k80/textures/k80-jing-hong-clean-ai-v1.png",
+      "path": "assets/catalog/derived/k80/textures/k80-jing-hong-clean-ai-v1.png",
+      "width": 1154,
+      "height": 1800,
+      "bytes": 3823475
+    },
+    {
+      "source": "assets/generated/series/k80/textures/k80-jing-hong.jpg",
+      "path": "assets/catalog/derived/k80/textures/k80-jing-hong.jpg",
+      "width": 1154,
+      "height": 1800,
+      "bytes": 883110
+    },
+    {
+      "source": "assets/generated/series/k80/textures/k80-qing-ya-clean-ai-v1.png",
+      "path": "assets/catalog/derived/k80/textures/k80-qing-ya-clean-ai-v1.png",
+      "width": 775,
+      "height": 1800,
+      "bytes": 1525435
+    },
+    {
+      "source": "assets/generated/series/k80/textures/k80-qing-ya.jpg",
+      "path": "assets/catalog/derived/k80/textures/k80-qing-ya.jpg",
+      "width": 774,
+      "height": 1800,
+      "bytes": 136313
+    },
+    {
+      "source": "assets/generated/series/k80/textures/k80-ruo-jian-clean-ai-v1.png",
+      "path": "assets/catalog/derived/k80/textures/k80-ruo-jian-clean-ai-v1.png",
+      "width": 874,
+      "height": 1800,
+      "bytes": 1827190
+    },
+    {
+      "source": "assets/generated/series/k80/textures/k80-ruo-jian-clean-ai-v1.png",
+      "path": "assets/catalog/derived/k80/textures/k80-ruo-jian-design-ai-v1.png",
+      "width": 873,
+      "height": 1800,
+      "bytes": 1631760,
+      "kind": "texture-design",
+      "treatment": "hardware-free design map; orange integrated pull/light rebuilt as independent fitting"
+    },
+    {
+      "source": "assets/generated/series/k80/textures/k80-ruo-jian.jpg",
+      "path": "assets/catalog/derived/k80/textures/k80-ruo-jian.jpg",
+      "width": 874,
+      "height": 1800,
+      "bytes": 257494
+    },
+    {
+      "source": "assets/generated/series/k80/textures/k80-yuan-yin-clean-ai-v1.png",
+      "path": "assets/catalog/derived/k80/textures/k80-yuan-yin-clean-ai-v1.png",
+      "width": 900,
+      "height": 1800,
+      "bytes": 3016533
+    },
+    {
+      "source": "assets/catalog/derived/k80/textures/k80-yuan-yin-base-ai-v2.png",
+      "path": "assets/catalog/derived/k80/textures/k80-yuan-yin-base-ai-v2.png",
+      "width": 887,
+      "height": 1774,
+      "bytes": 2659686,
+      "kind": "texture-base"
+    },
+    {
+      "source": "assets/catalog/derived/k80/textures/k80-jiang-chuan-base-ai-v1.png",
+      "path": "assets/catalog/derived/k80/textures/k80-jiang-chuan-base-ai-v1.png",
+      "width": 1003,
+      "height": 1568,
+      "bytes": 1829154,
+      "kind": "texture-base"
+    },
+    {
+      "source": "assets/catalog/derived/k80/textures/k80-jing-hong-base-ai-v1.png",
+      "path": "assets/catalog/derived/k80/textures/k80-jing-hong-base-ai-v1.png",
+      "width": 1004,
+      "height": 1566,
+      "bytes": 3133791,
+      "kind": "texture-base"
+    },
+    {
+      "source": "assets/catalog/derived/k80/textures/k80-qing-ya-base-child-ai-v2.png",
+      "path": "assets/catalog/derived/k80/textures/k80-qing-ya-base-child-ai-v2.png",
+      "width": 264,
+      "height": 1911,
+      "bytes": 587941,
+      "kind": "texture-base"
+    },
+    {
+      "source": "assets/catalog/derived/k80/textures/k80-qing-ya-base-main-ai-v2.png",
+      "path": "assets/catalog/derived/k80/textures/k80-qing-ya-base-main-ai-v2.png",
+      "width": 560,
+      "height": 1911,
+      "bytes": 1155144,
+      "kind": "texture-base"
+    },
+    {
+      "source": "assets/generated/series/k80/textures/k80-qing-ya-clean-ai-v1.png",
+      "path": "assets/catalog/derived/k80/textures/k80-qing-ya-design-main-ai-v1.png",
+      "width": 560,
+      "height": 1911,
+      "bytes": 1192596,
+      "kind": "texture-design",
+      "treatment": "hardware-free design map; short gold pull rebuilt as independent fitting"
+    },
+    {
+      "source": "assets/catalog/derived/k80/door-skins/k80-qinghuafu-double-leaf.png",
+      "path": "assets/catalog/derived/k80/door-skins/k80-qinghuafu-double-leaf.png",
+      "width": 740,
+      "height": 1245,
+      "bytes": 1184858,
+      "kind": "door-skin"
+    },
+    {
+      "source": "assets/catalog/derived/k80/textures/k80-qing-hua-fu-base-ai-v1.png",
+      "path": "assets/catalog/derived/k80/textures/k80-qing-hua-fu-base-ai-v1.png",
+      "width": 967,
+      "height": 1627,
+      "bytes": 2428501,
+      "kind": "texture-base"
+    },
+    {
+      "source": "assets/generated/series/k80/textures/k80-yuan-yin.jpg",
+      "path": "assets/catalog/derived/k80/textures/k80-yuan-yin.jpg",
+      "width": 900,
+      "height": 1800,
+      "bytes": 689351
+    },
+    {
+      "source": "assets/source/hardware/locks/07型/07LM-Y-PLUS.png",
+      "path": "assets/catalog/hardware/locks/07/smart-lock-07lm-y-plus.png",
+      "width": 1055,
+      "height": 1800,
+      "bytes": 724918
+    },
+    {
+      "source": "assets/source/hardware/locks/07型/拉手07LM-Q1人脸款.png",
+      "path": "assets/catalog/hardware/locks/07/pull-handle-07lm-q1-face.png",
+      "width": 680,
+      "height": 1800,
+      "bytes": 275097
+    },
+    {
+      "source": "assets/source/hardware/locks/08、KFV型/KFV、08型室内执手参考图.jpg",
+      "path": "assets/catalog/hardware/locks/08-kfv/indoor-handle-kfv-reference.jpg",
+      "width": 1350,
+      "height": 1800,
+      "bytes": 358617
+    },
+    {
+      "source": "assets/source/hardware/locks/08、KFV型/YT82.png",
+      "path": "assets/catalog/hardware/locks/08-kfv/lock-yt82.png",
+      "width": 1800,
+      "height": 1800,
+      "bytes": 1883113
+    },
+    {
+      "source": "assets/source/hardware/locks/08、KFV型/YT83.png",
+      "path": "assets/catalog/hardware/locks/08-kfv/lock-yt83.png",
+      "width": 1449,
+      "height": 1800,
+      "bytes": 1384571
+    },
+    {
+      "source": "assets/source/hardware/locks/08、KFV型/YTR55H.jpeg",
+      "path": "assets/catalog/hardware/locks/08-kfv/lock-ytr55h-concealed.jpg",
+      "width": 769,
+      "height": 1800,
+      "bytes": 118849
+    },
+    {
+      "source": "assets/source/legacy/brand/collection-entry.jpg",
+      "path": "assets/catalog/brand/collection-entry.jpg",
+      "width": 1800,
+      "height": 1800,
+      "bytes": 374502
+    },
+    {
+      "source": "assets/source/legacy/brand/collection-system.jpg",
+      "path": "assets/catalog/brand/collection-system.jpg",
+      "width": 1800,
+      "height": 1800,
+      "bytes": 529188
+    },
+    {
+      "source": "assets/source/legacy/brand/collection-villa.jpg",
+      "path": "assets/catalog/brand/collection-villa.jpg",
+      "width": 1800,
+      "height": 1800,
+      "bytes": 591290
+    },
+    {
+      "source": "assets/source/legacy/brand/door-types.jpg",
+      "path": "assets/catalog/brand/door-types.jpg",
+      "width": 1800,
+      "height": 1012,
+      "bytes": 352828
+    },
+    {
+      "source": "assets/source/legacy/brand/hero-main.jpg",
+      "path": "assets/catalog/brand/hero-main.jpg",
+      "width": 1800,
+      "height": 774,
+      "bytes": 171441
+    },
+    {
+      "source": "assets/source/legacy/brand/store-hangzhou.jpg",
+      "path": "assets/catalog/brand/store-hangzhou.jpg",
+      "width": 1800,
+      "height": 1800,
+      "bytes": 182440
+    },
+    {
+      "source": "assets/source/legacy/k9/casing-arch-wood-v1.png",
+      "path": "assets/catalog/derived/legacy/casing-arch-wood-v1.png",
+      "width": 1174,
+      "height": 1800,
+      "bytes": 1245060
+    },
+    {
+      "source": "assets/source/legacy/k9/casing-double-rib-black-v1.png",
+      "path": "assets/catalog/derived/legacy/casing-double-rib-black-v1.png",
+      "width": 1229,
+      "height": 1800,
+      "bytes": 1103113
+    },
+    {
+      "source": "assets/source/legacy/k9/casing-mountain-black-v1.png",
+      "path": "assets/catalog/derived/legacy/casing-mountain-black-v1.png",
+      "width": 1157,
+      "height": 1800,
+      "bytes": 1104565
+    },
+    {
+      "source": "assets/source/legacy/k9/door-assembly-arch-wood-v1.png",
+      "path": "assets/catalog/derived/legacy/door-assembly-arch-wood-v1.png",
+      "width": 1174,
+      "height": 1800,
+      "bytes": 3321921
+    },
+    {
+      "source": "assets/source/legacy/k9/door-assembly-double-rib-v1.png",
+      "path": "assets/catalog/derived/legacy/door-assembly-double-rib-v1.png",
+      "width": 1229,
+      "height": 1800,
+      "bytes": 3586168
+    },
+    {
+      "source": "assets/source/legacy/k9/door-assembly-mountain-band-v1.png",
+      "path": "assets/catalog/derived/legacy/door-assembly-mountain-band-v1.png",
+      "width": 1160,
+      "height": 1800,
+      "bytes": 2779006
+    },
+    {
+      "source": "assets/source/legacy/k9/hardware-arch-pull-smartlock-v1.png",
+      "path": "assets/catalog/derived/legacy/hardware-arch-pull-smartlock-v1.png",
+      "width": 1176,
+      "height": 1800,
+      "bytes": 1387206
+    },
+    {
+      "source": "assets/source/legacy/k9/hardware-double-smartlock-v1.png",
+      "path": "assets/catalog/derived/legacy/hardware-double-smartlock-v1.png",
+      "width": 1800,
+      "height": 1440,
+      "bytes": 1490963
+    },
+    {
+      "source": "assets/source/legacy/k9/hardware-mountain-recessed-lock-v1.png",
+      "path": "assets/catalog/derived/legacy/hardware-mountain-recessed-lock-v1.png",
+      "width": 1800,
+      "height": 1112,
+      "bytes": 1263536
+    },
+    {
+      "source": "assets/source/legacy/k9/k9-door-surface-atlas-v1.png",
+      "path": "assets/catalog/derived/legacy/k9-door-surface-atlas-v1.png",
+      "width": 1200,
+      "height": 1800,
+      "bytes": 2123819
+    },
+    {
+      "source": "assets/source/legacy/k9/k9-material-0102ta-v1.png",
+      "path": "assets/catalog/derived/legacy/k9-material-0102ta-v1.png",
+      "width": 449,
+      "height": 1800,
+      "bytes": 965833
+    },
+    {
+      "source": "assets/source/legacy/k9/k9-material-0102ta-v2.png",
+      "path": "assets/catalog/derived/legacy/k9-material-0102ta-v2.png",
+      "width": 449,
+      "height": 1800,
+      "bytes": 401637
+    },
+    {
+      "source": "assets/source/legacy/k9/k9-material-0102tb-v1.png",
+      "path": "assets/catalog/derived/legacy/k9-material-0102tb-v1.png",
+      "width": 449,
+      "height": 1800,
+      "bytes": 1218357
+    },
+    {
+      "source": "assets/source/legacy/k9/k9-material-a32d-v1.png",
+      "path": "assets/catalog/derived/legacy/k9-material-a32d-v1.png",
+      "width": 452,
+      "height": 1800,
+      "bytes": 992486
+    },
+    {
+      "source": "assets/source/legacy/k9/k9-material-a32d-v2.png",
+      "path": "assets/catalog/derived/legacy/k9-material-a32d-v2.png",
+      "width": 452,
+      "height": 1800,
+      "bytes": 988304
+    },
+    {
+      "source": "assets/source/legacy/k9/k9-material-x201b-v1.png",
+      "path": "assets/catalog/derived/legacy/k9-material-x201b-v1.png",
+      "width": 449,
+      "height": 1800,
+      "bytes": 885242
+    },
+    {
+      "source": "assets/source/legacy/k9/real-door-arch-wood.jpg",
+      "path": "assets/catalog/derived/legacy/real-door-arch-wood.jpg",
+      "width": 1177,
+      "height": 1800,
+      "bytes": 612502
+    },
+    {
+      "source": "assets/source/legacy/k9/real-door-double-line.jpg",
+      "path": "assets/catalog/derived/legacy/real-door-double-line.jpg",
+      "width": 1231,
+      "height": 1800,
+      "bytes": 757347
+    },
+    {
+      "source": "assets/source/legacy/k9/real-door-mountain-band.jpg",
+      "path": "assets/catalog/derived/legacy/real-door-mountain-band.jpg",
+      "width": 1160,
+      "height": 1800,
+      "bytes": 577877
+    },
+    {
+      "source": "assets/source/legacy/k9/texture-arch-wood-full-v1.png",
+      "path": "assets/catalog/derived/legacy/texture-arch-wood-full-v1.png",
+      "width": 1181,
+      "height": 1800,
+      "bytes": 3645759
+    },
+    {
+      "source": "assets/source/legacy/k9/texture-arch-wood-full-v2.png",
+      "path": "assets/catalog/derived/legacy/texture-arch-wood-full-v2.png",
+      "width": 1168,
+      "height": 1800,
+      "bytes": 3628192
+    },
+    {
+      "source": "assets/source/legacy/k9/texture-arch-wood-large-v1.png",
+      "path": "assets/catalog/derived/legacy/texture-arch-wood-large-v1.png",
+      "width": 1165,
+      "height": 1800,
+      "bytes": 3406794
+    },
+    {
+      "source": "assets/source/legacy/k9/texture-arch-wood-v2.jpg",
+      "path": "assets/catalog/derived/legacy/texture-arch-wood-v2.jpg",
+      "width": 936,
+      "height": 1800,
+      "bytes": 546936
+    },
+    {
+      "source": "assets/source/legacy/k9/texture-arch-wood.jpg",
+      "path": "assets/catalog/derived/legacy/texture-arch-wood.jpg",
+      "width": 830,
+      "height": 1800,
+      "bytes": 407421
+    },
+    {
+      "source": "assets/source/legacy/k9/texture-double-rib-full-v1.png",
+      "path": "assets/catalog/derived/legacy/texture-double-rib-full-v1.png",
+      "width": 1230,
+      "height": 1800,
+      "bytes": 3559900
+    },
+    {
+      "source": "assets/source/legacy/k9/texture-double-rib-full-v2.png",
+      "path": "assets/catalog/derived/legacy/texture-double-rib-full-v2.png",
+      "width": 1218,
+      "height": 1800,
+      "bytes": 3622783
+    },
+    {
+      "source": "assets/source/legacy/k9/texture-double-rib-large-v1.png",
+      "path": "assets/catalog/derived/legacy/texture-double-rib-large-v1.png",
+      "width": 1217,
+      "height": 1800,
+      "bytes": 4025257
+    },
+    {
+      "source": "assets/source/legacy/k9/texture-double-rib.jpg",
+      "path": "assets/catalog/derived/legacy/texture-double-rib.jpg",
+      "width": 947,
+      "height": 1800,
+      "bytes": 593362
+    },
+    {
+      "source": "assets/source/legacy/k9/texture-mountain-full-v1.png",
+      "path": "assets/catalog/derived/legacy/texture-mountain-full-v1.png",
+      "width": 1159,
+      "height": 1800,
+      "bytes": 2866742
+    },
+    {
+      "source": "assets/source/legacy/k9/texture-mountain-full-v2.png",
+      "path": "assets/catalog/derived/legacy/texture-mountain-full-v2.png",
+      "width": 1145,
+      "height": 1800,
+      "bytes": 2821365
+    },
+    {
+      "source": "assets/source/legacy/k9/texture-mountain-large-v1.png",
+      "path": "assets/catalog/derived/legacy/texture-mountain-large-v1.png",
+      "width": 1146,
+      "height": 1800,
+      "bytes": 2484082
+    },
+    {
+      "source": "assets/source/legacy/k9/texture-mountain-v2.jpg",
+      "path": "assets/catalog/derived/legacy/texture-mountain-v2.jpg",
+      "width": 835,
+      "height": 1800,
+      "bytes": 412998
+    },
+    {
+      "source": "assets/source/legacy/k9/texture-mountain.jpg",
+      "path": "assets/catalog/derived/legacy/texture-mountain.jpg",
+      "width": 858,
+      "height": 1800,
+      "bytes": 283676
+    },
+    {
+      "source": "assets/source/legacy/k9/thumb-0102ta.jpg",
+      "path": "assets/catalog/derived/legacy/thumb-0102ta.jpg",
+      "width": 1800,
+      "height": 1800,
+      "bytes": 380926
+    },
+    {
+      "source": "assets/source/legacy/k9/thumb-0102tb.jpg",
+      "path": "assets/catalog/derived/legacy/thumb-0102tb.jpg",
+      "width": 1800,
+      "height": 1800,
+      "bytes": 240755
+    },
+    {
+      "source": "assets/source/legacy/k9/thumb-a32d.jpg",
+      "path": "assets/catalog/derived/legacy/thumb-a32d.jpg",
+      "width": 1800,
+      "height": 1800,
+      "bytes": 374502
+    },
+    {
+      "source": "assets/source/legacy/k9/thumb-x201b.jpg",
+      "path": "assets/catalog/derived/legacy/thumb-x201b.jpg",
+      "width": 1800,
+      "height": 1800,
+      "bytes": 329703
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-世瑞_颜色：花絮黄铜11#／泰蓝炽彩8#/【产品照】D90-世瑞_颜色：花絮黄铜11#／泰蓝炽彩8#_照片编号：B0013024.jpg",
+      "path": "assets/catalog/d90/products/shirui/detail-b0013024.jpg",
+      "width": 1350,
+      "height": 1800,
+      "bytes": 372348
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-世瑞_颜色：花絮黄铜11#／泰蓝炽彩8#/【产品照】D90-世瑞_颜色：花絮黄铜11#／泰蓝炽彩8#_照片编号：B0013027 .jpg",
+      "path": "assets/catalog/d90/products/shirui/detail-b0013027.jpg",
+      "width": 1341,
+      "height": 1800,
+      "bytes": 496561
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-世瑞_颜色：花絮黄铜11#／泰蓝炽彩8#/【产品照】D90-世瑞_颜色：花絮黄铜11#／泰蓝炽彩8#_照片编号：B0013033.jpg",
+      "path": "assets/catalog/d90/products/shirui/detail-b0013033.jpg",
+      "width": 1350,
+      "height": 1800,
+      "bytes": 370208
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-世瑞_颜色：花絮黄铜11#／泰蓝炽彩8#/【产品照】D90-世瑞_颜色：花絮黄铜11#／泰蓝炽彩8#_照片编号：B0019720_正视图.jpg",
+      "path": "assets/catalog/d90/products/shirui/front-b0019720.jpg",
+      "width": 1800,
+      "height": 1407,
+      "bytes": 316324
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-世瑞_颜色：花絮黄铜11#／泰蓝炽彩8#/【产品照】D90-世瑞_颜色：花絮黄铜11#／泰蓝炽彩8#_照片编号：B0019726.jpg",
+      "path": "assets/catalog/d90/products/shirui/detail-b0019726.jpg",
+      "width": 1514,
+      "height": 1800,
+      "bytes": 317539
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-世瑞_颜色：花絮黄铜11#／泰蓝炽彩8#/【产品照】D90-世瑞_颜色：花絮黄铜11#／泰蓝炽彩8#_照片编号：B0019732.jpg",
+      "path": "assets/catalog/d90/products/shirui/detail-b0019732.jpg",
+      "width": 1349,
+      "height": 1800,
+      "bytes": 283548
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-世瑞_颜色：花絮黄铜11#／泰蓝炽彩8#/【产品照】D90-世瑞_颜色：花絮黄铜11#／泰蓝炽彩8#_照片编号：B0019735-0.jpg",
+      "path": "assets/catalog/d90/products/shirui/detail-b0019735-0.jpg",
+      "width": 1349,
+      "height": 1800,
+      "bytes": 587325
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-世瑞_颜色：花絮黄铜11#／泰蓝炽彩8#/【产品照】D90-世瑞_颜色：花絮黄铜11#／泰蓝炽彩8#_照片编号：B0019735.jpg",
+      "path": "assets/catalog/d90/products/shirui/detail-b0019735.jpg",
+      "width": 1349,
+      "height": 1800,
+      "bytes": 357088
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-冠冕_颜色：花絮黄铜13#/【产品照】D90-冠冕_颜色：花絮黄铜13#_照片编号：B0020342_正视图.jpg",
+      "path": "assets/catalog/d90/products/guanmin/front-b0020342.jpg",
+      "width": 928,
+      "height": 1800,
+      "bytes": 510616
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-冠冕_颜色：花絮黄铜13#/【产品照】D90-冠冕_颜色：花絮黄铜13#_照片编号：B0020348.jpg",
+      "path": "assets/catalog/d90/products/guanmin/detail-b0020348.jpg",
+      "width": 1355,
+      "height": 1800,
+      "bytes": 478988
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-冠冕_颜色：花絮黄铜13#/【产品照】D90-冠冕_颜色：花絮黄铜13#_照片编号：B0020366.jpg",
+      "path": "assets/catalog/d90/products/guanmin/detail-b0020366.jpg",
+      "width": 932,
+      "height": 1800,
+      "bytes": 344110
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-冠冕_颜色：花絮黄铜13#/【产品照】D90-冠冕_颜色：花絮黄铜13#_照片编号：B0020369.jpg",
+      "path": "assets/catalog/d90/products/guanmin/detail-b0020369.jpg",
+      "width": 1349,
+      "height": 1800,
+      "bytes": 436875
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-冠冕_颜色：花絮黄铜13#/【产品照】D90-冠冕_颜色：花絮黄铜13#_照片编号：B0020376.jpg",
+      "path": "assets/catalog/d90/products/guanmin/detail-b0020376.jpg",
+      "width": 1349,
+      "height": 1800,
+      "bytes": 489346
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-拾翠_颜色：雅黑/【产品照】D90-拾翠_颜色：雅黑_照片编号：B0020010-1.jpg",
+      "path": "assets/catalog/d90/products/shicui/detail-b0020010-1.jpg",
+      "width": 1122,
+      "height": 1800,
+      "bytes": 218026
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-拾翠_颜色：雅黑/【产品照】D90-拾翠_颜色：雅黑_照片编号：B0020010_正视图.jpg",
+      "path": "assets/catalog/d90/products/shicui/front-b0020010.jpg",
+      "width": 1122,
+      "height": 1800,
+      "bytes": 219208
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-拾翠_颜色：雅黑/【产品照】D90-拾翠_颜色：雅黑_照片编号：B0020017.jpg",
+      "path": "assets/catalog/d90/products/shicui/detail-b0020017.jpg",
+      "width": 1335,
+      "height": 1800,
+      "bytes": 245413
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-拾翠_颜色：雅黑/【产品照】D90-拾翠_颜色：雅黑_照片编号：B0020025.jpg",
+      "path": "assets/catalog/d90/products/shicui/detail-b0020025.jpg",
+      "width": 1800,
+      "height": 1384,
+      "bytes": 318389
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-爱格_颜色：炫光黑/【产品照】D90-爱格_颜色：炫光黑_照片编号：B0019624_正视图.jpg",
+      "path": "assets/catalog/d90/products/aige/front-b0019624.jpg",
+      "width": 1100,
+      "height": 1800,
+      "bytes": 266232
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-爱格_颜色：炫光黑/【产品照】D90-爱格_颜色：炫光黑_照片编号：B0019628.jpg",
+      "path": "assets/catalog/d90/products/aige/detail-b0019628.jpg",
+      "width": 1349,
+      "height": 1800,
+      "bytes": 282076
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-爱格_颜色：炫光黑/【产品照】D90-爱格_颜色：炫光黑_照片编号：B0019646_铰链.jpg",
+      "path": "assets/catalog/d90/products/aige/hardware-hinge-b0019646.jpg",
+      "width": 1349,
+      "height": 1800,
+      "bytes": 292636
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-爱格_颜色：炫光黑/【产品照】D90-爱格_颜色：炫光黑_照片编号：B0019652.jpg",
+      "path": "assets/catalog/d90/products/aige/detail-b0019652.jpg",
+      "width": 1349,
+      "height": 1800,
+      "bytes": 379028
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-爱格_颜色：炫光黑/【产品照】D90-爱格_颜色：炫光黑_照片编号：B0019658.jpg",
+      "path": "assets/catalog/d90/products/aige/detail-b0019658.jpg",
+      "width": 1800,
+      "height": 1361,
+      "bytes": 552149
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-金曲_颜色：宝马灰（门框）/【产品照】D90-金曲_颜色：宝马灰（门框）_照片编号：B0012605-0 .jpg",
+      "path": "assets/catalog/d90/products/jinqu/detail-b0012605-0.jpg",
+      "width": 1101,
+      "height": 1800,
+      "bytes": 280233
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-金曲_颜色：宝马灰（门框）/【产品照】D90-金曲_颜色：宝马灰（门框）_照片编号：B0012605_正视图 .jpg",
+      "path": "assets/catalog/d90/products/jinqu/front-b0012605.jpg",
+      "width": 1101,
+      "height": 1800,
+      "bytes": 280875
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-金曲_颜色：宝马灰（门框）/【产品照】D90-金曲_颜色：宝马灰（门框）_照片编号：B0012607_外装拉手.jpg",
+      "path": "assets/catalog/d90/products/jinqu/hardware-pull-b0012607.jpg",
+      "width": 1350,
+      "height": 1800,
+      "bytes": 379506
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-金曲_颜色：宝马灰（门框）/【产品照】D90-金曲_颜色：宝马灰（门框）_照片编号：B0012614-0.jpg",
+      "path": "assets/catalog/d90/products/jinqu/detail-b0012614-0.jpg",
+      "width": 963,
+      "height": 1800,
+      "bytes": 253953
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-金曲_颜色：宝马灰（门框）/【产品照】D90-金曲_颜色：宝马灰（门框）_照片编号：B0012614.jpg",
+      "path": "assets/catalog/d90/products/jinqu/detail-b0012614.jpg",
+      "width": 963,
+      "height": 1800,
+      "bytes": 257054
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-金曲_颜色：宝马灰（门框）/【产品照】D90-金曲_颜色：宝马灰（门框）_照片编号：B0012618.jpg",
+      "path": "assets/catalog/d90/products/jinqu/detail-b0012618.jpg",
+      "width": 1350,
+      "height": 1800,
+      "bytes": 346295
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-金曲_颜色：宝马灰（门框）/【产品照】D90-金曲_颜色：宝马灰（门框）_照片编号：B0012623.jpg",
+      "path": "assets/catalog/d90/products/jinqu/detail-b0012623.jpg",
+      "width": 1350,
+      "height": 1800,
+      "bytes": 290148
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-金曲_颜色：宝马灰（门框）/【产品照】D90-金曲_颜色：宝马灰（门框）_照片编号：B0012624.jpg",
+      "path": "assets/catalog/d90/products/jinqu/detail-b0012624.jpg",
+      "width": 1350,
+      "height": 1800,
+      "bytes": 307127
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-金曲_颜色：宝马灰（门框）/【产品照】D90-金曲_颜色：宝马灰（门框）_照片编号：B0012626_执手.jpg",
+      "path": "assets/catalog/d90/products/jinqu/hardware-handle-b0012626.jpg",
+      "width": 1350,
+      "height": 1800,
+      "bytes": 570113
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-金曲_颜色：宝马灰（门框）/【产品照】D90-金曲_颜色：宝马灰（门框）_照片编号：B0012631_背板.jpg",
+      "path": "assets/catalog/d90/products/jinqu/hardware-backplate-b0012631.jpg",
+      "width": 1350,
+      "height": 1800,
+      "bytes": 388776
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-颂歌_颜色：炫光黑/【产品照】D90-颂歌_颜色：炫光黑_照片编号：B0020126-1.jpg",
+      "path": "assets/catalog/d90/products/songge/detail-b0020126-1.jpg",
+      "width": 1113,
+      "height": 1800,
+      "bytes": 211212
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-颂歌_颜色：炫光黑/【产品照】D90-颂歌_颜色：炫光黑_照片编号：B0020126_正视图.jpg",
+      "path": "assets/catalog/d90/products/songge/front-b0020126.jpg",
+      "width": 1113,
+      "height": 1800,
+      "bytes": 212897
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-颂歌_颜色：炫光黑/【产品照】D90-颂歌_颜色：炫光黑_照片编号：B0020138.jpg",
+      "path": "assets/catalog/d90/products/songge/detail-b0020138.jpg",
+      "width": 1349,
+      "height": 1800,
+      "bytes": 212241
+    },
+    {
+      "source": "assets/source/series/d90/products/【产品照】D90-颂歌_颜色：炫光黑/【产品照】D90-颂歌_颜色：炫光黑_照片编号：B0020140.jpg",
+      "path": "assets/catalog/d90/products/songge/detail-b0020140.jpg",
+      "width": 1800,
+      "height": 1349,
+      "bytes": 199633
+    },
+    {
+      "source": "assets/source/series/k80/products/zhengrong/p40型门套.jpg",
+      "path": "assets/catalog/k80/products/zhengrong/casing-p40.jpg",
+      "width": 1800,
+      "height": 1800,
+      "bytes": 91514
+    },
+    {
+      "source": "assets/source/series/k80/products/zhengrong/wl3k型门套.jpg",
+      "path": "assets/catalog/k80/products/zhengrong/casing-wl3k.jpg",
+      "width": 1800,
+      "height": 1800,
+      "bytes": 80329
+    },
+    {
+      "source": "assets/source/series/k80/products/zhengrong/z型门套.jpg",
+      "path": "assets/catalog/k80/products/zhengrong/casing-z.jpg",
+      "width": 1800,
+      "height": 1800,
+      "bytes": 100143
+    },
+    {
+      "source": "assets/source/series/k80/products/zhengrong/把手.jpg",
+      "path": "assets/catalog/k80/products/zhengrong/hardware-handle-asset.jpg",
+      "width": 1800,
+      "height": 1800,
+      "bytes": 59245
+    },
+    {
+      "source": "assets/source/series/k80/products/zhengrong/雅帝峥嵘加高假气窗.jpg",
+      "path": "assets/catalog/k80/products/zhengrong/transom-asset.jpg",
+      "width": 1800,
+      "height": 1800,
+      "bytes": 239701
+    },
+    {
+      "source": "assets/source/series/k80/products/zhengrong/雅帝峥嵘半幅纹理-深灰色.jpg",
+      "path": "assets/catalog/k80/products/zhengrong/texture-asset.jpg",
+      "width": 660,
+      "height": 1800,
+      "bytes": 475818
+    },
+    {
+      "source": "assets/source/series/k80/products/zhengrong/雅帝峥嵘半幅纹理-米灰色.jpg",
+      "path": "assets/catalog/k80/products/zhengrong/texture-asset-2.jpg",
+      "width": 660,
+      "height": 1800,
+      "bytes": 486714
+    },
+    {
+      "source": "assets/source/series/k80/products/zhengrong/雅帝峥嵘半幅纹理.jpg",
+      "path": "assets/catalog/k80/products/zhengrong/texture-asset-3.jpg",
+      "width": 660,
+      "height": 1800,
+      "bytes": 463589
+    },
+    {
+      "source": "assets/source/series/k80/products/zhengrong/雅帝峥嵘单门.jpg",
+      "path": "assets/catalog/k80/products/zhengrong/door-single-asset.jpg",
+      "width": 1800,
+      "height": 1800,
+      "bytes": 242067
+    },
+    {
+      "source": "assets/source/series/k80/products/zhengrong/雅帝峥嵘单门加高气窗.jpg",
+      "path": "assets/catalog/k80/products/zhengrong/transom-asset-2.jpg",
+      "width": 1800,
+      "height": 1800,
+      "bytes": 270207
+    },
+    {
+      "source": "assets/source/series/k80/products/zhengrong/雅帝峥嵘子母门.jpg",
+      "path": "assets/catalog/k80/products/zhengrong/door-mother-asset.jpg",
+      "width": 1800,
+      "height": 1800,
+      "bytes": 330626
+    },
+    {
+      "source": "assets/source/series/k80/products/zhengrong/雅帝峥嵘子母门加高气窗.jpg",
+      "path": "assets/catalog/k80/products/zhengrong/transom-asset-3.jpg",
+      "width": 1800,
+      "height": 1800,
+      "bytes": 348456
+    },
+    {
+      "source": "assets/source/series/k80/products/zhengrong/雅帝峥嵘实物照片.jpg",
+      "path": "assets/catalog/k80/products/zhengrong/product-photo-asset.jpg",
+      "width": 1050,
+      "height": 1800,
+      "bytes": 727926
+    },
+    {
+      "source": "assets/source/series/k80/products/zhengrong/雅帝峥嵘对开门.jpg",
+      "path": "assets/catalog/k80/products/zhengrong/door-double-asset.jpg",
+      "width": 1800,
+      "height": 1800,
+      "bytes": 395707
+    },
+    {
+      "source": "assets/source/series/k80/products/zhengrong/雅帝峥嵘对开门加高气窗.jpg",
+      "path": "assets/catalog/k80/products/zhengrong/transom-asset-4.jpg",
+      "width": 1800,
+      "height": 1800,
+      "bytes": 421846
+    },
+    {
+      "source": "assets/source/series/k80/products/zhengrong/雅帝峥嵘纹理-深灰色.jpg",
+      "path": "assets/catalog/k80/products/zhengrong/texture-asset-4.jpg",
+      "width": 1320,
+      "height": 1800,
+      "bytes": 960287
+    },
+    {
+      "source": "assets/source/series/k80/products/zhengrong/雅帝峥嵘纹理-米灰色.jpg",
+      "path": "assets/catalog/k80/products/zhengrong/texture-asset-5.jpg",
+      "width": 1320,
+      "height": 1800,
+      "bytes": 970484
+    },
+    {
+      "source": "assets/source/series/k80/products/zhengrong/雅帝峥嵘纹理.jpg",
+      "path": "assets/catalog/k80/products/zhengrong/texture-asset-6.jpg",
+      "width": 1320,
+      "height": 1800,
+      "bytes": 935055
+    },
+    {
+      "source": "assets/source/series/k80/products/zhengrong/雅帝峥嵘饰面.jpg",
+      "path": "assets/catalog/k80/products/zhengrong/finish-asset.jpg",
+      "width": 1800,
+      "height": 1800,
+      "bytes": 579750
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝圆隐_颜色：花絮深古铜1#∕花絮银灰1#/【产品照】K80AL-雅帝圆隐_颜色：花絮深古铜1#∕花絮银灰1#_照片编号：B0020027-1.jpg",
+      "path": "assets/catalog/k80/products/yuanyin/detail-b0020027-1.jpg",
+      "width": 936,
+      "height": 1800,
+      "bytes": 619551
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝圆隐_颜色：花絮深古铜1#∕花絮银灰1#/【产品照】K80AL-雅帝圆隐_颜色：花絮深古铜1#∕花絮银灰1#_照片编号：B0020027_正视图.jpg",
+      "path": "assets/catalog/k80/products/yuanyin/front-b0020027.jpg",
+      "width": 936,
+      "height": 1800,
+      "bytes": 620747
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝圆隐_颜色：花絮深古铜1#∕花絮银灰1#/【产品照】K80AL-雅帝圆隐_颜色：花絮深古铜1#∕花絮银灰1#_照片编号：B0020034.jpg",
+      "path": "assets/catalog/k80/products/yuanyin/detail-b0020034.jpg",
+      "width": 1349,
+      "height": 1800,
+      "bytes": 761889
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝圆隐_颜色：花絮深古铜1#∕花絮银灰1#/【产品照】K80AL-雅帝圆隐_颜色：花絮深古铜1#∕花絮银灰1#_照片编号：B0020037.jpg",
+      "path": "assets/catalog/k80/products/yuanyin/detail-b0020037.jpg",
+      "width": 1284,
+      "height": 1800,
+      "bytes": 644331
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝圆隐_颜色：花絮深古铜1#∕花絮银灰1#/【产品照】K80AL-雅帝圆隐_颜色：花絮深古铜1#∕花絮银灰1#_照片编号：B0020053.jpg",
+      "path": "assets/catalog/k80/products/yuanyin/detail-b0020053.jpg",
+      "width": 1349,
+      "height": 1800,
+      "bytes": 891197
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝江川赋_颜色：花絮青古铜4#/【产品照】K80AL-雅帝江川赋_颜色：花絮青古铜4#_照片编号：B0003064-0.jpg",
+      "path": "assets/catalog/k80/products/jiangchuan/detail-b0003064-0.jpg",
+      "width": 1154,
+      "height": 1800,
+      "bytes": 545904
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝江川赋_颜色：花絮青古铜4#/【产品照】K80AL-雅帝江川赋_颜色：花絮青古铜4#_照片编号：B0003064-1.jpg",
+      "path": "assets/catalog/k80/products/jiangchuan/detail-b0003064-1.jpg",
+      "width": 1360,
+      "height": 1800,
+      "bytes": 727064
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝江川赋_颜色：花絮青古铜4#/【产品照】K80AL-雅帝江川赋_颜色：花絮青古铜4#_照片编号：B0003064_正视图.jpg",
+      "path": "assets/catalog/k80/products/jiangchuan/front-b0003064.jpg",
+      "width": 1154,
+      "height": 1800,
+      "bytes": 546712
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝江川赋_颜色：花絮青古铜4#/【产品照】K80AL-雅帝江川赋_颜色：花絮青古铜4#_照片编号：B0003069.jpg",
+      "path": "assets/catalog/k80/products/jiangchuan/detail-b0003069.jpg",
+      "width": 1391,
+      "height": 1800,
+      "bytes": 1088585
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝江川赋_颜色：花絮青古铜4#/【产品照】K80AL-雅帝江川赋_颜色：花絮青古铜4#_照片编号：B0003073.jpg",
+      "path": "assets/catalog/k80/products/jiangchuan/detail-b0003073.jpg",
+      "width": 1350,
+      "height": 1800,
+      "bytes": 810619
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝江川赋_颜色：花絮青古铜4#/【产品照】K80AL-雅帝江川赋_颜色：花絮青古铜4#_照片编号：B0003075-0.jpg",
+      "path": "assets/catalog/k80/products/jiangchuan/detail-b0003075-0.jpg",
+      "width": 927,
+      "height": 1800,
+      "bytes": 447876
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝江川赋_颜色：花絮青古铜4#/【产品照】K80AL-雅帝江川赋_颜色：花絮青古铜4#_照片编号：B0003075.jpg",
+      "path": "assets/catalog/k80/products/jiangchuan/detail-b0003075.jpg",
+      "width": 927,
+      "height": 1800,
+      "bytes": 449572
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝江川赋_颜色：花絮青古铜4#/【产品照】K80AL-雅帝江川赋_颜色：花絮青古铜4#_照片编号：B0003076.jpg",
+      "path": "assets/catalog/k80/products/jiangchuan/detail-b0003076.jpg",
+      "width": 1350,
+      "height": 1800,
+      "bytes": 955901
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝江川赋_颜色：花絮青古铜4#/【产品照】K80AL-雅帝江川赋_颜色：花絮青古铜4#_照片编号：B0003078.jpg",
+      "path": "assets/catalog/k80/products/jiangchuan/detail-b0003078.jpg",
+      "width": 1350,
+      "height": 1800,
+      "bytes": 447138
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝江川赋_颜色：花絮青古铜4#/【产品照】K80AL-雅帝江川赋_颜色：花絮青古铜4#_照片编号：B0003082.jpg",
+      "path": "assets/catalog/k80/products/jiangchuan/detail-b0003082.jpg",
+      "width": 1350,
+      "height": 1800,
+      "bytes": 404820
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝江川赋_颜色：花絮青古铜4#/【产品照】K80AL-雅帝江川赋_颜色：花絮青古铜4#_照片编号：B0003084.jpg",
+      "path": "assets/catalog/k80/products/jiangchuan/detail-b0003084.jpg",
+      "width": 1144,
+      "height": 1800,
+      "bytes": 203012
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝江川赋_颜色：花絮青古铜4#/【产品照】K80AL-雅帝江川赋_颜色：花絮青古铜4#_照片编号：B0003087.jpg",
+      "path": "assets/catalog/k80/products/jiangchuan/detail-b0003087.jpg",
+      "width": 1350,
+      "height": 1800,
+      "bytes": 358617
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝清雅/【产品照】K80AL-雅帝清雅_照片编号：B0003354-0_正视图.jpg",
+      "path": "assets/catalog/k80/products/qingya/front-b0003354-0.jpg",
+      "width": 1310,
+      "height": 1800,
+      "bytes": 242367
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝清雅/【产品照】K80AL-雅帝清雅_照片编号：B0003354.jpg",
+      "path": "assets/catalog/k80/products/qingya/detail-b0003354.jpg",
+      "width": 1310,
+      "height": 1800,
+      "bytes": 242810
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝清雅/【产品照】K80AL-雅帝清雅_照片编号：B0003357.jpg",
+      "path": "assets/catalog/k80/products/qingya/detail-b0003357.jpg",
+      "width": 1215,
+      "height": 1800,
+      "bytes": 229028
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝清雅/【产品照】K80AL-雅帝清雅_照片编号：B0003358.jpg",
+      "path": "assets/catalog/k80/products/qingya/detail-b0003358.jpg",
+      "width": 1350,
+      "height": 1800,
+      "bytes": 257762
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝清雅/【产品照】K80AL-雅帝清雅_照片编号：B0003359-0.jpg",
+      "path": "assets/catalog/k80/products/qingya/detail-b0003359-0.jpg",
+      "width": 933,
+      "height": 1800,
+      "bytes": 183057
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝清雅/【产品照】K80AL-雅帝清雅_照片编号：B0003359.jpg",
+      "path": "assets/catalog/k80/products/qingya/detail-b0003359.jpg",
+      "width": 933,
+      "height": 1800,
+      "bytes": 181919
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝清雅/【产品照】K80AL-雅帝清雅_照片编号：B0003360.jpg",
+      "path": "assets/catalog/k80/products/qingya/detail-b0003360.jpg",
+      "width": 1138,
+      "height": 1800,
+      "bytes": 156452
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝清雅/【产品照】K80AL-雅帝清雅_照片编号：B0003366.jpg",
+      "path": "assets/catalog/k80/products/qingya/detail-b0003366.jpg",
+      "width": 1140,
+      "height": 1800,
+      "bytes": 231963
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝清雅/【产品照】K80AL-雅帝清雅_照片编号：B0003368.jpg",
+      "path": "assets/catalog/k80/products/qingya/detail-b0003368.jpg",
+      "width": 1329,
+      "height": 1800,
+      "bytes": 302885
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝若简_颜色：影木1#/【产品照】K80AL-雅帝若简_颜色：影木1#_照片编号：B0013106.jpg",
+      "path": "assets/catalog/k80/products/ruojian/detail-b0013106.jpg",
+      "width": 1350,
+      "height": 1800,
+      "bytes": 308859
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝若简_颜色：影木1#/【产品照】K80AL-雅帝若简_颜色：影木1#_照片编号：B0013107.jpg",
+      "path": "assets/catalog/k80/products/ruojian/detail-b0013107.jpg",
+      "width": 1285,
+      "height": 1800,
+      "bytes": 387411
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝若简_颜色：影木1#/【产品照】K80AL-雅帝若简_颜色：影木1#_照片编号：B0013112.jpg",
+      "path": "assets/catalog/k80/products/ruojian/detail-b0013112.jpg",
+      "width": 1350,
+      "height": 1800,
+      "bytes": 260858
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝若简_颜色：影木1#/【产品照】K80AL-雅帝若简_颜色：影木1#_照片编号：B0013113.jpg",
+      "path": "assets/catalog/k80/products/ruojian/detail-b0013113.jpg",
+      "width": 1350,
+      "height": 1800,
+      "bytes": 262058
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝若简_颜色：影木1#/【产品照】K80AL-雅帝若简_颜色：影木1#_照片编号：B0019857_正视图.jpg",
+      "path": "assets/catalog/k80/products/ruojian/front-b0019857.jpg",
+      "width": 936,
+      "height": 1800,
+      "bytes": 297227
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝若简_颜色：影木1#/【产品照】K80AL-雅帝若简_颜色：影木1#_照片编号：B0019862.jpg",
+      "path": "assets/catalog/k80/products/ruojian/detail-b0019862.jpg",
+      "width": 1800,
+      "height": 1349,
+      "bytes": 545057
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝若简_颜色：影木1#/【产品照】K80AL-雅帝若简_颜色：影木1#_照片编号：B0019863.jpg",
+      "path": "assets/catalog/k80/products/ruojian/detail-b0019863.jpg",
+      "width": 1341,
+      "height": 1800,
+      "bytes": 368658
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝荆虹赋_颜色：花絮青古铜3#/【产品照】K80AL-雅帝荆虹赋_颜色：花絮青古铜3#_照片编号：B0012993-0.jpg",
+      "path": "assets/catalog/k80/products/jinghong/detail-b0012993-0.jpg",
+      "width": 1161,
+      "height": 1800,
+      "bytes": 1029825
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝荆虹赋_颜色：花絮青古铜3#/【产品照】K80AL-雅帝荆虹赋_颜色：花絮青古铜3#_照片编号：B0012993_正视图.jpg",
+      "path": "assets/catalog/k80/products/jinghong/front-b0012993.jpg",
+      "width": 1161,
+      "height": 1800,
+      "bytes": 1030726
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝荆虹赋_颜色：花絮青古铜3#/【产品照】K80AL-雅帝荆虹赋_颜色：花絮青古铜3#_照片编号：B0012997.jpg",
+      "path": "assets/catalog/k80/products/jinghong/detail-b0012997.jpg",
+      "width": 1350,
+      "height": 1800,
+      "bytes": 1443560
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝荆虹赋_颜色：花絮青古铜3#/【产品照】K80AL-雅帝荆虹赋_颜色：花絮青古铜3#_照片编号：B0013001-0.jpg",
+      "path": "assets/catalog/k80/products/jinghong/detail-b0013001-0.jpg",
+      "width": 853,
+      "height": 1800,
+      "bytes": 586884
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝荆虹赋_颜色：花絮青古铜3#/【产品照】K80AL-雅帝荆虹赋_颜色：花絮青古铜3#_照片编号：B0013001.jpg",
+      "path": "assets/catalog/k80/products/jinghong/detail-b0013001.jpg",
+      "width": 853,
+      "height": 1800,
+      "bytes": 588600
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝荆虹赋_颜色：花絮青古铜3#/【产品照】K80AL-雅帝荆虹赋_颜色：花絮青古铜3#_照片编号：B0013003.jpg",
+      "path": "assets/catalog/k80/products/jinghong/detail-b0013003.jpg",
+      "width": 1350,
+      "height": 1800,
+      "bytes": 1232971
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝荆虹赋_颜色：花絮青古铜3#/【产品照】K80AL-雅帝荆虹赋_颜色：花絮青古铜3#_照片编号：B0013005.jpg",
+      "path": "assets/catalog/k80/products/jinghong/detail-b0013005.jpg",
+      "width": 1350,
+      "height": 1800,
+      "bytes": 498648
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝荆虹赋_颜色：花絮青古铜3#/【产品照】K80AL-雅帝荆虹赋_颜色：花絮青古铜3#_照片编号：B0013008.jpg",
+      "path": "assets/catalog/k80/products/jinghong/detail-b0013008.jpg",
+      "width": 1350,
+      "height": 1800,
+      "bytes": 443087
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝荆虹赋_颜色：花絮青古铜3#/【产品照】K80AL-雅帝荆虹赋_颜色：花絮青古铜3#_照片编号：B0013014.jpg",
+      "path": "assets/catalog/k80/products/jinghong/detail-b0013014.jpg",
+      "width": 1350,
+      "height": 1800,
+      "bytes": 371561
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝荆虹赋_颜色：花絮青古铜3#/【产品照】K80AL-雅帝荆虹赋_颜色：花絮青古铜3#_照片编号：B0013021.jpg",
+      "path": "assets/catalog/k80/products/jinghong/detail-b0013021.jpg",
+      "width": 1350,
+      "height": 1800,
+      "bytes": 446045
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝荆虹赋_颜色：花絮青古铜3#/【产品照】K80AL-雅帝荆虹赋_颜色：花絮青古铜3#_照片编号：B0013024.jpg",
+      "path": "assets/catalog/k80/products/jinghong/detail-b0013024.jpg",
+      "width": 1350,
+      "height": 1800,
+      "bytes": 372348
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝荆虹赋_颜色：花絮青古铜3#/【产品照】K80AL-雅帝荆虹赋_颜色：花絮青古铜3#_照片编号：B0013027 .jpg",
+      "path": "assets/catalog/k80/products/jinghong/detail-b0013027.jpg",
+      "width": 1341,
+      "height": 1800,
+      "bytes": 496561
+    },
+    {
+      "source": "assets/source/series/k80/products/【产品照】K80AL-雅帝荆虹赋_颜色：花絮青古铜3#/【产品照】K80AL-雅帝荆虹赋_颜色：花絮青古铜3#_照片编号：B0013033.jpg",
+      "path": "assets/catalog/k80/products/jinghong/detail-b0013033.jpg",
+      "width": 1350,
+      "height": 1800,
+      "bytes": 370208
+    },
+    {
+      "source": "assets/generated/series/k80/textures/k80-ruo-jian-clean-ai-v1.png",
+      "path": "assets/catalog/derived/k80/door-skins/k80-ruojian-double-leaf.png",
+      "width": 437,
+      "height": 1800,
+      "bytes": 1028007,
+      "kind": "door-skin"
+    },
+    {
+      "source": "assets/generated/series/k80/textures/k80-yuan-yin-clean-ai-v1.png",
+      "path": "assets/catalog/derived/k80/door-skins/k80-yuanyin-double-leaf.png",
+      "width": 444,
+      "height": 1774,
+      "bytes": 1562670,
+      "kind": "door-skin"
+    },
+    {
+      "source": "assets/generated/series/k80/textures/k80-jiang-chuan-clean-ai-v1.png",
+      "path": "assets/catalog/derived/k80/door-skins/k80-jiangchuan-double-leaf.png",
+      "width": 498,
+      "height": 1581,
+      "bytes": 1032002,
+      "kind": "door-skin"
+    },
+    {
+      "source": "assets/generated/series/k80/textures/k80-jing-hong-clean-ai-v1.png",
+      "path": "assets/catalog/derived/k80/door-skins/k80-jinghong-double-leaf.png",
+      "width": 502,
+      "height": 1566,
+      "bytes": 1515714,
+      "kind": "door-skin"
+    },
+    {
+      "source": "assets/generated/series/k80/textures/k80-qing-ya-clean-ai-v1.png",
+      "path": "assets/catalog/derived/k80/door-skins/k80-qingya-mother-child.png",
+      "width": 264,
+      "height": 1911,
+      "bytes": 571857,
+      "kind": "door-skin"
+    },
+    {
+      "source": "assets/generated/series/k80/textures/k80-qing-ya-clean-ai-v1.png",
+      "path": "assets/catalog/derived/k80/door-skins/k80-qingya-mother-main.png",
+      "width": 560,
+      "height": 1911,
+      "bytes": 1197111,
+      "kind": "door-skin"
+    },
+    {
+      "source": "assets/generated/series/d90/textures/d90-jinqu-clean-ai-v1.png",
+      "path": "assets/catalog/derived/d90/door-skins/d90-jinqu-side-main.png",
+      "width": 619,
+      "height": 1556,
+      "bytes": 1271166,
+      "kind": "door-skin"
+    },
+    {
+      "source": "assets/generated/series/d90/textures/d90-jinqu-clean-ai-v1.png",
+      "path": "assets/catalog/derived/d90/door-skins/d90-jinqu-side-light.png",
+      "width": 283,
+      "height": 1556,
+      "bytes": 475316,
+      "kind": "door-skin"
+    },
+    {
+      "source": "assets/generated/series/d90/textures/d90-shirui-clean-ai-v1.png",
+      "path": "assets/catalog/derived/d90/door-skins/d90-shirui-side-main.png",
+      "width": 624,
+      "height": 1073,
+      "bytes": 757289,
+      "kind": "door-skin"
+    },
+    {
+      "source": "assets/generated/series/d90/textures/d90-shirui-clean-ai-v1.png",
+      "path": "assets/catalog/derived/d90/door-skins/d90-shirui-side-light.png",
+      "width": 730,
+      "height": 1073,
+      "bytes": 312399,
+      "kind": "door-skin",
+      "treatment": "frosted-glass"
+    },
+    {
+      "source": "assets/generated/series/d90/textures/d90-shicui-clean-ai-v1.png",
+      "path": "assets/catalog/derived/d90/door-skins/d90-shicui-double-leaf.png",
+      "width": 427,
+      "height": 1555,
+      "bytes": 663228,
+      "kind": "door-skin"
+    },
+    {
+      "source": "assets/generated/series/d90/textures/d90-aige-clean-ai-v1.png",
+      "path": "assets/catalog/derived/d90/door-skins/d90-aige-double-leaf.png",
+      "width": 423,
+      "height": 1566,
+      "bytes": 695792,
+      "kind": "door-skin"
+    },
+    {
+      "source": "assets/generated/series/d90/textures/d90-songge-clean-ai-v1.png",
+      "path": "assets/catalog/derived/d90/door-skins/d90-songge-double-leaf.png",
+      "width": 425,
+      "height": 1561,
+      "bytes": 687565,
+      "kind": "door-skin"
+    },
+    {
+      "source": "assets/generated/series/d90/textures/d90-guanmin-clean-ai-v1.png",
+      "path": "assets/catalog/derived/d90/door-skins/d90-guanmin-double-leaf.png",
+      "width": 434,
+      "height": 1734,
+      "bytes": 1162793,
+      "kind": "door-skin"
+    },
+    {
+      "source": "assets/catalog/pdf-previews/k80/yijian/page-04.jpg",
+      "path": "assets/catalog/derived/k80/door-skins/k80-yijian-double-leaf.png",
+      "width": 278,
+      "height": 504,
+      "bytes": 87486,
+      "kind": "door-skin"
+    },
+    {
+      "source": "assets/catalog/pdf-previews/k80/heya/page-04.jpg",
+      "path": "assets/catalog/derived/k80/door-skins/k80-heya-double-leaf.png",
+      "width": 262,
+      "height": 504,
+      "bytes": 69014,
+      "kind": "door-skin"
+    },
+    {
+      "source": "assets/catalog/pdf-previews/k80/ouya/page-04.jpg",
+      "path": "assets/catalog/derived/k80/door-skins/k80-ouya-double-leaf.png",
+      "width": 301,
+      "height": 504,
+      "bytes": 103612,
+      "kind": "door-skin"
+    }
+  ],
+  "doorTextureIndex": "assets/catalog/door-textures.json"
+}

@@ -1,0 +1,386 @@
+{
+  "version": 1,
+  "description": "按门扇拆分的真实纹理资产；双开门主门运行时镜像，子母门和边门使用独立分片。",
+  "generatedAt": "2026-08-15T13:41:02.429887+00:00",
+  "sourceAssetsPreserved": true,
+  "count": 17,
+  "series": {
+    "k80": {
+      "ruojian": {
+        "doorType": "double",
+        "source": "assets/generated/series/k80/textures/k80-ruo-jian-clean-ai-v1.png",
+        "parts": {
+          "doubleLeaf": {
+            "path": "assets/catalog/derived/k80/door-skins/k80-ruojian-double-leaf.png",
+            "source": "assets/generated/series/k80/textures/k80-ruo-jian-clean-ai-v1.png",
+            "sourceWindow": [
+              0.0,
+              0.0,
+              0.5,
+              1.0
+            ],
+            "width": 437,
+            "height": 1800,
+            "bytes": 1028007
+          }
+        },
+        "assembly": {
+          "child": "doubleLeaf",
+          "main": "doubleLeaf",
+          "mirrorMain": true
+        }
+      },
+      "yijian": {
+        "doorType": "double",
+        "source": "assets/catalog/pdf-previews/k80/yijian/page-04.jpg",
+        "parts": {
+          "doubleLeaf": {
+            "path": "assets/catalog/derived/k80/door-skins/k80-yijian-double-leaf.png",
+            "source": "assets/catalog/pdf-previews/k80/yijian/page-04.jpg",
+            "sourceWindow": [
+              0.137,
+              0.62,
+              0.355,
+              0.9
+            ],
+            "width": 278,
+            "height": 504,
+            "bytes": 87486
+          }
+        },
+        "assembly": {
+          "child": "doubleLeaf",
+          "main": "doubleLeaf",
+          "mirrorMain": true
+        }
+      },
+      "heya": {
+        "doorType": "double",
+        "source": "assets/catalog/pdf-previews/k80/heya/page-04.jpg",
+        "parts": {
+          "doubleLeaf": {
+            "path": "assets/catalog/derived/k80/door-skins/k80-heya-double-leaf.png",
+            "source": "assets/catalog/pdf-previews/k80/heya/page-04.jpg",
+            "sourceWindow": [
+              0.133,
+              0.62,
+              0.338,
+              0.9
+            ],
+            "width": 262,
+            "height": 504,
+            "bytes": 69014
+          }
+        },
+        "assembly": {
+          "child": "doubleLeaf",
+          "main": "doubleLeaf",
+          "mirrorMain": true
+        }
+      },
+      "ouya": {
+        "doorType": "double",
+        "source": "assets/catalog/pdf-previews/k80/ouya/page-04.jpg",
+        "parts": {
+          "doubleLeaf": {
+            "path": "assets/catalog/derived/k80/door-skins/k80-ouya-double-leaf.png",
+            "source": "assets/catalog/pdf-previews/k80/ouya/page-04.jpg",
+            "sourceWindow": [
+              0.132,
+              0.62,
+              0.368,
+              0.9
+            ],
+            "width": 301,
+            "height": 504,
+            "bytes": 103612
+          }
+        },
+        "assembly": {
+          "child": "doubleLeaf",
+          "main": "doubleLeaf",
+          "mirrorMain": true
+        }
+      },
+      "yuanyin": {
+        "doorType": "double",
+        "source": "assets/generated/series/k80/textures/k80-yuan-yin-clean-ai-v1.png",
+        "parts": {
+          "doubleLeaf": {
+            "path": "assets/catalog/derived/k80/door-skins/k80-yuanyin-double-leaf.png",
+            "source": "assets/generated/series/k80/textures/k80-yuan-yin-clean-ai-v1.png",
+            "sourceWindow": [
+              0.0,
+              0.0,
+              0.5,
+              1.0
+            ],
+            "width": 444,
+            "height": 1774,
+            "bytes": 1562670
+          }
+        },
+        "assembly": {
+          "child": "doubleLeaf",
+          "main": "doubleLeaf",
+          "mirrorMain": true
+        }
+      },
+      "jiangchuan": {
+        "doorType": "double",
+        "source": "assets/generated/series/k80/textures/k80-jiang-chuan-clean-ai-v1.png",
+        "parts": {
+          "doubleLeaf": {
+            "path": "assets/catalog/derived/k80/door-skins/k80-jiangchuan-double-leaf.png",
+            "source": "assets/generated/series/k80/textures/k80-jiang-chuan-clean-ai-v1.png",
+            "sourceWindow": [
+              0.0,
+              0.0,
+              0.5,
+              1.0
+            ],
+            "width": 498,
+            "height": 1581,
+            "bytes": 1032002
+          }
+        },
+        "assembly": {
+          "child": "doubleLeaf",
+          "main": "doubleLeaf",
+          "mirrorMain": true
+        }
+      },
+      "jinghong": {
+        "doorType": "double",
+        "source": "assets/generated/series/k80/textures/k80-jing-hong-clean-ai-v1.png",
+        "parts": {
+          "doubleLeaf": {
+            "path": "assets/catalog/derived/k80/door-skins/k80-jinghong-double-leaf.png",
+            "source": "assets/generated/series/k80/textures/k80-jing-hong-clean-ai-v1.png",
+            "sourceWindow": [
+              0.0,
+              0.0,
+              0.5,
+              1.0
+            ],
+            "width": 502,
+            "height": 1566,
+            "bytes": 1515714
+          }
+        },
+        "assembly": {
+          "child": "doubleLeaf",
+          "main": "doubleLeaf",
+          "mirrorMain": true
+        }
+      },
+      "qingya": {
+        "doorType": "mother",
+        "source": "assets/generated/series/k80/textures/k80-qing-ya-clean-ai-v1.png",
+        "parts": {
+          "motherChild": {
+            "path": "assets/catalog/derived/k80/door-skins/k80-qingya-mother-child.png",
+            "source": "assets/generated/series/k80/textures/k80-qing-ya-clean-ai-v1.png",
+            "sourceWindow": [
+              0.0,
+              0.0,
+              0.32,
+              1.0
+            ],
+            "width": 264,
+            "height": 1911,
+            "bytes": 571857
+          },
+          "motherMain": {
+            "path": "assets/catalog/derived/k80/door-skins/k80-qingya-mother-main.png",
+            "source": "assets/generated/series/k80/textures/k80-qing-ya-clean-ai-v1.png",
+            "sourceWindow": [
+              0.32,
+              0.0,
+              1.0,
+              1.0
+            ],
+            "width": 560,
+            "height": 1911,
+            "bytes": 1197111
+          }
+        },
+        "assembly": {
+          "child": "motherChild",
+          "main": "motherMain"
+        }
+      }
+    },
+    "d90": {
+      "jinqu": {
+        "doorType": "sideLight",
+        "source": "assets/generated/series/d90/textures/d90-jinqu-clean-ai-v1.png",
+        "parts": {
+          "sideMain": {
+            "path": "assets/catalog/derived/d90/door-skins/d90-jinqu-side-main.png",
+            "source": "assets/generated/series/d90/textures/d90-jinqu-clean-ai-v1.png",
+            "sourceWindow": [
+              0.335,
+              0.025,
+              0.965,
+              0.995
+            ],
+            "width": 619,
+            "height": 1556,
+            "bytes": 1271166
+          },
+          "sideLight": {
+            "path": "assets/catalog/derived/d90/door-skins/d90-jinqu-side-light.png",
+            "source": "assets/generated/series/d90/textures/d90-jinqu-clean-ai-v1.png",
+            "sourceWindow": [
+              0.018,
+              0.025,
+              0.305,
+              0.995
+            ],
+            "width": 283,
+            "height": 1556,
+            "bytes": 475316
+          }
+        },
+        "assembly": {
+          "main": "sideMain",
+          "side": "sideLight"
+        }
+      },
+      "shirui": {
+        "doorType": "sideLight",
+        "source": "assets/generated/series/d90/textures/d90-shirui-clean-ai-v1.png",
+        "parts": {
+          "sideMain": {
+            "path": "assets/catalog/derived/d90/door-skins/d90-shirui-side-main.png",
+            "source": "assets/generated/series/d90/textures/d90-shirui-clean-ai-v1.png",
+            "sourceWindow": [
+              0.545,
+              0.02,
+              0.985,
+              0.985
+            ],
+            "width": 624,
+            "height": 1073,
+            "bytes": 757289
+          },
+          "sideLight": {
+            "path": "assets/catalog/derived/d90/door-skins/d90-shirui-side-light.png",
+            "source": "assets/generated/series/d90/textures/d90-shirui-clean-ai-v1.png",
+            "sourceWindow": [
+              0.02,
+              0.02,
+              0.535,
+              0.985
+            ],
+            "width": 730,
+            "height": 1073,
+            "bytes": 312399,
+            "treatment": "frosted-glass"
+          }
+        },
+        "assembly": {
+          "main": "sideMain",
+          "side": "sideLight"
+        }
+      },
+      "shicui": {
+        "doorType": "double",
+        "source": "assets/generated/series/d90/textures/d90-shicui-clean-ai-v1.png",
+        "parts": {
+          "doubleLeaf": {
+            "path": "assets/catalog/derived/d90/door-skins/d90-shicui-double-leaf.png",
+            "source": "assets/generated/series/d90/textures/d90-shicui-clean-ai-v1.png",
+            "sourceWindow": [
+              0.055,
+              0.018,
+              0.485,
+              0.996
+            ],
+            "width": 427,
+            "height": 1555,
+            "bytes": 663228
+          }
+        },
+        "assembly": {
+          "child": "doubleLeaf",
+          "main": "doubleLeaf",
+          "mirrorMain": true
+        }
+      },
+      "aige": {
+        "doorType": "double",
+        "source": "assets/generated/series/d90/textures/d90-aige-clean-ai-v1.png",
+        "parts": {
+          "doubleLeaf": {
+            "path": "assets/catalog/derived/d90/door-skins/d90-aige-double-leaf.png",
+            "source": "assets/generated/series/d90/textures/d90-aige-clean-ai-v1.png",
+            "sourceWindow": [
+              0.055,
+              0.02,
+              0.485,
+              0.996
+            ],
+            "width": 423,
+            "height": 1566,
+            "bytes": 695792
+          }
+        },
+        "assembly": {
+          "child": "doubleLeaf",
+          "main": "doubleLeaf",
+          "mirrorMain": true
+        }
+      },
+      "songge": {
+        "doorType": "double",
+        "source": "assets/generated/series/d90/textures/d90-songge-clean-ai-v1.png",
+        "parts": {
+          "doubleLeaf": {
+            "path": "assets/catalog/derived/d90/door-skins/d90-songge-double-leaf.png",
+            "source": "assets/generated/series/d90/textures/d90-songge-clean-ai-v1.png",
+            "sourceWindow": [
+              0.055,
+              0.018,
+              0.485,
+              0.996
+            ],
+            "width": 425,
+            "height": 1561,
+            "bytes": 687565
+          }
+        },
+        "assembly": {
+          "child": "doubleLeaf",
+          "main": "doubleLeaf",
+          "mirrorMain": true
+        }
+      },
+      "guanmin": {
+        "doorType": "double",
+        "source": "assets/generated/series/d90/textures/d90-guanmin-clean-ai-v1.png",
+        "parts": {
+          "doubleLeaf": {
+            "path": "assets/catalog/derived/d90/door-skins/d90-guanmin-double-leaf.png",
+            "source": "assets/generated/series/d90/textures/d90-guanmin-clean-ai-v1.png",
+            "sourceWindow": [
+              0.01,
+              0.006,
+              0.492,
+              0.998
+            ],
+            "width": 434,
+            "height": 1734,
+            "bytes": 1162793
+          }
+        },
+        "assembly": {
+          "child": "doubleLeaf",
+          "main": "doubleLeaf",
+          "mirrorMain": true
+        }
+      }
+    }
+  }
+}
