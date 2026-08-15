@@ -75,7 +75,7 @@
 .door-frame.door-type-2 .door-handle{right:calc(50% + 10px / var(--door-scale-x,1));}
 .door-frame.door-type-2 .door-lock{right:calc(50% + 5px / var(--door-scale-x,1));box-shadow:calc(80px / var(--door-scale-x,1)) 0 0 -1px #1c1b18;}
 .door-stage{transform:scale(.72) scaleX(var(--door-scale-x,1)) scaleY(var(--door-scale-y,1))!important}
-.door-frame .door-side{background-color:var(--door-frame,#191817);background-image:var(--door-texture,url('assets/texture-double-rib.jpg?v=2'));background-repeat:no-repeat;background-size:calc(520px / var(--door-scale-x,1)) calc(980px / var(--door-scale-y,1));background-position:center top;opacity:1;border:1px solid #0005;}
+.door-frame .door-side{background-color:var(--door-frame,#191817);background-image:var(--door-texture,url('assets/source/legacy/k9/texture-double-rib.jpg?v=2'));background-repeat:no-repeat;background-size:calc(520px / var(--door-scale-x,1)) calc(980px / var(--door-scale-y,1));background-position:center top;opacity:1;border:1px solid #0005;}
 .door-frame.door-type-2 .door-preview.photo{background-image:var(--door-texture),var(--door-texture);background-repeat:no-repeat;background-size:calc(260px / var(--door-scale-x,1)) calc(980px / var(--door-scale-y,1)),calc(260px / var(--door-scale-x,1)) calc(980px / var(--door-scale-y,1));background-position:left top,right top;}
 @media(max-width:900px){.door-stage{transform:scale(.68) scaleX(var(--door-scale-x,1)) scaleY(var(--door-scale-y,1))!important}}
 @media(max-width:600px){.door-stage{transform:scale(.6) scaleX(var(--door-scale-x,1)) scaleY(var(--door-scale-y,1))!important}}
@@ -402,11 +402,11 @@ nav a{display:none}nav a.active{display:block}
 }
 
 /* Product-type cards use real door references, not abstract color blocks. */
-.type-preview.type-0:before{background:url('./assets/real-door-arch-wood.jpg') center/cover}
+.type-preview.type-0:before{background:url('./assets/source/legacy/k9/real-door-arch-wood.jpg') center/cover}
 .type-preview.type-1:before{background:url('http://www.yadilo.com/web/upload/2022/12/19/16714294844934jucd5.jpg') center/cover}
-.type-preview.type-2:before{background:url('./assets/real-door-double-line.jpg') center/cover}
-.type-preview.type-3:before{background:url('./assets/real-door-mountain-band.jpg') center/cover}
-.type-preview.type-4:before{background:url('./assets/door-assembly-double-rib-v1.png') center/cover}
+.type-preview.type-2:before{background:url('./assets/source/legacy/k9/real-door-double-line.jpg') center/cover}
+.type-preview.type-3:before{background:url('./assets/source/legacy/k9/real-door-mountain-band.jpg') center/cover}
+.type-preview.type-4:before{background:url('./assets/source/legacy/k9/door-assembly-double-rib-v1.png') center/cover}
 
 /* K9GBF-B-X201B reference assembly from the official detail page: a narrow
    child leaf and a wider mother leaf inside one dark-blue frame. */

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>雅帝乐 · 后台管理</title>
+  <link rel="stylesheet" href="./admin.css?v=20260813.5" />
+  <link rel="stylesheet" href="./admin-enhance.css?v=20260813.6" />
+  <style>[hidden]{display:none!important}</style>
+</head>
+<body>
+  <div id="loginView" class="login-shell">
+    <form id="loginForm" class="login-card">
+      <div class="brand-mark">Y</div>
+      <p class="eyebrow">YADILO / BACK OFFICE</p>
+      <h1>后台管理</h1>
+      <p class="muted">产品配置、方案与门店咨询的统一工作台</p>
+      <label>账号<input name="username" value="admin" autocomplete="username" required /></label>
+      <label>密码<input name="password" type="password" autocomplete="current-password" required /></label>
+      <button class="primary" type="submit">登录后台</button>
+      <p id="loginError" class="error" role="alert"></p>
+    </form>
+  </div>
+
+  <div id="appView" class="app-shell" hidden>
+    <aside class="sidebar">
+      <a class="brand" href="./index.html"><span class="brand-mark">Y</span><span><b>雅帝乐</b><small>YADILO ADMIN</small></span></a>
+      <nav id="nav" aria-label="后台导航">
+        <button class="nav-item active" data-page="dashboard">总览<span>Overview</span></button>
+        <button class="nav-item" data-page="products">产品与配置<span>Catalog</span></button>
+        <button class="nav-item" data-page="options">选配字典<span>Options</span></button>
+        <button class="nav-item" data-page="consultations">咨询订单<span>Leads</span><i id="leadBadge"></i></button>
+        <button class="nav-item" data-page="schemes">定制方案<span>Schemes</span></button>
+        <button class="nav-item" data-page="dealers" data-role="dealer_manager">经销商管理<span>Dealers</span></button>
+        <button class="nav-item" data-page="assets" data-role="editor">素材上传<span>Assets</span></button>
+        <button class="nav-item" data-page="admins" data-role="admin">管理员<span>Admins</span></button>
+        <button class="nav-item" data-page="settings" data-role="admin">系统与安全<span>Settings</span></button>
+        <button class="nav-item" data-page="catalogAudit" data-role="editor">产品一致性<span>Catalog QA</span></button>
+        <button class="nav-item" data-page="sources">来源文档<span>Sources</span></button>
+        <button class="nav-item" data-page="audit">操作日志<span>Audit</span></button>
+      </nav>
+      <div class="sidebar-footer"><a href="./selection.html">查看前台 ↗</a><button id="logoutButton">退出登录</button></div>
+    </aside>
+    <main class="main-shell">
+      <header class="topbar"><div><p class="eyebrow">YADILO / OPERATIONS</p><h2 id="pageTitle">业务总览</h2></div><div class="topbar-user"><span id="currentUser"></span><span class="live-dot">系统在线</span></div></header>
+      <div id="content" class="content"></div>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="./admin.js?v=20260813.6"></script>
+</body>
+</html>

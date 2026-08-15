@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YADILO D90 金属门定制实验室</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./glb-configurator.css?v=20261185" />
+  <link rel="stylesheet" href="./glb-configurator-cards.css?v=20261020" />
+  <link rel="stylesheet" href="./background-premium.css?v=20260820" />
+  <style>
+    .d90-product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+    .d90-product-card{min-width:0;padding:0 0 9px;border:1px solid rgba(255,255,255,.10);border-radius:10px;background:rgba(255,255,255,.035);color:#eee;text-align:left;overflow:hidden;cursor:pointer;transition:border-color .25s ease,background .25s ease,transform .25s ease}
+    .d90-product-card:hover{transform:translateY(-2px);border-color:rgba(244,190,134,.58)}
+    .d90-product-card.selected{border-color:#d8a16f;background:rgba(190,129,76,.15);box-shadow:0 0 0 1px rgba(216,161,111,.18)}
+    .d90-product-card img{display:block;width:100%;height:86px;object-fit:cover;object-position:center 28%;background:#111;filter:saturate(.85) contrast(1.03)}
+    .d90-product-card b,.d90-product-card small{display:block;padding:0 9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .d90-product-card b{margin-top:7px;font-size:12px;font-weight:600}.d90-product-card small{margin-top:3px;color:#9e9993;font-size:9px}
+    .d90-option-grid{display:grid;gap:8px}.d90-option-grid.four{grid-template-columns:repeat(4,minmax(0,1fr))}.d90-option-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .d90-hardware-card{min-width:0;padding:0 0 8px;border:1px solid rgba(255,255,255,.10);border-radius:10px;background:rgba(255,255,255,.035);color:#eee;text-align:center;overflow:hidden;cursor:pointer;transition:border-color .25s ease,background .25s ease}
+    .d90-hardware-card.selected{border-color:#d8a16f;background:rgba(190,129,76,.14)}
+    .d90-hardware-card .hardware-card-icon{position:relative;display:grid;place-items:center;width:100%;height:72px;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.065);background:radial-gradient(circle at 50% 38%,#2b2b29 0,#151616 65%,#0c0d0e 100%)}
+    .d90-hardware-card .hardware-card-icon:before,.d90-hardware-card .hardware-card-icon:after{content:"";display:block;position:absolute}
+    .hardware-icon-lock-none:before{width:42px;height:22px;border:1px dashed rgba(213,190,161,.48);border-radius:5px;box-shadow:0 0 16px rgba(216,161,111,.10)}
+    .hardware-icon-lock-none:after{width:18px;height:1px;background:#9e8b78;opacity:.72}
+    .hardware-icon-lock-smart:before{width:17px;height:45px;border:1px solid #899095;border-radius:4px;background:linear-gradient(90deg,#070808,#505657 48%,#111313);box-shadow:0 4px 12px #0008}
+    .hardware-icon-lock-smart:after{width:5px;height:5px;border:1px solid #d2b68d;border-radius:50%;box-shadow:0 14px 0 -1px #a8afb0,0 24px 0 -1px #a8afb0}
+    .hardware-icon-lock-round:before{width:36px;height:36px;border:4px solid #9b8b77;border-radius:50%;background:radial-gradient(circle,#101212 0 24%,#5b6060 26% 31%,#151616 33%)}
+    .hardware-icon-lock-round:after{width:6px;height:6px;border-radius:50%;background:#d6dadd;box-shadow:0 0 8px #e4d0b0}
+    .hardware-icon-handle-none:before{width:32px;height:2px;border-radius:2px;background:#827568;opacity:.66}
+    .hardware-icon-handle-long:before{width:8px;height:49px;border-radius:5px;background:linear-gradient(90deg,#4b5557,#d5d5d0 48%,#596265);box-shadow:2px 4px 10px #0008}
+    .hardware-icon-handle-ring:before{width:38px;height:38px;border:5px solid #9a8a76;border-radius:50%;box-shadow:inset 0 0 0 2px #252626,0 4px 10px #0008}
+    .hardware-icon-handle-integrated:before{width:13px;height:51px;border-radius:4px;background:linear-gradient(90deg,#2a1610,#b47745 47%,#281812);box-shadow:0 0 12px rgba(255,184,111,.28)}
+    .hardware-icon-handle-integrated:after{width:3px;height:40px;border-radius:3px;background:#ffc78d;box-shadow:0 0 8px #ffb45f}
+    .d90-hardware-card b,.d90-hardware-card small{display:block}.d90-hardware-card b{margin-top:6px;font-size:10px}.d90-hardware-card small{margin-top:3px;color:#9e9993;font-size:8px}
+    .d90-note{margin:7px 0 0;color:#8f8a84;font-size:9px;line-height:1.6}
+    .choice-grid.five{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .choice-grid.single-choice{grid-template-columns:minmax(0,1fr)}
+    .d90-source-tag{display:inline-flex;align-items:center;gap:5px;margin-top:7px;color:#c6a17f;font-size:9px;letter-spacing:.04em}.d90-source-tag i{width:5px;height:5px;border-radius:50%;background:#d4a16d;box-shadow:0 0 8px #d4a16d}
+    .d90-glass-controls{display:grid;gap:10px;margin:12px 0 4px;padding:12px;border:1px solid rgba(216,161,111,.18);border-radius:10px;background:linear-gradient(135deg,rgba(63,86,84,.24),rgba(20,22,22,.38));box-shadow:inset 0 1px 0 rgba(224,247,239,.07)}
+    .d90-glass-controls[hidden]{display:none}.d90-glass-controls .field-heading{margin:0 0 7px}.d90-glass-controls .mini-choice-grid{margin-bottom:0}.d90-glass-material-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}.d90-glass-material{min-width:0;padding:8px 5px;border:1px solid rgba(255,255,255,.10);border-radius:8px;background:rgba(255,255,255,.035);color:#eee;text-align:center;cursor:pointer}.d90-glass-material.selected{border-color:#d8a16f;background:rgba(190,129,76,.15);box-shadow:0 0 0 1px rgba(216,161,111,.14)}.d90-glass-material i{display:block;width:30px;height:30px;margin:0 auto 6px;border-radius:50%;border:1px solid rgba(255,255,255,.34);box-shadow:inset 0 0 12px rgba(255,255,255,.18),0 4px 10px #0005}.d90-glass-material b{display:block;font-size:9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.d90-glass-material small{display:block;margin-top:3px;color:#9eaaa5;font-size:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.d90-glass-clear{background:linear-gradient(135deg,#dbe9e5,#829994)}.d90-glass-frosted{background:linear-gradient(135deg,#d4ddd7,#8e9d96);filter:blur(.25px)}.d90-glass-smoke{background:linear-gradient(135deg,#93aaa5,#283c3a)}.d90-glass-teal{background:linear-gradient(135deg,#9fc9bd,#326b65)}
+    .d90-glass-controls .range-row{margin:0}.d90-glass-controls .range-row span{color:#c5cbc6}.d90-glass-controls .light-color-dot{display:inline-block;width:8px;height:8px;margin-right:5px;border-radius:50%;box-shadow:0 0 9px currentColor}.d90-light-amber{color:#ffad55;background:#ffad55}.d90-light-gold{color:#e0ad67;background:#e0ad67}.d90-light-warm-white{color:#ffe7c4;background:#ffe7c4}.d90-light-ice{color:#c8edff;background:#c8edff}
+    @media(max-width:1100px){.d90-product-card img{height:68px}.d90-hardware-card .hardware-card-icon{height:58px}}
+    @media(max-width:760px){.d90-product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.d90-option-grid.four,.d90-option-grid.three,.choice-grid.five{grid-template-columns:repeat(2,minmax(0,1fr))}.d90-glass-material-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.d90-product-card img{height:82px}}
+  </style>
+  <link rel="stylesheet" href="./configurator-panel-polish.css?v=20261002" />
+  <link rel="stylesheet" href="./porsche-configurator-layout.css?v=20261150" />
+  <link rel="stylesheet" href="./product-inspector.css?v=20261174" />
+</head>
+
+<body>
+  <header class="glb-header">
+    <a class="glb-brand" href="./index.html" aria-label="返回雅帝乐首页"><span class="brand-mark">Y</span><span><b>雅帝乐</b><small>D90 METAL DOOR STUDIO</small></span></a>
+    <div class="glb-header-center"><span class="eyebrow">YADILO D90 COLLECTION</span><strong>真实产品照片 · Blender 分层模型 · 可定制门洞</strong></div>
+    <div class="glb-header-actions"><span class="glb-status"><i></i> D90 GLB 读取中</span><button type="button" id="openAiScenes" class="ai-scenes-button">AI 场景</button><button type="button" id="openSchemes" class="scheme-library-button"><span>个人方案</span><b id="schemeCount">0</b></button><button type="button" id="saveScheme" class="save-scheme">保存方案</button><button type="button" id="resetView">重置视角</button><button type="button" id="toggleFullscreen" aria-label="进入全屏">全屏</button></div>
+  </header>
+
+  <main class="glb-shell">
+    <section class="glb-stage" id="stage" aria-label="D90 金属门三维预览">
+      <div class="stage-topline"><span>YADILO / PRIVATE SHOWROOM</span><span id="modelStatus">正在读取 D90 展厅模型…</span></div>
+      <div id="canvasMount" class="canvas-mount"></div>
+      <div class="stage-hint"><span class="hint-dot"></span><span>拖动旋转 · 滚轮缩放 · 点击部件查看详情</span></div>
+      <div class="stage-controls" role="group" aria-label="视图控制">
+        <button type="button" class="stage-control" data-view="front">正面</button>
+        <button type="button" class="stage-control" data-view="side">侧面</button>
+        <button type="button" class="stage-control" id="toggleDoorOpen">打开主门</button>
+      </div>
+      <div class="pose-chip" id="doorPoseReadout">闭合状态 · D90 门扇厚度 90 mm</div>
+      <div class="dimension-chip dimension-width"><span>宽度</span><strong id="widthReadout">1800 mm</strong></div>
+      <div class="dimension-chip dimension-height"><span>高度</span><strong id="heightReadout">2600 mm</strong></div>
+    </section>
+
+    <aside class="glb-panel order-panel" aria-label="D90 金属门配置">
+      <div class="panel-intro">
+        <span class="eyebrow">D90 PRIVATE CONFIGURATION</span>
+        <h1>私人订制</h1>
+        <span class="d90-source-tag"><i></i>素材源：assets/source/series/d90 + assets/source/hardware/locks</span>
+        <div class="config-progress"><span class="active">01 产品</span><span>02 结构</span><span>03 尺寸</span><span>04 五金</span></div>
+      </div>
+
+      <details class="config-accordion" data-camera-focus="surface" open>
+        <summary><span><i>01</i> 当前产品与饰面</span><small id="productSectionSummary">单品锁定</small></summary>
+        <div class="accordion-body">
+        <article class="product-lock-card"><span id="productThumb" class="product-lock-thumb"></span><span><b id="productName">拾翠</b><small id="productPrototype">对开门原型 · 产品结构锁定，正背面纹理可定制</small></span><i>结构锁定</i></article>
+        <div class="face-switch" role="group" aria-label="选择纹理面"><button class="face-tab selected" type="button" data-texture-face="front">正面 · <span id="frontFinishName">拾翠</span></button><button class="face-tab" type="button" data-texture-face="back">背面 · <span id="backFinishName">拾翠</span></button></div>
+        <div class="colorway-heading"><span>纹理分区</span><small>同步调整 / 左侧门扇 / 右侧门扇</small></div>
+        <div id="textureRegionGrid" class="texture-region-grid"></div>
+          <div class="colorway-heading"><span>当前门面纹理方案</span><small>正面 / 背面独立，按当前分区应用</small></div>
+          <div id="textureSurfaceGrid" class="texture-surface-grid"></div>
+          <div id="shiruiGlassControls" class="d90-glass-controls" data-camera-focus="sidelight" hidden>
+            <div class="field-heading"><span>世瑞左侧玻璃</span><small>完整玻璃门扇独立配置，不改变右侧金属门</small></div>
+            <div class="d90-glass-material-grid">
+              <button type="button" class="d90-glass-material" data-shirui-glass-material="clear"><i class="d90-glass-clear"></i><b>通透玻璃</b><small>清透反射</small></button>
+              <button type="button" class="d90-glass-material" data-shirui-glass-material="frosted"><i class="d90-glass-frosted"></i><b>细磨砂</b><small>柔和遮挡</small></button>
+              <button type="button" class="d90-glass-material" data-shirui-glass-material="smoke"><i class="d90-glass-smoke"></i><b>烟灰玻璃</b><small>低透深色</small></button>
+              <button type="button" class="d90-glass-material" data-shirui-glass-material="teal"><i class="d90-glass-teal"></i><b>茶青玻璃</b><small>青绿色调</small></button>
+            </div>
+            <label class="range-row"><span>透明度</span><input id="shiruiGlassTransparencySlider" type="range" min="25" max="92" step="1" value="84" /><output id="shiruiGlassTransparencyOutput">84%</output></label>
+            <label class="range-row"><span>磨砂强度</span><input id="shiruiGlassFrostSlider" type="range" min="0" max="100" step="1" value="8" /><output id="shiruiGlassFrostOutput">8%</output></label>
+            <div class="field-heading"><span>玻璃边缘灯带</span><small>只作用于左侧整片玻璃的四周边缘</small></div>
+            <div class="mini-choice-grid two"><button type="button" class="mini-choice" data-shirui-glass-light-enabled="true">开启</button><button type="button" class="mini-choice selected" data-shirui-glass-light-enabled="false">关闭</button></div>
+            <div class="mini-choice-grid four"><button type="button" class="mini-choice" data-shirui-glass-light-color="amber"><i class="light-color-dot d90-light-amber"></i>琥珀</button><button type="button" class="mini-choice" data-shirui-glass-light-color="gold"><i class="light-color-dot d90-light-gold"></i>香槟</button><button type="button" class="mini-choice selected" data-shirui-glass-light-color="warm-white"><i class="light-color-dot d90-light-warm-white"></i>暖白</button><button type="button" class="mini-choice" data-shirui-glass-light-color="ice"><i class="light-color-dot d90-light-ice"></i>冰蓝</button></div>
+            <label class="range-row"><span>灯带亮度</span><input id="shiruiGlassLightIntensitySlider" type="range" min="0" max="1.5" step="0.05" value="1" /><output id="shiruiGlassLightIntensityOutput">100%</output></label>
+          </div>
+          <div id="designLayerHeading" class="colorway-heading design-layer-heading" hidden><span>主造型分层</span><button type="button" class="inspector-inline" data-inspector-open="design">了解主造型</button></div>
+          <div id="designPresetGrid" class="design-preset-grid" hidden></div>
+          <div id="designLayerTools" class="design-layer-tools" hidden aria-label="主造型位置与大小调整">
+            <label class="range-row texture-range"><span>左右</span><input id="designOffsetXSlider" type="range" min="-18" max="18" step="1" value="0" /><output id="designOffsetXOutput">0%</output></label>
+            <label class="range-row texture-range"><span>上下</span><input id="designOffsetYSlider" type="range" min="-18" max="18" step="1" value="0" /><output id="designOffsetYOutput">0%</output></label>
+            <label class="range-row texture-range"><span>大小</span><input id="designScaleSlider" type="range" min="0.82" max="1.30" step="0.01" value="1" /><output id="designScaleOutput">100%</output></label>
+            <p>只移动主造型层；底纹、门扇比例和五金锚点不跟着变形。</p>
+          </div>
+        <details class="advanced-drawer"><summary>高级纹理取景 <small>不拉伸结构</small></summary><div class="texture-tools" aria-label="门扇纹理取景调整">
+          <label class="range-row texture-range"><span>缩放</span><input id="textureZoomSlider" type="range" min="0.82" max="1.34" step="0.01" value="1" /><output id="textureZoomOutput">100%</output></label>
+          <label class="range-row texture-range"><span>左右</span><input id="texturePanXSlider" type="range" min="-0.20" max="0.20" step="0.01" value="0" /><output id="texturePanXOutput">0%</output></label>
+          <label class="range-row texture-range"><span>上下</span><input id="texturePanYSlider" type="range" min="-0.20" max="0.20" step="0.01" value="0" /><output id="texturePanYOutput">0%</output></label>
+          <button type="button" id="resetTextureView" class="texture-tool-reset">恢复原始取景</button><p>门扇纹理按真实物理比例取景；同步模式左右共同调整，单独模式只改变当前门扇，尺寸变化显示更多或更少内容。</p>
+        </div></details>
+        </div>
+      </details>
+
+      <details class="config-accordion" data-camera-focus="structure">
+        <summary><span><i>02</i> 门型与开启</span><small id="structureSectionSummary">原型锁定 · 外开右锁</small></summary>
+        <div class="accordion-body">
+        <div class="field-heading"><span>门型结构</span><small>按当前产品实拍原型开放可定制的门型</small></div>
+        <div class="choice-grid five">
+          <button class="choice" data-door-type="single"><b>单门</b><small>独立门扇</small></button>
+          <button class="choice" data-door-type="mother"><b>子母门</b><small>左小右大分割</small></button>
+          <button class="choice selected" data-door-type="double"><b>对开门</b><small>左右镜像转轴</small></button>
+          <button class="choice" data-door-type="sideLight"><b>单边边门</b><small>主门与左侧边门一体</small></button>
+          <button class="choice" data-door-type="doubleSide"><b>双边边门</b><small>左右玻璃一体</small></button>
+        </div>
+        <div id="compositionLogicNote" class="composition-logic-note"></div>
+        <div class="field-heading"><span>开启方向</span><small>左右以室外正视图为准，左锁开左扇</small></div>
+        <div class="mini-choice-grid two"><button class="mini-choice" data-opening="out-left">外开左锁</button><button class="mini-choice selected" data-opening="out-right">外开右锁</button><button class="mini-choice" data-opening="in-left">内开左锁</button><button class="mini-choice" data-opening="in-right">内开右锁</button></div>
+        <div class="field-heading"><span>合页</span><button type="button" class="inspector-inline" data-inspector-open="hinge">查看合页大图</button></div>
+        <div class="mini-choice-grid two"><button class="mini-choice selected" data-hinge="d90-hidden">D90 标配暗合页</button><button class="mini-choice" data-hinge="d90-heavy">D90 重载外合页</button></div>
+        </div>
+      </details>
+
+      <details class="config-accordion" data-camera-focus="dimensions">
+        <summary><span><i>03</i> 尺寸</span><small id="dimensionSectionSummary">2100 × 2600 mm</small></summary>
+        <div class="accordion-body">
+        <div class="field-heading"><span>包框尺寸</span><small>单位：mm · 按原型限制区间</small></div>
+        <label class="range-row"><span>宽度</span><input id="widthSlider" type="range" min="1800" max="2400" step="10" value="2100" /><output id="widthOutput">2100 mm</output></label>
+        <label class="range-row"><span>高度</span><input id="heightSlider" type="range" min="2300" max="3200" step="10" value="2600" /><output id="heightOutput">2600 mm</output></label>
+        <div class="dimension-calcs"><span><small>门扇见光</small><b id="clearOpeningReadout">—</b></span><span><small id="casingReadoutLabel">外门套总尺寸</small><b id="casingReadout">—</b></span><span><small>门扇厚度</small><b>90 mm</b></span></div>
+        <p class="dimension-note" id="dimensionRangeNote">调整尺寸不拉伸纹理、锁具、拉手或框料截面。</p>
+        </div>
+      </details>
+
+      <details class="config-accordion" data-camera-focus="frame">
+        <summary><span><i>04</i> <span id="frameSectionTitle">门框与门套</span></span><small id="frameSectionSummary">固定工艺色 · 整体制作</small></summary>
+        <div class="accordion-body">
+          <div class="spec-grid"><span><small>门框体系</small><b>D90 标配金属框</b></span><span><small>门体结构</small><b>整体拱顶 · 共用纹理，仅保留分割线</b></span></div>
+          <label class="range-row"><span>墙厚</span><input id="wallThicknessSlider" type="range" min="100" max="500" step="10" value="240" /><output id="wallThicknessOutput">240 mm</output></label>
+          <div class="field-heading"><span>门框安装位置</span><small>相对墙体的落位</small></div>
+          <div class="mini-choice-grid three"><button class="mini-choice" data-frame-install="outside">靠墙外</button><button class="mini-choice selected" data-frame-install="center">靠中装</button><button class="mini-choice" data-frame-install="inside">靠墙内</button></div>
+          <div class="field-heading"><span>门框制作方式</span><small>对应生产工艺</small></div>
+          <div class="mini-choice-grid two"><button class="mini-choice selected" data-frame-build="integral">整体制作</button><button class="mini-choice" data-frame-build="assembled">拼装制作</button></div>
+        </div>
+      </details>
+
+      <details class="config-accordion" data-camera-focus="hardware">
+        <summary><span><i>05</i> 锁具与拉手</span><small id="hardwareSectionSummary">净门扇</small></summary>
+        <div class="accordion-body">
+        <div class="field-heading"><span>锁体 / 面板</span><button type="button" class="inspector-inline" data-inspector-open="lock">了解锁体结构</button></div>
+        <div class="d90-option-grid four">
+          <button class="d90-hardware-card selected" data-lock="none"><span class="hardware-card-icon hardware-icon-lock-none" aria-hidden="true"></span><b>隐藏锁体（无外露）</b><small>不显示第二个锁面</small></button>
+          <button class="d90-hardware-card" data-lock="smart"><span class="hardware-card-icon hardware-icon-lock-smart" aria-hidden="true"></span><b>07 型智能锁</b><small>独立锁体 · 读头</small></button>
+          <button class="d90-hardware-card" data-lock="yt82"><span class="hardware-card-icon hardware-icon-lock-round" aria-hidden="true"></span><b>YT82 圆形锁</b><small>独立圆形锁体</small></button>
+        </div>
+        <div class="field-heading"><span>外拉手</span><small>产品有纹理一体结构时才显示</small></div>
+        <div class="d90-option-grid four">
+          <button class="d90-hardware-card selected" data-handle="none"><span class="hardware-card-icon hardware-icon-handle-none" aria-hidden="true"></span><b>不配置拉手</b><small>仅显示门锁</small></button>
+          <button class="d90-hardware-card" data-handle="long"><span class="hardware-card-icon hardware-icon-handle-long" aria-hidden="true"></span><b>SL48F 通天拉手</b><small>细竖杆 · 暗槽安装</small></button>
+          <button class="d90-hardware-card" data-handle="ring"><span class="hardware-card-icon hardware-icon-handle-ring" aria-hidden="true"></span><b>环形拉手</b><small>独立环形把手</small></button>
+          <button class="d90-hardware-card" data-handle="integrated"><span class="hardware-card-icon hardware-icon-handle-integrated" aria-hidden="true"></span><b>纹理一体灯带拉手</b><small>正面融入纹理 · 侧面有凸起</small></button>
+        </div>
+        <label class="range-row handle-position-row" hidden><span>左右</span><input id="handleHorizontalSlider" type="range" min="-180" max="180" step="10" value="0" /><output id="handleHorizontalOutput">基准位置</output></label>
+        <label class="range-row handle-position-row" hidden><span>上下</span><input id="handlePositionSlider" type="range" min="-240" max="240" step="10" value="0" /><output id="handlePositionOutput">基准位置</output></label>
+        <label class="range-row handle-position-row" hidden><span>缩放</span><input id="handleScaleSlider" type="range" min="0.82" max="1.18" step="0.01" value="1" /><output id="handleScaleOutput">100%</output></label>
+        <p class="hardware-note secondary handle-position-row" hidden>对开门以中缝为轴镜像同步调整长拉手；上下和缩放两扇门保持一致。</p>
+        <div class="field-heading lock-position-heading"><span>锁体位置</span><small>跟随真实安装基准</small></div>
+        <label class="range-row lock-position-row" hidden><span>左右</span><input id="lockHorizontalSlider" type="range" min="-140" max="140" step="10" value="0" /><output id="lockHorizontalOutput">基准位置</output></label>
+        <label class="range-row lock-position-row" hidden><span>上下</span><input id="lockPositionSlider" type="range" min="-200" max="200" step="10" value="0" /><output id="lockPositionOutput">基准位置</output></label>
+        <label class="range-row lock-position-row" hidden><span>缩放</span><input id="lockScaleSlider" type="range" min="0.86" max="1.14" step="0.01" value="1" /><output id="lockScaleOutput">100%</output></label>
+        <p class="hardware-note secondary lock-position-row" hidden>锁具与下方锁芯一起移动；对开门选择双锁产品时按门扇结构保持对称。</p>
+        </div>
+      </details>
+
+      <footer class="glb-panel-footer"><span id="modelAssetLabel">MODEL / d90-door-custom.glb</span><span id="meshCount">— meshes</span></footer>
+    </aside>
+  </main>
+
+  <div class="scheme-backdrop" id="schemeBackdrop" hidden>
+    <aside class="scheme-drawer" id="schemeDrawer" aria-hidden="true" aria-label="个人方案">
+      <div class="scheme-drawer-head"><div><span class="eyebrow">YADILO / PERSONAL SCHEMES</span><h2>个人方案</h2><p>保存当前门体配置，并保留标准下单字段映射，后续可继续编辑或导出。</p></div><button type="button" class="drawer-close" data-close-schemes aria-label="关闭">×</button></div>
+      <div class="scheme-list" id="schemeList"></div>
+    </aside>
+  </div>
+
+  <div class="ai-scene-backdrop" id="aiSceneBackdrop" hidden>
+    <aside class="ai-scene-panel" id="aiScenePanel" aria-hidden="true" aria-label="AI 场景方案">
+      <div class="ai-scene-head"><div><span class="eyebrow">YADILO / AI SCENE STUDY</span><h2>AI 场景方案</h2><p>先选择一个真实应用场景，再以当前定制门体作为强参考图生成；门型、纹理、五金与尺寸优先保持不变。</p></div><button type="button" class="drawer-close" data-close-ai-scenes aria-label="关闭">×</button></div>
+      <div class="ai-reference-card"><div class="ai-reference-media"><img id="aiReferencePreview" alt="当前定制门体强参考图" hidden /><div id="aiReferencePlaceholder" class="ai-reference-placeholder"><span>✦</span><small>打开面板后截取当前定制门体</small></div></div><div class="ai-reference-copy"><div><b>当前定制门体</b><span class="ai-reference-badge">强参考 · HIGH</span></div><p>以当前预览中的门型、门扇纹理、门框门套、锁具和拉手作为产品事实，不让 AI 自行换门。</p><button type="button" id="refreshAiReference" class="ai-reference-refresh">刷新参考图</button></div></div>
+      <div class="ai-scene-progress"><div class="ai-scene-progress-track"><span id="aiSceneProgress"></span></div><p id="aiSceneStatus" class="ai-scene-status">等待生成</p></div>
+      <div class="ai-scene-list" id="aiSceneList"></div>
+      <div class="ai-scene-footer"><small>一次生成当前选中的一个场景。结果会随下一次“保存方案”写入个人方案；图像由当前配置对应的聚合生图模型生成。</small><button type="button" id="generateAiScenes" class="ai-scene-generate">生成「现代别墅入口」</button></div>
+    </aside>
+  </div>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./vendor/three/three.module.js?v=20261008",
+        "three/addons/": "./vendor/three/examples/jsm/"
+      }
+    }
+  </script>
+  <script>if (new URLSearchParams(location.search).get('embedded') === '1') document.body.classList.add('is-embedded');</script>
+  <script src="./ai-config.js?v=20261185"></script>
+  <script type="module" src="./d90-configurator.js?v=20260814.39"></script>
+  <script type="module">import { installConfiguratorPanelBehavior } from './configurator-panel-behavior.js?v=20261160'; installConfiguratorPanelBehavior();</script>
+  <script type="module" src="./fullscreen.js?v=20261008"></script>
+</body>
+
+</html>

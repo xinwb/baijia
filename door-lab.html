@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>雅帝乐 · K80 / D90 双系列门体配置器</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root{font-family:"Noto Sans SC",system-ui,sans-serif;color:#f0ece7;background:#11100f;color-scheme:dark}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:#11100f}
+    body{overflow:hidden}
+    .series-header{height:76px;display:grid;grid-template-columns:minmax(210px,1fr) auto minmax(210px,1fr);align-items:center;gap:22px;padding:0 28px;border-bottom:1px solid rgba(255,255,255,.1);background:rgba(18,17,16,.94);backdrop-filter:blur(24px);position:relative;z-index:4}
+    .series-brand{display:flex;align-items:center;gap:10px;color:#f5f3ef;text-decoration:none;min-width:0}
+    .brand-mark{display:grid;place-items:center;flex:0 0 30px;width:30px;height:30px;border-radius:8px;background:#f2eee9;color:#1c1917;font:600 16px Georgia}
+    .series-brand b{display:block;font-size:14px;line-height:1.1;letter-spacing:.08em}.series-brand small{display:block;margin-top:4px;color:#8f8984;font-size:7px;letter-spacing:.18em}
+    .series-switch{display:flex;align-items:center;gap:5px;padding:4px;border:1px solid rgba(255,255,255,.14);border-radius:19px;background:rgba(35,32,29,.82)}
+    .series-tab{display:flex;align-items:center;gap:9px;height:35px;padding:0 15px;border:0;border-radius:15px;background:transparent;color:#9b938b;font:inherit;cursor:pointer;transition:background .22s ease,color .22s ease,transform .22s ease;white-space:nowrap}
+    .series-tab:hover{color:#ede6df;transform:translateY(-1px)}.series-tab.is-active{background:#f4f0eb;color:#211d1a}.series-tab.is-active .series-code{color:#9e7045}
+    .series-code{font:600 12px "Playfair Display",serif;letter-spacing:.08em}.series-tab span:last-child{font-size:10px}
+    .series-caption{justify-self:end;text-align:right;color:#8f8984;font-size:9px;line-height:1.55;letter-spacing:.04em}.series-caption strong{display:block;color:#d6ccc4;font-size:10px;font-weight:500}
+    .series-frame-wrap{height:calc(100vh - 76px);min-height:0;background:#11100f}.series-frame{display:block;width:100%;height:100%;border:0;background:#11100f}
+    @media(max-width:920px){.series-header{grid-template-columns:1fr auto;gap:12px;padding:0 18px}.series-caption{display:none}}
+    @media(max-width:620px){.series-header{height:64px;padding:0 12px}.series-frame-wrap{height:calc(100vh - 64px)}.series-tab{height:32px;padding:0 10px;gap:6px}.series-tab span:last-child{display:none}.series-switch{gap:3px}.series-brand small{letter-spacing:.1em}.brand-mark{width:27px;height:27px;flex-basis:27px}}
+  </style>
+</head>
+
+<body>
+  <header class="series-header">
+    <a class="series-brand" href="./index.html#configure" aria-label="返回雅帝乐首页"><span class="brand-mark">Y</span><span><b>雅帝乐</b><small>DUAL SERIES DOOR LAB</small></span></a>
+    <nav class="series-switch" role="tablist" aria-label="选择门体系列">
+      <button class="series-tab" type="button" data-series="k80" role="tab" aria-selected="false"><span class="series-code">K80</span><span>经典纹理</span></button>
+      <button class="series-tab is-active" type="button" data-series="d90" role="tab" aria-selected="true"><span class="series-code">D90</span><span>真实产品</span></button>
+    </nav>
+    <div class="series-caption" id="seriesCaption"><strong>D90 COLLECTION</strong>实拍纹理 · 分层金属模型 · 独立五金</div>
+  </header>
+
+  <main class="series-frame-wrap">
+    <iframe id="seriesFrame" class="series-frame" title="D90 系列门体配置器" allow="fullscreen"></iframe>
+  </main>
+
+  <script>
+    const seriesConfig = {
+      k80: { label: 'K80 系列门体配置器', code: 'K80 COLLECTION', caption: '真实门型原图 · 智能切割纹理 · 气窗与五金', page: './glb-configurator.html' },
+      d90: { label: 'D90 系列门体配置器', code: 'D90 COLLECTION', caption: '实拍纹理 · 分层金属模型 · 独立五金', page: './d90-configurator.html' }
+    };
+    const PRODUCT_DEFAULTS = { k80: 'ruojian', d90: 'shirui' };
+    const PRODUCT_SERIES = {
+      ruojian: 'k80', yuanyin: 'k80', jiangchuanfu: 'k80', jiangchuan: 'k80', jinghongfu: 'k80', jinghong: 'k80', qingya: 'k80', qinghuafu: 'k80',
+      jinqu: 'd90', shirui: 'd90', shicui: 'd90', aige: 'd90', songge: 'd90', guanmin: 'd90'
+    };
+    const frame = document.querySelector('#seriesFrame');
+    const caption = document.querySelector('#seriesCaption');
+    const tabs = [...document.querySelectorAll('[data-series]')];
+    const params = new URLSearchParams(location.search);
+    const requestedProduct = params.get('product');
+    const requestedSeries = params.get('series') === 'k80' ? 'k80' : 'd90';
+    const initial = PRODUCT_SERIES[requestedProduct] || requestedSeries;
+    let activeProduct = PRODUCT_SERIES[requestedProduct] === initial ? requestedProduct : PRODUCT_DEFAULTS[initial];
+
+    function setSeries(series, updateUrl = true) {
+      const config = seriesConfig[series] || seriesConfig.d90;
+      tabs.forEach((tab) => {
+        const active = tab.dataset.series === series;
+        tab.classList.toggle('is-active', active);
+        tab.setAttribute('aria-selected', String(active));
+      });
+      caption.innerHTML = `<strong>${config.code}</strong>${config.caption}`;
+      document.title = `雅帝乐 · ${config.label}`;
+      frame.title = config.label;
+      if (PRODUCT_SERIES[activeProduct] !== series) activeProduct = PRODUCT_DEFAULTS[series];
+      const nextUrl = `${config.page}?embedded=1&product=${encodeURIComponent(activeProduct)}&v=20260813.37`;
+      if (frame.getAttribute('src') !== nextUrl) frame.src = nextUrl;
+      if (updateUrl) history.replaceState(null, '', `./door-lab.html?series=${series}&product=${encodeURIComponent(activeProduct)}&v=20260813.37`);
+    }
+
+    tabs.forEach((tab) => tab.addEventListener('click', () => setSeries(tab.dataset.series)));
+    setSeries(initial, false);
+  </script>
+</body>
+
+</html>

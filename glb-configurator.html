@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YADILO GLB 门体实验室</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./glb-configurator.css?v=20261185" />
+  <link rel="stylesheet" href="./glb-configurator-cards.css?v=20261143" />
+  <link rel="stylesheet" href="./background-premium.css?v=20260820" />
+  <style>
+    .texture-qingya{background-image:url('./assets/catalog/derived/k80/textures/k80-qing-ya-clean-ai-v1.png')}
+    .glb-d90-link{display:inline-flex;align-items:center;padding:7px 10px;border:1px solid rgba(216,161,111,.42);border-radius:7px;color:#d8a16f;text-decoration:none;font-size:9px;letter-spacing:.04em;transition:background .2s ease,color .2s ease}.glb-d90-link:hover{background:rgba(216,161,111,.14);color:#f1c99e}
+    .pose-chip{position:absolute;right:28px;top:104px;z-index:2;padding:7px 10px;border:1px solid rgba(255,255,255,.14);border-radius:7px;background:rgba(27,24,22,.66);backdrop-filter:blur(14px);color:#aaa19a;font-size:9px;letter-spacing:.04em;pointer-events:none}
+    .integrated-light-controls{margin:12px 0 4px;padding:12px;border:1px solid rgba(216,161,111,.16);border-radius:10px;background:linear-gradient(135deg,rgba(91,61,39,.22),rgba(20,19,18,.34));box-shadow:inset 0 1px 0 rgba(255,220,171,.05)}
+    .integrated-light-controls[hidden]{display:none}.integrated-light-controls .field-heading{margin:0 0 8px}.integrated-light-controls .mini-choice-grid{margin-bottom:8px}.integrated-light-controls .mini-choice{min-height:31px}.light-color-dot{display:inline-block;width:8px;height:8px;margin-right:5px;border-radius:50%;box-shadow:0 0 9px currentColor}.light-color-amber{color:#ffad55;background:#ffad55}.light-color-gold{color:#e0ad67;background:#e0ad67}.light-color-warm-white{color:#ffe7c4;background:#ffe7c4}.light-color-smoke{color:#9b6846;background:#9b6846}
+    @media(max-width:1100px){.pose-chip{right:18px}}
+    @media(max-width:760px){.pose-chip{right:16px;top:94px;font-size:8px}}
+  </style>
+  <link rel="stylesheet" href="./configurator-panel-polish.css?v=20261002" />
+  <link rel="stylesheet" href="./porsche-configurator-layout.css?v=20261150" />
+  <link rel="stylesheet" href="./product-inspector.css?v=20261175" />
+  <link rel="stylesheet" href="./showroom-controls.css?v=20260817" />
+  <link rel="stylesheet" href="./private-configurator-reference.css?v=20260814.15" />
+  <link rel="stylesheet" href="./configurator-ui-refactor.css?v=20260814.41" />
+</head>
+
+<body>
+  <header class="glb-header">
+    <a class="glb-brand" href="./index.html" aria-label="返回雅帝乐首页"><span class="brand-mark">Y</span><span><b>雅帝乐</b><small>GLB DOOR LAB</small></span></a>
+    <div class="glb-header-center"><span class="eyebrow">YADILO DIGITAL WORKSHOP</span><strong>真实门体 · 可编辑模型</strong></div>
+    <div class="glb-header-actions"><a class="glb-d90-link" href="./door-lab.html?series=d90&v=20261002">D90 系列</a><span class="glb-status"><i></i> GLB 已加载</span><button type="button" id="openAiScenes" class="ai-scenes-button">AI 场景</button><button type="button" id="openSchemes" class="scheme-library-button"><span>个人方案</span><b id="schemeCount">0</b></button><button type="button" id="saveScheme" class="save-scheme">保存方案</button><a class="header-action header-back" href="./index.html">返回</a><button type="button" id="toggleFullscreen" aria-label="进入全屏">全屏</button></div>
+  </header>
+
+  <main class="glb-shell">
+    <section class="glb-stage" id="stage" aria-label="GLB 门体预览">
+      <div class="stage-topline"><span>YADILO / PRIVATE SHOWROOM</span><span id="modelStatus">正在读取展厅模型…</span></div>
+      <div id="canvasMount" class="canvas-mount"></div>
+      <div class="stage-hint"><span class="hint-dot"></span><span>拖动旋转 · 滚轮缩放 · 点击部件查看详情</span></div>
+      <div class="stage-controls" role="group" aria-label="视图控制">
+        <button type="button" class="stage-control active" data-view="perspective">重置视角</button>
+        <button type="button" class="stage-control" data-view="front">正面</button>
+        <button type="button" class="stage-control" data-view="side">侧面</button>
+        <button type="button" class="stage-control" id="toggleDoorOpen">打开主门</button>
+      </div>
+      <div class="showroom-light-panel" id="showroomLightPanel" hidden aria-label="展厅灯光控制">
+        <div class="showroom-light-panel-head"><span>展厅灯光</span><div class="showroom-light-panel-actions"><button type="button" id="showroomLightPower" class="showroom-light-power active" aria-pressed="true">灯带开启</button><button type="button" id="closeShowroomLightPanel" aria-label="关闭灯光控制">×</button></div></div>
+        <div class="showroom-light-presets" role="group" aria-label="灯光场景">
+          <button type="button" class="showroom-light-preset active" data-showroom-light="gallery">展厅</button>
+          <button type="button" class="showroom-light-preset" data-showroom-light="daylight">自然光</button>
+          <button type="button" class="showroom-light-preset" data-showroom-light="evening">暖夜</button>
+        </div>
+        <label class="showroom-light-range"><span>亮度</span><input id="showroomLightIntensitySlider" type="range" min="0.35" max="1.45" step="0.05" value="1" /><output id="showroomLightIntensityOutput">100%</output></label>
+        <p>展厅效果默认隐藏；开启后可切换墙面灯带、顶部洗墙光和门体金属反射。</p>
+      </div>
+      <div class="pose-chip" id="doorPoseReadout">闭合状态 · 80 mm 全钢门扇结构</div>
+      <div class="dimension-chip dimension-width"><span>宽度</span><strong id="widthReadout">1300 mm</strong></div>
+      <div class="dimension-chip dimension-height"><span>高度</span><strong id="heightReadout">2600 mm</strong></div>
+    </section>
+
+    <aside class="glb-panel order-panel" aria-label="K80 门体配置">
+      <div class="panel-intro">
+        <span class="eyebrow">K80 PRIVATE CONFIGURATION</span>
+        <h1>私人订制</h1>
+        <div class="config-progress"><span class="active">01 产品</span><span>02 结构</span><span>03 尺寸</span><span>04 五金</span></div>
+      </div>
+
+      <details class="config-accordion" data-camera-focus="surface" open>
+        <summary><span><i>01</i> 当前产品与饰面</span><small id="productSectionSummary">单品锁定</small></summary>
+        <div class="accordion-body">
+          <article class="product-lock-card"><span id="productThumb" class="product-lock-thumb"></span><span><b id="productName">雅帝若简</b><small id="productPrototype">对开门原型 · 产品结构锁定，正背面纹理可定制</small></span><i>结构锁定</i></article>
+          <div class="face-switch" role="group" aria-label="选择门扇面"><button class="face-tab selected" type="button" data-texture-face="front">正面 · <span id="frontFinishName">雅帝若简</span></button><button class="face-tab" type="button" data-texture-face="back">背面 · <span id="backFinishName">雅帝若简</span></button></div>
+          <div class="colorway-heading"><span>纹理分区</span><small id="textureRegionHint">同步调整 / 左侧门扇 / 右侧门扇</small></div>
+          <div id="textureRegionGrid" class="texture-region-grid"></div>
+          <div class="colorway-heading"><span>当前门面纹理方案</span><small>正面 / 背面独立，按当前分区应用</small></div>
+          <div id="textureSurfaceGrid" class="texture-surface-grid"></div>
+          <div id="designLayerHeading" class="colorway-heading design-layer-heading" hidden><span>主造型分层</span><button type="button" class="inspector-inline" data-inspector-open="design">了解主造型</button></div>
+          <div id="designPresetGrid" class="design-preset-grid"></div>
+          <div id="designLayerTools" class="design-layer-tools" hidden aria-label="主造型位置与大小调整">
+            <label class="range-row texture-range"><span>左右</span><input id="designOffsetXSlider" type="range" min="-18" max="18" step="1" value="0" /><output id="designOffsetXOutput">0%</output></label>
+            <label class="range-row texture-range"><span>上下</span><input id="designOffsetYSlider" type="range" min="-18" max="18" step="1" value="0" /><output id="designOffsetYOutput">0%</output></label>
+            <label class="range-row texture-range"><span>大小</span><input id="designScaleSlider" type="range" min="0.82" max="1.30" step="0.01" value="1" /><output id="designScaleOutput">100%</output></label>
+            <p>只移动主造型层；底纹、门扇比例和五金锚点不跟着变形。</p>
+          </div>
+          <details class="advanced-drawer">
+            <summary>高级纹理取景 <small>不拉伸结构</small></summary>
+            <div class="texture-tools" aria-label="门扇纹理取景调整">
+              <label class="range-row texture-range"><span>缩放</span><input id="textureZoomSlider" type="range" min="0.82" max="2.20" step="0.01" value="1" /><output id="textureZoomOutput">100%</output></label>
+              <label class="range-row texture-range"><span>左右</span><input id="texturePanXSlider" type="range" min="-0.20" max="0.20" step="0.01" value="0" /><output id="texturePanXOutput">0%</output></label>
+              <label class="range-row texture-range"><span>上下</span><input id="texturePanYSlider" type="range" min="-0.20" max="0.20" step="0.01" value="0" /><output id="texturePanYOutput">0%</output></label>
+              <button type="button" id="resetTextureView" class="texture-tool-reset">恢复原始取景</button>
+              <p>门扇纹理按真实物理比例取景；同步模式左右共同调整，单独模式只改变当前门扇，尺寸变化显示更多或更少内容。</p>
+            </div>
+          </details>
+        </div>
+      </details>
+
+      <details class="config-accordion" data-camera-focus="structure">
+        <summary><span><i>02</i> 门型与开启</span><small id="structureSectionSummary">子母 · 外开左锁</small></summary>
+        <div class="accordion-body">
+          <div class="field-heading"><span>门型结构</span><small>单门 / 子母门 / 对开门均可定制，边门按产品素材开放</small></div>
+          <div class="choice-grid five">
+            <button class="choice" data-type="single"><b>单门</b><small>独立门扇</small></button>
+            <button class="choice selected" data-type="mother"><b>子母门</b><small>左小右大</small></button>
+            <button class="choice" data-type="double"><b>对开门</b><small>左右镜像</small></button>
+            <button class="choice" data-type="sideLight"><b>中庭</b><small>主门与中庭框一体</small></button>
+            <button class="choice" data-type="doubleSide"><b>双边边门</b><small>左右玻璃一体</small></button>
+          </div>
+          <div id="compositionLogicNote" class="composition-logic-note"></div>
+          <div class="field-heading"><span>开启方向</span><small>左右以室外正视图为准，左锁开左扇</small></div>
+          <div class="mini-choice-grid two">
+            <button class="mini-choice selected" data-opening="out-left">外开左锁</button><button class="mini-choice" data-opening="out-right">外开右锁</button>
+            <button class="mini-choice" data-opening="in-left">内开左锁</button><button class="mini-choice" data-opening="in-right">内开右锁</button>
+          </div>
+          <div class="field-heading"><span>铰链 / 合页</span><button type="button" class="inspector-inline" data-inspector-open="hinge">查看合页大图</button></div>
+          <div class="mini-choice-grid three">
+            <button class="mini-choice selected" data-hinge="k80-hidden">K80 单轴暗合页</button><button class="mini-choice" data-hinge="k80-five-axis">K80 全钢五轴</button><button class="mini-choice" data-hinge="k80-external">K80 重载外合页</button>
+          </div>
+        </div>
+      </details>
+
+      <details class="config-accordion" data-camera-focus="transom">
+        <summary><span><i>03</i> 气窗</span><small id="transomSectionSummary">无气窗</small></summary>
+        <div class="accordion-body">
+          <div class="mini-choice-grid two transom-options">
+            <button class="mini-choice selected" data-transom-type="none">无气窗</button>
+            <button class="mini-choice" data-transom-type="door-extended">门体加高气窗</button>
+            <button class="mini-choice" data-transom-type="square-true">方形真气窗</button>
+            <button class="mini-choice" data-transom-type="integrated">方形门窗一体</button>
+          </div>
+          <p class="field-note">气窗与门体共用同一门套，宽度随门洞同步；框料截面保持固定。默认不配置气窗。</p>
+        </div>
+      </details>
+
+      <details class="config-accordion" data-camera-focus="dimensions">
+        <summary><span><i>04</i> 尺寸</span><small id="dimensionSectionSummary">1300 × 2600 mm</small></summary>
+        <div class="accordion-body">
+          <div class="field-heading"><span>包框尺寸</span><small>单位：mm · 按门型限制区间</small></div>
+          <label class="range-row"><span>宽度</span><input id="widthSlider" type="range" min="1100" max="1700" step="10" value="1300" /><output id="widthOutput">1300 mm</output></label>
+          <label class="range-row"><span>高度</span><input id="heightSlider" type="range" min="2300" max="3000" step="10" value="2600" /><output id="heightOutput">2600 mm</output></label>
+          <div class="dimension-calcs"><span><small>门扇见光</small><b id="clearOpeningReadout">—</b></span><span><small>外门套总尺寸</small><b id="casingReadout">—</b></span><span><small>门扇结构厚度</small><b>80 mm</b></span></div>
+          <p class="dimension-note" id="dimensionRangeNote">尺寸调整不会拉伸纹理、门锁、拉手或框料截面。</p>
+        </div>
+      </details>
+
+      <details class="config-accordion" data-camera-focus="frame">
+        <summary><span><i>05</i> 门框与门套</span><small id="frameSectionSummary">固定工艺色 · 整体制作</small></summary>
+        <div class="accordion-body">
+          <div class="spec-grid"><span><small>门框体系</small><b>K80 标配金属框</b></span><span><small>门套颜色</small><b>产品固定工艺色</b></span></div>
+          <label class="range-row"><span>墙厚</span><input id="wallThicknessSlider" type="range" min="100" max="500" step="10" value="240" /><output id="wallThicknessOutput">240 mm</output></label>
+          <div class="field-heading"><span>门框安装位置</span><small>相对墙体的落位</small></div>
+          <div class="mini-choice-grid three"><button class="mini-choice" data-frame-install="outside">靠墙外</button><button class="mini-choice selected" data-frame-install="center">靠中装</button><button class="mini-choice" data-frame-install="inside">靠墙内</button></div>
+          <div class="field-heading"><span>门框制作方式</span><small>对应生产工艺</small></div>
+          <div class="mini-choice-grid two"><button class="mini-choice selected" data-frame-build="integral">整体制作</button><button class="mini-choice" data-frame-build="assembled">拼装制作</button></div>
+        </div>
+      </details>
+
+      <details class="config-accordion" data-camera-focus="hardware">
+        <summary><span><i>06</i> 锁具与拉手</span><small id="hardwareSectionSummary">隐形锁体 · SL48F</small></summary>
+        <div class="accordion-body">
+          <div class="field-heading"><span>锁体 / 面板</span><button type="button" class="inspector-inline" data-inspector-open="lock">了解锁体结构</button></div>
+          <div class="hardware-grid lock-grid">
+            <button class="hardware-card selected" data-lock="none"><span class="handle-preview none"></span><b>隐藏锁体（无外露）</b><small>不显示第二个锁面</small></button>
+            <button class="hardware-card" data-lock="smart"><span class="handle-preview smart"></span><b>智能锁</b><small>独立锁体面板</small></button>
+          </div>
+          <div class="field-heading"><span id="handleFieldTitle">外拉手</span><small id="handleFieldNote">按产品照片显示可用结构</small></div>
+          <div class="hardware-grid handle-grid">
+            <button class="hardware-card" data-handle="long"><span class="handle-preview long"></span><b>SL48F 通天拉手</b><small>细竖杆 · 暗槽安装</small></button>
+            <button class="hardware-card" data-handle="ring"><span class="handle-preview ring"></span><b>双环拉手</b><small>左右门扇对称</small></button>
+            <button class="hardware-card" data-handle="recess"><span class="handle-preview recess"></span><b>中部凹槽拉手</b><small>内嵌式 · 与门扇一体</small></button>
+            <button class="hardware-card" data-handle="integrated"><span class="handle-preview integrated"></span><b>纹理一体灯带拉手</b><small>正面融入纹理 · 侧面有凸起</small></button>
+            <button class="hardware-card" data-handle="none"><span class="handle-preview none"></span><b>无外拉手</b><small>仅保留锁体</small></button>
+          </div>
+          <p id="integratedChannelNote" class="hardware-note" hidden>雅帝若简固定主体门凹槽灯带：它是门扇结构，不计入外拉手选配；灯槽从主体门扇上沿贯穿至下沿，凹入门面，橙色灯芯可单独调节。</p>
+          <label class="range-row handle-position-row"><span>左右</span><input id="handleHorizontalSlider" type="range" min="-180" max="180" step="10" value="0" /><output id="handleHorizontalOutput">基准位置</output></label>
+          <label class="range-row handle-position-row"><span>上下</span><input id="handlePositionSlider" type="range" min="-240" max="240" step="10" value="0" /><output id="handlePositionOutput">基准位置</output></label>
+          <label class="range-row handle-position-row"><span>缩放</span><input id="handleScaleSlider" type="range" min="0.82" max="1.18" step="0.01" value="1" /><output id="handleScaleOutput">100%</output></label>
+          <p class="hardware-note secondary">位置按毫米基准调整，门高变化不会改变安装高度；对开门左右镜像同步。</p>
+          <div id="integratedLightControls" class="integrated-light-controls" hidden>
+            <div class="field-heading"><span>一体灯带</span><small>只对当前产品真实灯带生效</small></div>
+            <div class="mini-choice-grid two">
+              <button type="button" class="mini-choice selected" data-integrated-light-enabled="true">开启</button>
+              <button type="button" class="mini-choice" data-integrated-light-enabled="false">关闭</button>
+            </div>
+            <div class="field-heading"><span>灯光色温</span><small>灯芯与展厅光晕同步</small></div>
+            <div class="mini-choice-grid three">
+              <button type="button" class="mini-choice selected" data-integrated-light-color="amber"><i class="light-color-dot light-color-amber"></i>橙色灯带</button>
+              <button type="button" class="mini-choice" data-integrated-light-color="gold"><i class="light-color-dot light-color-gold"></i>香槟金</button>
+              <button type="button" class="mini-choice" data-integrated-light-color="warm-white"><i class="light-color-dot light-color-warm-white"></i>暖白光</button>
+              <button type="button" class="mini-choice" data-integrated-light-color="smoke"><i class="light-color-dot light-color-smoke"></i>低亮古铜</button>
+            </div>
+            <label class="range-row handle-position-row"><span>亮度</span><input id="integratedLightIntensitySlider" type="range" min="0.35" max="1.35" step="0.05" value="1" /><output id="integratedLightIntensityOutput">100%</output></label>
+          </div>
+          <div id="ringLightControls" class="integrated-light-controls ring-light-controls" hidden>
+            <div class="field-heading"><span>圆月环光</span><small>同步控制环形灯芯与场景光晕</small></div>
+            <div class="mini-choice-grid two">
+              <button type="button" class="mini-choice selected" data-ring-light-enabled="true">开启</button>
+              <button type="button" class="mini-choice" data-ring-light-enabled="false">关闭</button>
+            </div>
+            <div class="field-heading"><span>灯光色温</span><small>环形灯芯与点光源同步</small></div>
+            <div class="mini-choice-grid three">
+              <button type="button" class="mini-choice selected" data-ring-light-color="amber"><i class="light-color-dot light-color-amber"></i>琥珀暖光</button>
+              <button type="button" class="mini-choice" data-ring-light-color="gold"><i class="light-color-dot light-color-gold"></i>香槟金</button>
+              <button type="button" class="mini-choice" data-ring-light-color="warm-white"><i class="light-color-dot light-color-warm-white"></i>暖白光</button>
+              <button type="button" class="mini-choice" data-ring-light-color="smoke"><i class="light-color-dot light-color-smoke"></i>低亮古铜</button>
+            </div>
+            <label class="range-row handle-position-row"><span>亮度</span><input id="ringLightIntensitySlider" type="range" min="0" max="1.35" step="0.05" value="1" /><output id="ringLightIntensityOutput">100%</output></label>
+          </div>
+          <div class="field-heading lock-position-heading"><span>锁体位置</span><small>只移动独立锁体，不改变门扇</small></div>
+          <label class="range-row lock-position-row" hidden><span>左右</span><input id="lockHorizontalSlider" type="range" min="-140" max="140" step="10" value="0" /><output id="lockHorizontalOutput">基准位置</output></label>
+          <label class="range-row lock-position-row" hidden><span>上下</span><input id="lockPositionSlider" type="range" min="-200" max="200" step="10" value="0" /><output id="lockPositionOutput">基准位置</output></label>
+          <label class="range-row lock-position-row" hidden><span>缩放</span><input id="lockScaleSlider" type="range" min="0.86" max="1.14" step="0.01" value="1" /><output id="lockScaleOutput">100%</output></label>
+          <p class="hardware-note secondary lock-position-row" hidden>锁体安装基准固定在主门扇；对开门若选择双环拉手，左右拉手按中缝镜像。</p>
+        </div>
+      </details>
+
+      <footer class="glb-panel-footer"><span>MODEL / yadilo-door-custom.glb</span><span id="meshCount">— meshes</span></footer>
+    </aside>
+  </main>
+
+  <div class="scheme-backdrop" id="schemeBackdrop" hidden>
+    <aside class="scheme-drawer" id="schemeDrawer" aria-hidden="true" aria-label="个人方案">
+      <div class="scheme-drawer-head"><div><span class="eyebrow">YADILO / PERSONAL SCHEMES</span><h2>个人方案</h2><p>保存当前门体配置，并保留标准下单字段映射，后续可继续编辑或导出。</p></div><button type="button" class="drawer-close" data-close-schemes aria-label="关闭">×</button></div>
+      <div class="scheme-list" id="schemeList"></div>
+    </aside>
+  </div>
+
+  <div class="ai-scene-backdrop" id="aiSceneBackdrop" hidden>
+    <aside class="ai-scene-panel" id="aiScenePanel" aria-hidden="true" aria-label="AI 场景方案">
+      <div class="ai-scene-head"><div><span class="eyebrow">YADILO / AI SCENE STUDY</span><h2>AI 场景方案</h2><p>先选择一个真实应用场景，再以当前定制门体作为强参考图生成；门型、纹理、五金与尺寸优先保持不变。</p></div><button type="button" class="drawer-close" data-close-ai-scenes aria-label="关闭">×</button></div>
+      <div class="ai-reference-card"><div class="ai-reference-media"><img id="aiReferencePreview" alt="当前定制门体强参考图" hidden /><div id="aiReferencePlaceholder" class="ai-reference-placeholder"><span>✦</span><small>打开面板后截取当前定制门体</small></div></div><div class="ai-reference-copy"><div><b>当前定制门体</b><span class="ai-reference-badge">强参考 · HIGH</span></div><p>以当前预览中的门型、门扇纹理、门框门套、锁具和拉手作为产品事实，不让 AI 自行换门。</p><button type="button" id="refreshAiReference" class="ai-reference-refresh">刷新参考图</button></div></div>
+      <div class="ai-scene-progress"><div class="ai-scene-progress-track"><span id="aiSceneProgress"></span></div><p id="aiSceneStatus" class="ai-scene-status">等待生成</p></div>
+      <div class="ai-scene-list" id="aiSceneList"></div>
+      <div class="ai-scene-footer"><small>一次生成当前选中的一个场景。结果会随下一次“保存方案”写入个人方案；图像由当前配置对应的聚合生图模型生成。</small><button type="button" id="generateAiScenes" class="ai-scene-generate">生成「现代别墅入口」</button></div>
+    </aside>
+  </div>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./vendor/three/three.module.js?v=20261008",
+        "three/addons/": "./vendor/three/examples/jsm/"
+      }
+    }
+  </script>
+  <script>if (new URLSearchParams(location.search).get('embedded') === '1') document.body.classList.add('is-embedded');</script>
+  <script src="./ai-config.js?v=20261185"></script>
+  <script src="./catalog-pdf-data.js?v=20260814.14"></script>
+  <script type="module" src="./glb-configurator.js?v=20260815.88"></script>
+  <script type="module" src="./private-configurator-tabs.js?v=20260815.87"></script>
+  <script type="module">import { installConfiguratorPanelBehavior } from './configurator-panel-behavior.js?v=20261161'; installConfiguratorPanelBehavior();</script>
+  <script type="module" src="./fullscreen.js?v=20261008"></script>
+</body>
+
+</html>

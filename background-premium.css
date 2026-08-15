@@ -1,0 +1,132 @@
+/* YADILO premium architectural gallery shell.
+   The cool mineral palette gives the warm metal finishes a deliberate focal
+   point without reducing contrast in the ordering controls. */
+:root {
+  color: #eceff1;
+  background: #0b1015;
+}
+
+body {
+  background: #0b1015;
+}
+
+.glb-header {
+  border-bottom-color: rgba(208, 220, 230, .12);
+  background: linear-gradient(180deg, rgba(9, 13, 17, .97), rgba(14, 18, 22, .88));
+}
+
+.glb-brand { color: #f5f7f8; }
+.glb-brand small,
+.glb-header-center .eyebrow,
+.eyebrow { color: #89949d; }
+
+.glb-header-actions button {
+  border-color: rgba(208, 220, 230, .18);
+  background: rgba(255, 255, 255, .015);
+  color: #d5dce0;
+}
+
+.glb-header-actions button:hover { background: rgba(220, 231, 239, .08); }
+.glb-header-actions button.active {
+  border-color: rgba(216, 161, 111, .62);
+  background: rgba(183, 134, 79, .18);
+  color: #f2c994;
+}
+.glb-status { color: #aeb8bd; }
+.glb-shell { background: #0b1015; }
+
+.glb-stage {
+  border-right-color: rgba(208, 220, 230, .14);
+  background:
+    radial-gradient(ellipse at 47% 29%, rgba(199, 170, 130, .17), transparent 23%),
+    radial-gradient(ellipse at 47% 35%, rgba(118, 143, 158, .30), transparent 46%),
+    linear-gradient(165deg, #3d4a52 0%, #202c33 52%, #0a0f14 100%);
+}
+
+.glb-stage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: .42;
+  background:
+    linear-gradient(90deg, transparent 0 11%, rgba(218, 225, 226, .06) 11.1% 11.2%, transparent 11.3% 88.7%, rgba(218, 225, 226, .06) 88.8% 88.9%, transparent 89%),
+    linear-gradient(180deg, rgba(255, 255, 255, .10), transparent 26%, transparent 72%, rgba(2, 6, 9, .34));
+}
+
+.glb-stage::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 24%;
+  pointer-events: none;
+  z-index: 0;
+  background: linear-gradient(180deg, transparent, rgba(5, 10, 14, .26));
+  border-top: 1px solid rgba(216, 182, 139, .08);
+}
+
+.canvas-mount { z-index: 1; }
+.stage-topline,
+.stage-controls,
+.stage-hint,
+.dimension-chip,
+.pose-chip { z-index: 2; }
+
+.glb-panel {
+  background: linear-gradient(180deg, #1a1f23 0%, #11161a 100%);
+  box-shadow: -18px 0 42px rgba(0, 0, 0, .18);
+}
+
+.stage-controls,
+.dimension-chip,
+.pose-chip {
+  border-color: rgba(208, 220, 230, .18);
+  background: rgba(13, 19, 24, .74);
+}
+
+.stage-controls { box-shadow: 0 12px 30px rgba(0, 0, 0, .16); }
+
+.choice,
+.finish-card,
+.hardware-card,
+.color-choice,
+.segmented button {
+  border-color: rgba(208, 220, 230, .13);
+  background: rgba(25, 31, 36, .82);
+}
+
+.choice.selected,
+.finish-card.selected,
+.hardware-card.selected,
+.color-choice.selected {
+  border-color: #d4a96f;
+  background: rgba(183, 134, 79, .18);
+}
+
+.dimension-chip { color: #b6c0c5; }
+.dimension-chip strong { color: #f0e7dc; }
+
+html:fullscreen,
+html:-webkit-full-screen {
+  background: #0b1015;
+}
+
+body.is-pseudo-fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body.is-pseudo-fullscreen .glb-shell {
+  height: calc(100vh - 72px);
+}
+
+@media (max-width: 760px) {
+  .glb-panel { box-shadow: none; }
+}

@@ -1,29 +1,37 @@
 /* Parametric door assembly. This layer deliberately supersedes the earlier
    decorative preview rules: every visible part belongs to one opening. */
 .door-scene{overflow:clip!important;isolation:isolate;perspective:1500px!important}
+.preview-top{pointer-events:none}
+.menu-toggle{display:none}
+.nav-links{display:contents}
 #doorStage{position:relative!important;inset:auto!important;width:100%!important;height:100%!important;min-width:0!important;min-height:0!important;display:grid!important;place-items:center!important;justify-content:center!important;align-content:center!important;box-sizing:border-box!important;padding:0 88px 76px 0!important;transform:none!important;transform-origin:center!important}
-#threeDoorMount{position:absolute;left:max(0px,calc(var(--door-left,50%) - 210px));top:max(0px,calc(var(--door-top,80px) - 130px));right:max(88px,calc(100% - var(--door-left,50%) - var(--door-width,280px) - 8px));bottom:max(76px,calc(100% - var(--door-top,120px) - var(--door-height,480px) - 18px));z-index:3;pointer-events:none}
+#threeDoorMount{position:absolute;inset:0;z-index:5;pointer-events:none;opacity:0;transition:opacity .22s ease}
+#doorStage.is-3d-active #threeDoorMount{opacity:1}
 #threeDoorMount canvas{display:block;width:100%!important;height:100%!important}
 #doorStage .wall-shadow{display:none!important}
-.door-model{position:relative!important;align-self:end!important;justify-self:center!important;margin-bottom:0!important;transform-style:preserve-3d;transform:rotateY(var(--view-angle,0deg));transform-origin:center center;transition:transform .45s cubic-bezier(.2,.8,.2,1);z-index:4;opacity:.02}
-#doorOpening.door-opening{position:absolute!important;inset:0!important;display:grid!important;align-items:stretch!important;justify-items:stretch!important;box-sizing:border-box!important;padding:var(--frame-stroke,8px)!important;background:linear-gradient(90deg,color-mix(in srgb,var(--frame-color) 66%,#000),color-mix(in srgb,var(--frame-color) 82%,#fff) 18%,var(--frame-color) 54%,color-mix(in srgb,var(--frame-color) 68%,#000))!important;border:1px solid color-mix(in srgb,var(--frame-color) 64%,#fff)!important;border-radius:0!important;overflow:visible!important;transform:translateZ(1px)!important}
-#doorOpening.casing-0{box-shadow:0 0 0 3px color-mix(in srgb,var(--casing-color) 76%,#fff),0 0 0 8px var(--casing-color),0 0 0 9px color-mix(in srgb,var(--casing-color) 56%,#000),0 20px 34px rgba(25,25,27,.28)!important}
-#doorOpening.casing-1{box-shadow:0 0 0 2px color-mix(in srgb,var(--casing-color) 72%,#fff),0 0 0 4px var(--casing-color),0 0 0 5px color-mix(in srgb,var(--casing-color) 52%,#000),0 20px 34px rgba(25,25,27,.28)!important}
-#doorOpening.casing-2{box-shadow:0 0 0 4px color-mix(in srgb,var(--casing-color) 70%,#fff),0 0 0 14px var(--casing-color),0 0 0 16px color-mix(in srgb,var(--casing-color) 54%,#000),0 20px 34px rgba(25,25,27,.28)!important}
+.door-model{position:relative!important;align-self:end!important;justify-self:center!important;margin-bottom:0!important;transform-style:preserve-3d;transform:rotateY(var(--view-angle,0deg));transform-origin:center center;transition:transform .22s ease,opacity .22s ease;z-index:4;opacity:1}
+#doorStage.is-3d-active .door-model{opacity:.02}
+#doorOpening.door-opening{position:absolute!important;inset:0!important;display:grid!important;align-items:stretch!important;justify-items:stretch!important;box-sizing:border-box!important;padding:var(--frame-stroke,8px)!important;background:linear-gradient(90deg,#241e1b 0%,#6e5b50 8%,#9c8879 14%,#4b3b34 21%,#5d493f 47%,#876f60 53%,#493932 79%,#9a8272 86%,#4a3932 94%,#211b19 100%)!important;border:1px solid #b29a89!important;border-radius:0!important;overflow:visible!important;transform:translateZ(1px)!important;box-shadow:inset 0 0 0 1px rgba(27,20,17,.8),inset 0 0 0 3px rgba(212,190,169,.25),inset 0 0 16px rgba(0,0,0,.65)!important}
+#doorOpening.door-opening:before{content:'';position:absolute;inset:3px;pointer-events:none;border:1px solid rgba(226,205,183,.35);box-shadow:inset 0 0 0 2px rgba(24,18,15,.65),inset 0 4px 8px rgba(255,236,214,.16),inset 0 -6px 12px rgba(12,9,8,.42);z-index:0}
+#doorOpening.casing-0{box-shadow:0 0 0 3px color-mix(in srgb,var(--casing-color) 76%,#fff),0 0 0 var(--casing-width,10px) var(--casing-color),0 0 0 calc(var(--casing-width,10px) + 1px) color-mix(in srgb,var(--casing-color) 56%,#000),0 32px 48px rgba(25,25,27,.3)!important}
+#doorOpening.casing-1{box-shadow:0 0 0 2px color-mix(in srgb,var(--casing-color) 72%,#fff),0 0 0 var(--casing-width,2px) var(--casing-color),0 0 0 calc(var(--casing-width,2px) + 1px) color-mix(in srgb,var(--casing-color) 52%,#000),0 32px 48px rgba(25,25,27,.3)!important}
+#doorOpening.casing-2{box-shadow:0 0 0 4px color-mix(in srgb,var(--casing-color) 70%,#fff),0 0 0 var(--casing-width,4px) var(--casing-color),0 0 0 calc(var(--casing-width,4px) + 2px) color-mix(in srgb,var(--casing-color) 54%,#000),0 32px 48px rgba(25,25,27,.3)!important}
 .door-depth-face{position:absolute;top:0;height:100%;width:var(--door-depth,18px);background:linear-gradient(90deg,color-mix(in srgb,var(--casing-color) 52%,#000),var(--casing-color) 42%,color-mix(in srgb,var(--casing-color) 72%,#fff));box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--casing-color) 58%,#fff);pointer-events:none;opacity:0;transition:opacity .25s}
 .depth-right{right:0;transform-origin:right center;transform:rotateY(90deg)}
 .depth-left{left:0;transform-origin:left center;transform:rotateY(-90deg)}
 .door-model.view-right .depth-left,.door-model.view-left .depth-right{opacity:1}
-#doorOpening .door-frame{position:relative!important;left:auto!important;bottom:auto!important;width:100%!important;height:100%!important;display:grid!important;isolation:isolate!important;filter:none!important;background:#25282a!important;overflow:hidden!important}
-#doorOpening .surface-map{position:absolute;inset:0;z-index:0;background-image:var(--finish-image);background-size:var(--finish-size);background-position:center center;background-repeat:no-repeat;background-color:#7f807c}
-#doorOpening .door-leaf{position:relative;z-index:1;min-width:0;height:100%;box-sizing:border-box;border:var(--frame-stroke,8px) solid var(--frame-color);border-bottom-width:0!important;background:transparent;overflow:hidden}
+#doorOpening .door-frame{position:relative!important;left:auto!important;bottom:auto!important;width:100%!important;height:100%!important;display:grid!important;isolation:isolate!important;filter:none!important;background:linear-gradient(90deg,#251f1c,#755f52 8%,#3f312b 15%,#59443a 48%,#826b5c 52%,#43332c 85%,#8f7666 93%,#271f1c)!important;overflow:hidden!important;box-shadow:inset 0 0 0 1px rgba(226,201,177,.32),inset 0 0 14px rgba(0,0,0,.52)!important}
+#doorOpening .surface-map{position:absolute;inset:0;z-index:0;background-image:var(--finish-image);background-size:var(--finish-size);background-position:center top;background-repeat:no-repeat;background-color:#7f807c;filter:var(--finish-filter,none)}
+#doorOpening .door-leaf{position:relative;z-index:1;min-width:0;height:100%;box-sizing:border-box;border:var(--frame-stroke,8px) solid var(--frame-color);border-bottom-width:0!important;background:transparent;overflow:hidden;box-shadow:inset 1px 0 rgba(230,210,190,.28),inset -2px 0 rgba(28,20,17,.52)}
 #doorOpening .door-leaf+.door-leaf{border-left-width:0!important}
 #doorOpening .leaf-design{position:absolute;inset:0;z-index:1;pointer-events:none}
-#doorOpening .door-hardware{position:absolute;z-index:3;right:24px;top:auto;bottom:var(--hardware-bottom,180px);width:22px;height:100px;transform:none;border-radius:5px;background:linear-gradient(90deg,#111,#383d40 50%,#101214);box-shadow:1px 2px 5px rgba(0,0,0,.45)}
-#doorOpening .door-hardware.meeting-side{left:24px;right:auto}
+#doorOpening .door-hardware{position:absolute;z-index:3;right:var(--hardware-side,24px);top:auto;bottom:var(--hardware-bottom,180px);width:var(--hardware-width,22px);height:var(--hardware-height,100px);transform:translateZ(5px);border:1px solid rgba(255,255,255,.16);border-radius:5px;background:linear-gradient(90deg,#0b0c0d,#2c3031 48%,#111314);box-shadow:1px 3px 7px rgba(0,0,0,.48),inset 1px 0 rgba(255,255,255,.14),inset -2px 0 rgba(0,0,0,.38);overflow:visible}
+#doorOpening .door-hardware.meeting-side{left:var(--hardware-side,24px);right:auto}
+#doorOpening .door-hardware.passive-side{right:var(--hardware-side,24px);left:auto}
 #doorOpening .door-hardware:before{content:'';position:absolute;left:-5px;right:-5px;top:14px;height:14px;border:1px solid #bba37e;border-radius:3px}
 #doorOpening .door-hardware i{position:absolute;left:8px;top:35px;width:6px;height:30px;border-radius:5px;background:#8b9396}
 #doorOpening .door-hardware b{position:absolute;left:8px;bottom:10px;width:6px;height:6px;border-radius:50%;background:#0b0b0b}
+#doorOpening .door-hardware:after{content:'';position:absolute;left:3px;right:3px;top:3px;bottom:3px;border:1px solid rgba(255,255,255,.1);border-radius:inherit;pointer-events:none}
 #doorOpening .hardware-1{width:16px;height:56px;border-radius:2px;background:#292522}
 #doorOpening .hardware-1:before{top:8px;left:-24px;right:auto;width:25px;height:5px;border:0;border-radius:5px;background:#bdab92}
 #doorOpening .hardware-1 i,#doorOpening .hardware-1 b{display:none}
@@ -31,12 +39,16 @@
 #doorOpening .hardware-2:before{display:none}
 #doorOpening .hardware-2 i{left:3px;top:12px;width:6px;height:92px;background:#a6a5a0}
 #doorOpening .hardware-2 b{display:none}
+#doorOpening .door-hardware.handle-1{width:var(--hardware-width)!important;height:var(--hardware-height)!important;border-radius:2px;background:linear-gradient(90deg,#777d81,#d6d9da 48%,#73787b);box-shadow:1px 2px 5px rgba(0,0,0,.38)}
+#doorOpening .door-hardware.handle-1:before{display:none}
+#doorOpening .door-hardware.handle-1 i,#doorOpening .door-hardware.handle-1 b{display:none}
+#doorOpening .door-hardware.handle-2{width:var(--hardware-width)!important;height:var(--hardware-height)!important;border-radius:4px}
 
 /* Door patterns are geometry, not texture pixels. Profile thickness and
    offsets stay physically stable while the material canvas reveals more area. */
 #doorOpening .design-x201b:before{content:'';position:absolute;inset:var(--design-inset) var(--design-inset-small);border:var(--profile-wide) double rgba(107,135,146,.42);outline:var(--profile) solid rgba(2,8,12,.44);background:repeating-linear-gradient(90deg,rgba(3,8,11,.2) 0 var(--profile),rgba(97,126,137,.3) var(--profile) var(--profile-wide),rgba(7,13,17,.24) var(--profile-wide) var(--profile-gap));box-shadow:inset 0 0 0 var(--profile-wide) rgba(1,7,10,.46),inset 0 0 22px rgba(0,0,0,.34)}
 #doorOpening .design-x201b:after{content:'';position:absolute;inset:calc(var(--design-inset) + var(--profile-gap)) calc(var(--design-inset-small) + var(--profile-gap));border:1px solid rgba(151,175,184,.26);box-shadow:0 0 0 var(--profile) rgba(3,9,12,.58)}
-#doorOpening .leaf-child .design-x201b:before{inset:var(--design-inset) var(--design-inset-child);background:none;border-color:rgba(111,141,151,.38);box-shadow:inset 0 0 0 var(--profile-wide) rgba(1,7,10,.34),inset 0 0 18px rgba(0,0,0,.22)}
+#doorOpening .leaf-child .design-x201b:before{inset:var(--design-inset) var(--design-inset-child);border-color:rgba(111,141,151,.38);box-shadow:inset 0 0 0 var(--profile-wide) rgba(1,7,10,.34),inset 0 0 18px rgba(0,0,0,.22)}
 #doorOpening .leaf-child .design-x201b:after{inset:calc(var(--design-inset) + var(--profile-gap)) calc(var(--design-inset-child) + var(--profile-gap))}
 
 #doorOpening .design-ta:before{content:'';position:absolute;inset:var(--design-inset-small);border:1px solid rgba(255,255,255,.12);box-shadow:inset 0 0 20px rgba(66,55,43,.08)}
@@ -47,6 +59,7 @@
 #doorOpening .leaf-main .design-tb:before{left:0;right:auto;background:linear-gradient(90deg,rgba(226,220,207,.78),rgba(141,139,133,.52));border-left:0;border-right:1px solid rgba(245,239,228,.24)}
 #doorOpening .leaf-sidelight .design-ta:after,#doorOpening .leaf-sidelight .design-tb:before{display:none}
 #doorOpening .design-tb:after{content:'';position:absolute;inset:var(--design-inset-small);border:1px solid rgba(238,234,225,.08);box-shadow:inset 0 0 18px rgba(0,0,0,.08)}
+#doorOpening .design-yadirong{inset:0;background:linear-gradient(90deg,transparent 0 32%,rgba(42,34,29,.72) 32% 32.35%,transparent 32.35% 67%,rgba(42,34,29,.72) 67% 67.35%,transparent 67.35%),linear-gradient(180deg,transparent 0 22%,rgba(42,34,29,.7) 22% 22.35%,transparent 22.35% 47%,rgba(42,34,29,.7) 47% 47.35%,transparent 47.35% 72%,rgba(42,34,29,.7) 72% 72.35%,transparent 72.35%);box-shadow:inset 0 0 0 1px rgba(32,25,22,.5),inset 0 0 22px rgba(0,0,0,.18)}
 #doorOpening.type-0 .leaf-main .design-ta:after,#doorOpening.type-0 .leaf-main .design-tb:before{left:50%;right:auto;width:var(--center-strip-full);transform:translateX(-50%)}
 
 #doorOpening .design-a32d:before,#doorOpening .design-a32d:after{content:'';position:absolute;left:var(--design-inset);right:var(--design-inset);border:var(--profile-wide) double rgba(94,99,93,.34);outline:1px solid rgba(255,255,255,.35);box-shadow:inset 0 0 0 var(--profile) rgba(111,116,109,.13),0 0 0 var(--profile) rgba(255,255,255,.11)}
@@ -54,7 +67,7 @@
 #doorOpening .design-a32d:after{bottom:var(--design-inset);height:23%}
 
 #doorOpening .integrated-transom{position:relative;display:block!important;box-sizing:border-box;overflow:hidden;border-bottom:var(--frame-stroke,8px) solid var(--frame-color);background:linear-gradient(90deg,color-mix(in srgb,var(--frame-color) 68%,#000),var(--frame-color) 18%,var(--frame-color) 82%,color-mix(in srgb,var(--frame-color) 68%,#000));isolation:isolate}
-#doorOpening .transom-map{position:absolute;inset:var(--transom-inset);background-image:var(--finish-image);background-size:var(--finish-size);background-position:center top;background-repeat:no-repeat;background-color:#4b5152;box-shadow:inset 0 0 0 1px rgba(255,255,255,.16),inset 0 0 18px rgba(0,0,0,.32)}
+#doorOpening .transom-map{position:absolute;inset:var(--transom-inset);background-image:var(--finish-image);background-size:var(--finish-size);background-position:center top;background-repeat:no-repeat;background-color:#4b5152;filter:var(--finish-filter,none);box-shadow:inset 0 0 0 1px rgba(255,255,255,.16),inset 0 0 18px rgba(0,0,0,.32)}
 #doorOpening .transom-design{position:absolute;inset:var(--transom-inset);border:1px solid color-mix(in srgb,var(--frame-color) 62%,#fff);box-shadow:0 0 0 3px var(--frame-color),inset 0 0 16px rgba(0,0,0,.18)}
 #doorOpening .integrated-transom.design-x201b .transom-design{background:repeating-linear-gradient(90deg,rgba(3,8,11,.2) 0 var(--profile),rgba(97,126,137,.28) var(--profile) var(--profile-wide),rgba(7,13,17,.24) var(--profile-wide) var(--profile-gap))}
 #doorOpening .integrated-transom.design-ta .transom-design,#doorOpening .integrated-transom.design-tb .transom-design{background:none}
@@ -75,17 +88,169 @@
 .view-angle-control small{padding:0 8px 0 6px;color:#9b9b9f;font-size:8px}
 @media(prefers-reduced-motion:reduce){.door-model{transition:none}}
 
-/* Dimension rails stay attached to the generated sill and right jamb. */
+/* Dimension rails live on the preview perimeter, away from the generated door. */
 .scene-sliders{position:absolute!important;inset:0!important;width:auto!important;height:auto!important;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important;pointer-events:none;z-index:7!important}
 .scene-sliders label{pointer-events:auto!important;box-sizing:border-box!important;margin:0!important;background:rgba(255,255,255,.88)!important;border:1px solid rgba(255,255,255,.92)!important;box-shadow:0 8px 22px rgba(0,0,0,.12)!important;backdrop-filter:blur(16px)!important}
-.scene-sliders label:first-child{left:var(--door-left)!important;top:calc(var(--door-top) + var(--door-height) + 18px)!important;width:var(--door-width)!important;min-width:190px!important;height:38px!important;transform:none!important;display:grid!important;grid-template-columns:34px minmax(90px,1fr) 58px!important;align-items:center!important;padding:7px 10px!important}
-.scene-sliders label:last-child{left:calc(var(--door-left) + var(--door-width) + 18px)!important;top:var(--door-top)!important;width:50px!important;height:var(--door-height)!important;min-height:300px!important;transform:none!important;display:grid!important;grid-template:28px minmax(150px,1fr) 42px/1fr!important;justify-items:center!important;align-items:center!important;padding:8px 6px!important}
+.scene-sliders label:first-child{left:calc(50% - var(--door-width)/2)!important;top:auto!important;bottom:18px!important;width:var(--door-width)!important;min-width:190px!important;height:38px!important;transform:none!important;display:grid!important;grid-template-columns:34px minmax(90px,1fr) 58px!important;align-items:center!important;padding:7px 10px!important}
+.scene-sliders label:last-child{right:24px!important;left:auto!important;top:calc(var(--door-top) + var(--door-height) * .11)!important;width:50px!important;height:clamp(250px,calc(var(--door-height) * .78),420px)!important;min-height:250px!important;transform:none!important;display:grid!important;grid-template:28px minmax(150px,1fr) 42px/1fr!important;justify-items:center!important;align-items:center!important;padding:8px 6px!important}
 .scene-sliders label:last-child input{writing-mode:vertical-lr;direction:rtl;width:18px!important;height:100%!important;min-height:150px;appearance:auto}
 .scene-sliders label:last-child output{font-size:8px!important;line-height:1.15;text-align:center!important;white-space:normal!important}
 .dimension-width,.dimension-height{display:none!important}
 .finish-swatch small{display:none!important}
+.asset-swatch{height:78px!important;width:100%!important;background-position:center!important;background-size:cover!important;font-size:0!important;overflow:hidden!important}
+.asset-swatch span{position:absolute;left:5px;right:5px;bottom:5px;padding:3px 4px;border-radius:4px;background:rgba(12,13,14,.72);color:#fff;font-size:8px;line-height:1.15;letter-spacing:0;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 [data-group="finish"] .option-options{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}
 [data-group="finish"] .finish-swatch{height:78px!important;width:100%!important;background-position:center!important;background-size:cover!important;font-size:0!important;overflow:hidden!important}
 [data-group="finish"] .finish-swatch span{position:absolute;left:5px;right:5px;bottom:5px;padding:3px 4px;border-radius:4px;background:rgba(12,13,14,.72);color:#fff;font-size:8px;line-height:1.15;letter-spacing:0;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .mini-door{height:145px;width:92px;position:absolute;left:calc(50% - 46px);bottom:0;border:8px solid var(--mini-frame);background:var(--mini-image) center/cover no-repeat;z-index:1}
-@media(max-width:1100px){.config-panel{width:290px!important}.scene-sliders label:first-child{min-width:170px!important}.scene-sliders label:last-child{width:46px!important}}
+@media(max-width:1100px){.scene-sliders label:first-child{min-width:170px!important}.scene-sliders label:last-child{width:46px!important}}
+
+/* Keep the supplied material above the frame backing; its own panel seams are the design. */
+#doorOpening .surface-map{z-index:1;pointer-events:none}
+#doorOpening .door-leaf{z-index:2}
+#doorOpening .design-yadirong{background:linear-gradient(105deg,rgba(255,255,255,.12),transparent 26%,transparent 74%,rgba(26,20,17,.18));box-shadow:inset 0 0 0 1px rgba(32,25,22,.28),inset 0 0 22px rgba(0,0,0,.14)}
+#doorOpening .integrated-transom{border-bottom-width:var(--transom-divider,var(--frame-stroke,8px))}
+#doorOpening.has-transom .door-leaf{border-top-width:0!important}
+#doorOpening.type-1 .leaf-child:before{content:'';position:absolute;inset:0;z-index:0;pointer-events:none;background-image:var(--finish-image);background-size:var(--finish-size);background-position:center top;background-repeat:no-repeat;transform:scaleX(-1);transform-origin:center;filter:var(--finish-filter,none)}
+#doorOpening .integrated-transom.design-yadirong .transom-design{border:0;box-shadow:inset 0 0 12px rgba(0,0,0,.12)}
+#doorOpening .integrated-transom.design-yadirong .transom-map,
+#doorOpening .integrated-transom.design-yadirong .transom-design,
+#doorOpening .integrated-transom.design-yadirong .glass-veil{inset:0}
+#doorOpening.has-transom .door-frame>.surface-map{background-position:center calc(-1 * var(--transom-offset,0px))}
+#doorOpening.door-opening{padding:0!important}
+#doorOpening .integrated-transom{border-left:var(--frame-stroke,8px) solid var(--frame-color);border-right:var(--frame-stroke,8px) solid var(--frame-color);border-top:var(--frame-stroke,8px) solid var(--frame-color)}
+#doorOpening.casing-0{box-shadow:none!important}
+#doorOpening .door-leaf{border-bottom-width:var(--frame-stroke,8px)!important}
+#doorOpening.casing-0{box-shadow:0 0 0 2px color-mix(in srgb,var(--casing-color) 72%,#fff),0 0 0 var(--casing-width,2px) var(--casing-color),0 0 0 calc(var(--casing-width,2px) + 1px) color-mix(in srgb,var(--casing-color) 52%,#000),0 32px 48px rgba(25,25,27,.3)!important}
+
+@media(min-width:901px){
+  [data-group="handle"] .option-options,
+  [data-group="casing"] .option-options{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:8px!important}
+  [data-group="handle"] .asset-swatch,
+  [data-group="casing"] .asset-swatch{width:100%!important;min-width:0!important;height:82px!important}
+}
+
+/* Desktop configurator: controls stay left, the render owns the entire right workspace. */
+@media(min-width:901px){
+  .configurator.section-pad{padding:28px 4vw 36px}
+  .configurator .config-head{display:none}
+  .configurator .config-layout{grid-template-columns:minmax(320px,360px) minmax(0,1fr);height:calc(100vh - 122px);min-height:680px;border-radius:14px}
+  .configurator .config-panel{height:100%;overflow:auto;padding:26px 24px}
+  .configurator .preview-wrap{height:100%;min-width:0}
+  .configurator .preview-top{display:none}
+  .configurator .door-scene{height:100%;min-height:0}
+  .configurator .view-angle-control{display:none}
+}
+
+@media(max-width:900px){
+  .configurator .config-panel{max-height:none;overflow:visible}
+  .configurator .preview-wrap{height:auto}
+}
+.color-swatch{position:relative;overflow:hidden;padding-left:30px!important;text-align:left!important}
+.color-swatch:before{content:'';position:absolute;left:10px;top:50%;width:12px;height:12px;border-radius:50%;transform:translateY(-50%);background:var(--option-color);border:1px solid rgba(25,25,25,.22);box-shadow:inset 0 0 0 2px rgba(255,255,255,.24)}
+
+/* YADILO configurator shell: Porsche-like information architecture, with
+   YADILO's own type, controls and door assets. The preview is the primary
+   canvas; the option rail is an independent, quiet workspace. */
+@media(min-width:901px){
+  body:has(#configurator:target){background:#f5f5f7}
+  body:has(#configurator:target) .announcement{display:none}
+  body:has(#configurator:target) .site-header{height:72px;padding:0 28px;background:rgba(255,255,255,.94);border-bottom:1px solid #e5e5e7;backdrop-filter:blur(22px);position:sticky;top:0;z-index:40}
+  body:has(#configurator:target) .site-header .brand{position:absolute;left:50%;transform:translateX(-50%);font-size:15px;letter-spacing:.02em}
+  body:has(#configurator:target) .site-header .brand-mark{width:28px;height:28px;font-size:15px}
+  body:has(#configurator:target) .site-header nav{order:-1;margin:0;gap:0;position:relative;display:block}
+  body:has(#configurator:target) .site-header nav:before{content:none}
+  body:has(#configurator:target) .site-header .menu-toggle{display:flex;align-items:center;gap:5px;height:34px;padding:0 13px;border:1px solid #dedee2;border-radius:18px;background:#fff;color:#28282b;font-size:11px;transition:background .2s,border-color .2s}
+  body:has(#configurator:target) .site-header .menu-toggle:hover,body:has(#configurator:target) .site-header.menu-open .menu-toggle{background:#f1f1f3;border-color:#bdbdc2}
+  body:has(#configurator:target) .site-header .nav-links{display:none;position:absolute;left:0;top:42px;width:168px;padding:7px;border:1px solid #e1e1e5;border-radius:12px;background:rgba(255,255,255,.96);box-shadow:0 14px 32px rgba(24,24,28,.14);backdrop-filter:blur(18px);z-index:60}
+  body:has(#configurator:target) .site-header.menu-open .nav-links{display:grid;gap:2px}
+  body:has(#configurator:target) .site-header.menu-open .nav-links a{display:block;padding:10px 11px;border-radius:7px;color:#55555a;font-size:11px}
+  body:has(#configurator:target) .site-header.menu-open .nav-links a:hover,body:has(#configurator:target) .site-header.menu-open .nav-links a.active{background:#f2f2f4;color:#17171a}
+  body:has(#configurator:target) .header-actions{margin-left:auto;gap:10px}
+  body:has(#configurator:target) .header-ai{display:inline-flex;align-items:center;height:34px;padding:0 13px;border:1px solid #dedee2;border-radius:18px;background:#fff;color:#28282b;font-size:11px}
+  body:has(#configurator:target) .header-ai:hover{background:#f1f1f3;border-color:#bdbdc2}
+  body:has(#configurator:target) .header-order{height:34px;padding:0 13px;border:1px solid #dedee2;border-radius:18px;background:#fff;color:#28282b;font-size:11px}
+  body:has(#configurator:target) main>.hero,body:has(#configurator:target) main>.collection,body:has(#configurator:target) main>.service,body:has(#configurator:target) main>.stores,body:has(#configurator:target) main>.footer{display:none}
+  body:has(#configurator:target) .configurator.section-pad{display:block;padding:0;background:#f5f5f7}
+  .configurator .config-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(370px,420px);gap:0;height:calc(100vh - 72px);min-height:620px;border:0;border-radius:0;background:#fff;box-shadow:none}
+  .configurator .preview-wrap{position:relative;grid-column:1;grid-row:1;height:100%;border:0;border-radius:0;background:radial-gradient(circle at 50% 42%,#fff 0%,#f7f7f8 48%,#ececef 100%);overflow:hidden}
+  .configurator .config-panel{grid-column:2;grid-row:1;height:100%;padding:30px 30px 44px;background:#fff;border-left:1px solid #e4e4e7;border-right:0;overflow:auto;scrollbar-width:thin;scrollbar-color:#c9c9cd transparent}
+  .configurator .config-panel::-webkit-scrollbar{width:6px}.configurator .config-panel::-webkit-scrollbar-thumb{background:#c9c9cd;border-radius:8px}
+  .configurator .config-head{display:none}
+  .configurator .door-scene{height:100%;min-height:0;border-radius:0;background:transparent;overflow:hidden}
+  .configurator .scene-glow{background:radial-gradient(ellipse at 50% 65%,rgba(190,184,175,.22),transparent 56%);filter:blur(1px)}
+  .configurator .door-stage{height:100%;padding:64px 0 104px;box-sizing:border-box;align-items:center;justify-content:center}
+  .configurator .door-model{max-height:calc(100% - 24px)}
+  .configurator .view-angle-control{top:28px;left:50%;display:flex;opacity:0;pointer-events:none}
+  .configurator .scene-sliders{z-index:18!important}
+  .porsche-like-panel-head{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:18px}.panel-kicker{display:block;color:#8c8c91;font-size:9px;letter-spacing:.12em}.porsche-like-panel-head h1{margin:7px 0 0;color:#17171a;font-size:27px;line-height:1.05;letter-spacing:-.04em}.panel-save{width:32px;height:32px;border:1px solid #e1e1e5;border-radius:50%;background:#fff;color:#454549;font-size:17px}.panel-model-line{display:flex;justify-content:space-between;align-items:center;padding-bottom:18px;border-bottom:1px solid #e8e8eb;color:#27272b;font-size:13px}.panel-model-line span{color:#9b9ba0;font-size:10px}.config-search{display:flex;align-items:center;gap:8px;height:38px;margin:18px 0 20px;padding:0 12px;border:1px solid #dedee2;border-radius:7px;background:#fafafa;color:#7e7e84}.config-search input{width:100%;border:0;outline:0;background:transparent;color:#27272b;font:inherit;font-size:12px}.config-search input::placeholder{color:#9d9da2}
+  .configurator .option-group{margin:0;border-top:1px solid #e8e8eb;padding:18px 0 4px}.configurator .option-group:first-child{border-top:0;padding-top:0}.configurator .option-label{cursor:pointer;display:flex;align-items:baseline;justify-content:space-between;padding:0 0 12px;color:#232327}.configurator .option-label:after{content:'⌄';color:#96969b;font-size:13px;transition:transform .2s}.configurator .option-group.is-collapsed .option-label:after{transform:rotate(-90deg)}.configurator .option-group.is-collapsed .option-options{display:none!important}.configurator .option-label span{font-size:14px;font-weight:600}.configurator .option-label small{margin-left:auto;margin-right:9px;color:#9a9a9f;font-size:10px}.configurator .option-options{gap:7px}.configurator .option{min-height:42px;border:1px solid #e1e1e5;border-radius:7px;background:#fff;color:#39393e;font-size:11px;transition:border-color .18s,box-shadow .18s,background .18s}.configurator .option:hover{border-color:#8a8a90}.configurator .option.selected{border-color:#1e1e22;box-shadow:inset 0 0 0 1px #1e1e22;background:#fafafa}.configurator .option small{display:block;color:#99999e;font-size:9px;margin-top:4px}.configurator [data-group="type"] .option-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.configurator [data-group="type"] .option{min-height:56px;text-align:left;padding:9px 10px}.configurator [data-group="transom"] .option-options,.configurator [data-group="frame"] .option-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.configurator [data-group="color"] .option-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}.configurator [data-group="color"] .option{min-height:39px}.configurator [data-group="color"] .option small{display:none}.configurator .dimension-fields{margin-top:18px;padding:18px 0 0;border-top:1px solid #e8e8eb}.configurator .dimension-title{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px}.configurator .dimension-title span{font-size:14px;font-weight:600}.configurator .dimension-title small{font-size:9px;color:#9a9a9f}.configurator .dimension-inputs{display:grid;grid-template-columns:1fr 1fr;gap:8px}.configurator .dimension-inputs label{padding:10px;border:1px solid #dedee2;border-radius:7px;color:#6f6f75;font-size:10px}.configurator .dimension-inputs input{width:66px;margin-left:7px;border:0;outline:0;color:#222;font-size:12px}.configurator .dimension-inputs em{font-style:normal;color:#aaa;font-size:9px}.configurator .dimension-hint{margin-top:8px;color:#99999e;font-size:9px}.configurator .config-panel>.button.full{height:42px;margin-top:20px;border-radius:22px;font-size:12px}.configurator .panel-note{color:#a0a0a5;font-size:9px;line-height:1.6}
+  .configurator [data-group="type"] .option-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.configurator [data-group="type"] .option{min-height:56px;text-align:center;padding:10px 6px}.configurator [data-group="type"] .type-preview{width:auto;height:56px}.configurator [data-group="type"] .type-preview:before,.configurator [data-group="type"] .type-preview:after{display:none}.configurator [data-group="type"] .type-preview span{display:block;font-size:12px;line-height:1.3;white-space:nowrap}.configurator [data-group="type"] .type-preview small{display:block;font-size:9px;line-height:1.25;white-space:nowrap}
+  .render-toolbar{position:absolute;left:30px;right:auto;top:82px;display:flex;gap:6px;z-index:20}.render-tool{height:30px;padding:0 11px;border:1px solid #dfdfe3;border-radius:15px;background:rgba(255,255,255,.8);color:#55555a;font-size:10px;white-space:nowrap;backdrop-filter:blur(12px);transition:background .2s,border-color .2s,color .2s,transform .2s}.render-tool:hover{background:#fff;color:#1d1d20;transform:translateY(-1px)}.render-tool.selected{background:#1d1d20;border-color:#1d1d20;color:#fff}.render-tool[data-door-action="toggle-open"].selected{border-color:#d89a2b;background:#2b2520;color:#ffd28b}.render-tool:last-child{width:30px;padding:0;font-size:14px}
+  .render-gallery{position:absolute;left:30px;bottom:28px;transform:translateY(-86px);display:flex;gap:8px;z-index:20}.gallery-thumb{display:flex;flex-direction:column;gap:5px;align-items:center;width:54px;padding:5px 4px 4px;border:1px solid transparent;border-radius:8px;background:rgba(255,255,255,.72);color:#79797e;font-size:8px}.gallery-thumb.active,.gallery-thumb:hover{border-color:#242428;color:#242428;background:#fff}.gallery-door{display:block;width:42px;height:42px;border-radius:4px;background:linear-gradient(90deg,#302924,#8d7867 48%,#352a26);box-shadow:inset 0 0 0 3px #44352e}.gallery-mother{background:linear-gradient(90deg,#827163 0 34%,#302722 34% 100%)}.gallery-double{background:linear-gradient(90deg,#5e5048 0 49%,#282121 49% 51%,#5e5048 51%)}.gallery-side{background:linear-gradient(90deg,#333 0 25%,#65574e 25% 75%,#333 75%)}
+  .scene-sliders label{opacity:.92}
+}
+@media(max-width:900px){.render-toolbar{display:none}}
+
+/* Tablets have less horizontal room: give the preview priority while keeping
+   the option rail usable and scrollable. */
+@media(min-width:901px) and (max-width:1180px){
+  .configurator .config-layout{grid-template-columns:minmax(0,1fr) 330px}
+  .configurator .config-panel{width:auto!important;padding:24px 18px 34px}
+  .configurator .porsche-like-panel-head h1{font-size:24px}
+  .configurator .panel-kicker{font-size:8px}
+  .configurator .option-group{padding-top:15px}
+  .configurator .option-label span{font-size:13px}
+  .configurator .option{font-size:10px;padding-left:7px;padding-right:7px}
+  .configurator .dimension-inputs{gap:6px}
+  .configurator .dimension-inputs label{padding:8px 7px}
+  .configurator .dimension-inputs input{width:54px;margin-left:3px}
+}
+@media(min-width:901px) and (max-width:980px){
+  .configurator .config-layout{grid-template-columns:minmax(0,1fr) 304px}
+  .configurator .config-panel{padding-left:14px;padding-right:14px}
+  .configurator [data-group="type"] .option-options{gap:5px}
+  .configurator [data-group="type"] .option{padding-left:4px;padding-right:4px}
+}
+
+/* -------------------------------------------------------------------------
+   Porsche-style configurator shell
+   -------------------------------------------------------------------------
+   The layout follows the source reference's information architecture: a
+   quiet full-bleed visual canvas, a fixed global toolbar, and a separate
+   scrollable option rail. The product, imagery and copy remain YADILO-owned.
+*/
+@keyframes configFadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes configFadeIn{from{opacity:0}to{opacity:1}}
+@keyframes configPulse{0%,100%{box-shadow:0 0 0 0 rgba(30,30,32,0)}50%{box-shadow:0 0 0 5px rgba(30,30,32,.06)}}
+@keyframes doorCanvasIn{from{opacity:0;transform:scale(.985)}to{opacity:1;transform:scale(1)}}
+
+.preview-context-bar{position:absolute;left:0;right:0;top:0;height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;z-index:30;pointer-events:none;border-bottom:1px solid rgba(228,228,231,.72);background:rgba(255,255,255,.72);backdrop-filter:blur(18px)}
+.preview-context-actions{display:flex;align-items:center;gap:8px;pointer-events:auto}.preview-context-actions.right{gap:14px}
+.context-icon{width:34px;height:34px;border:1px solid #dedee2;border-radius:50%;background:rgba(255,255,255,.86);color:#252529;font-size:16px;line-height:1;transition:transform .22s ease,background .22s ease,border-color .22s ease}.context-icon:hover{background:#f0f0f2;border-color:#bfc0c4;transform:translateY(-1px)}
+.preview-price-label{color:#8b8b90;font-size:10px}.preview-context-actions.right strong{color:#1d1d20;font-family:"Playfair Display","Noto Sans SC",serif;font-size:17px;font-weight:500;letter-spacing:.01em}.context-primary{height:36px;padding:0 16px;border-radius:19px;background:#1d1d1f;color:#fff;font-size:11px;letter-spacing:.02em;transition:transform .22s ease,background .22s ease}.context-primary:hover{background:#3a3a3e;transform:translateY(-1px)}
+
+.configurator .preview-wrap{animation:configFadeIn .5s ease both}.configurator .config-panel{animation:configFadeUp .55s .06s ease both}.configurator .option-group{animation:configFadeUp .5s ease both}.configurator .option-group:nth-child(2){animation-delay:.04s}.configurator .option-group:nth-child(3){animation-delay:.08s}.configurator .option-group:nth-child(4){animation-delay:.12s}.configurator .option-group:nth-child(5){animation-delay:.16s}.configurator .option-group:nth-child(6){animation-delay:.2s}.configurator .option-group:nth-child(7){animation-delay:.24s}
+.configurator .door-scene{animation:doorCanvasIn .65s .08s cubic-bezier(.2,.75,.2,1) both}
+
+.configurator .render-toolbar{top:92px;left:28px;gap:5px;padding:4px;border:1px solid rgba(220,220,224,.92);border-radius:19px;background:rgba(255,255,255,.72);box-shadow:0 10px 26px rgba(30,30,32,.08);backdrop-filter:blur(18px)}
+.configurator .render-tool{height:29px;padding:0 11px;border:0;border-radius:15px;background:transparent;color:#65656b;box-shadow:none}.configurator .render-tool:hover{background:#fff;color:#1d1d20;transform:none}.configurator .render-tool.selected{background:#1d1d1f;color:#fff;box-shadow:0 3px 8px rgba(0,0,0,.16)}.configurator .render-tool[data-door-action="toggle-open"].selected{background:#3c3024;color:#f5cf94;border-color:transparent}.configurator .render-tool:last-child{width:29px}
+
+.configurator .door-stage{padding:82px 86px 122px 28px;animation:configFadeIn .75s .08s ease both}.configurator .door-model{transition:transform .5s cubic-bezier(.2,.75,.2,1),opacity .25s ease}.configurator .scene-glow{opacity:.88;transition:opacity .4s ease}
+.preview-bottom-bar{position:absolute;left:28px;right:28px;bottom:20px;display:flex;align-items:center;justify-content:space-between;z-index:12;pointer-events:none}.preview-bottom-actions{display:flex;align-items:center;gap:6px;pointer-events:auto}.preview-icon-button{display:inline-flex;align-items:center;gap:6px;height:33px;padding:0 11px;border:1px solid rgba(220,220,224,.9);border-radius:17px;background:rgba(255,255,255,.76);color:#48484d;font-size:12px;box-shadow:0 7px 18px rgba(30,30,32,.08);backdrop-filter:blur(15px);transition:transform .22s ease,background .22s ease,border-color .22s ease}.preview-icon-button span{font-size:10px}.preview-icon-button:hover{background:#fff;border-color:#bdbdc1;transform:translateY(-1px)}.preview-status{display:flex;align-items:center;gap:7px;padding:0 12px;height:30px;border-radius:15px;color:#747479;font-size:10px;background:rgba(255,255,255,.58);backdrop-filter:blur(15px)}.preview-status small{padding-left:6px;color:#a0a0a5;font-size:9px;border-left:1px solid #d5d5d8}.status-dot{width:6px;height:6px;border-radius:50%;background:#5b8a72;box-shadow:0 0 0 3px rgba(91,138,114,.12);animation:configPulse 2.8s ease-in-out infinite}
+
+.configurator .config-panel{scroll-behavior:smooth}.configurator .porsche-like-panel-head{padding-bottom:3px}.configurator .panel-save{transition:transform .22s ease,background .22s ease,border-color .22s ease}.configurator .panel-save:hover{background:#f1f1f3;border-color:#bdbdc2;transform:scale(1.04)}.configurator .config-search{height:42px;border-radius:21px;background:#f7f7f8;border-color:#e1e1e4;transition:border-color .22s ease,background .22s ease,box-shadow .22s ease}.configurator .config-search:focus-within{background:#fff;border-color:#afafb4;box-shadow:0 0 0 4px rgba(30,30,32,.05)}
+.configurator .option-group{padding:20px 0 6px}.configurator .option-group:first-child{padding-top:2px}.configurator .option-label{padding-bottom:14px}.configurator .option-label span{font-size:15px;letter-spacing:-.02em}.configurator .option-label small{font-size:9px;letter-spacing:.03em}.configurator .option-label:after{content:'+';font-size:16px;font-weight:300;line-height:1;transform:none}.configurator .option-group.is-collapsed .option-label:after{transform:rotate(45deg)}
+.configurator .option-options{gap:8px}.configurator .option{min-height:44px;border-radius:10px;border-color:#e2e2e5;transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease,background .22s ease}.configurator .option:hover{border-color:#96969c;transform:translateY(-1px)}.configurator .option.selected{border-color:#1d1d20;background:#fafafa;box-shadow:inset 0 0 0 1px #1d1d20,0 5px 14px rgba(30,30,32,.06)}
+.configurator [data-group="type"] .option{min-height:50px;border-radius:9px}.configurator [data-group="type"] .type-preview span{font-size:11px}.configurator [data-group="type"] .type-preview small{color:#9b9ba0}.configurator [data-group="finish"] .finish-swatch{height:88px;border-radius:10px}.configurator [data-group="finish"] .finish-swatch span{background:linear-gradient(180deg,transparent,rgba(9,10,11,.82));bottom:0;left:0;right:0;padding:20px 8px 7px;border-radius:0 0 9px 9px;font-size:9px}.configurator [data-group="color"] .color-swatch{min-height:42px;border-radius:21px;padding-left:32px!important}.configurator [data-group="color"] .color-swatch:before{left:10px;width:14px;height:14px}.configurator [data-group="handle"] .asset-swatch,.configurator [data-group="casing"] .asset-swatch{height:82px;border-radius:10px}.configurator [data-group="handle"] .asset-swatch span,.configurator [data-group="casing"] .asset-swatch span{background:linear-gradient(180deg,transparent,rgba(9,10,11,.82));bottom:0;left:0;right:0;padding:20px 7px 6px;border-radius:0 0 9px 9px;font-size:8px}
+.configurator [data-group="transomType"] .option-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.configurator [data-group="transomType"] .option{min-height:53px;padding:8px 7px;text-align:left}.configurator [data-group="transomType"] .option small{font-size:8px}
+.configurator .dimension-fields{padding-top:20px}.configurator .dimension-inputs label{border-radius:10px;background:#fafafa;transition:border-color .2s ease,background .2s ease}.configurator .dimension-inputs label:focus-within{background:#fff;border-color:#aaaab0}.configurator .config-panel>.button.full{margin-top:24px;height:46px;box-shadow:0 5px 14px rgba(29,29,31,.14);transition:transform .22s ease,box-shadow .22s ease}.configurator .config-panel>.button.full:hover{transform:translateY(-1px);box-shadow:0 9px 18px rgba(29,29,31,.18)}
+
+@media(min-width:901px) and (max-width:1180px){.preview-context-bar{padding-inline:18px}.preview-price-label{display:none}.configurator .door-stage{padding-right:66px}.preview-bottom-bar{left:18px;right:18px}.configurator .render-toolbar{left:18px}.context-primary{padding-inline:13px}}
+@media(min-width:601px) and (max-width:900px){
+  body:has(#configurator:target){background:#f5f5f7}body:has(#configurator:target) .announcement{display:none}body:has(#configurator:target) .site-header{height:64px;padding:0 18px;background:rgba(255,255,255,.94);position:sticky;top:0;z-index:40}body:has(#configurator:target) .site-header .brand{position:absolute;left:50%;transform:translateX(-50%)}body:has(#configurator:target) .site-header .menu-toggle{display:flex;align-items:center;height:32px;padding:0 11px;border:1px solid #dedee2;border-radius:17px;background:#fff;font-size:10px}body:has(#configurator:target) .site-header .nav-links{display:none}body:has(#configurator:target) .header-ai{display:inline-flex;height:32px;align-items:center;padding:0 10px;border:1px solid #dedee2;border-radius:17px;font-size:10px}body:has(#configurator:target) .header-order{height:32px;padding:0 10px;border:1px solid #dedee2;border-radius:17px;font-size:10px}body:has(#configurator:target) main>.hero,body:has(#configurator:target) main>.collection,body:has(#configurator:target) main>.service,body:has(#configurator:target) main>.stores{display:none}body:has(#configurator:target) .configurator.section-pad{display:block;padding:0;background:#f5f5f7}
+  .configurator .config-layout{grid-template-columns:minmax(0,1fr) 326px;height:calc(100vh - 64px);min-height:580px}.configurator .preview-wrap{grid-column:1;grid-row:1;height:100%;min-width:0}.configurator .config-panel{grid-column:2;grid-row:1;height:100%;padding:24px 16px 30px;overflow:auto}.configurator .door-stage{padding:78px 58px 94px 14px}.preview-context-bar{height:60px;padding-inline:14px}.context-icon{width:30px;height:30px}.preview-context-actions.right{gap:6px}.preview-context-actions.right strong{font-size:14px}.preview-price-label{display:none}.context-primary{height:32px;padding-inline:11px;font-size:10px}.configurator .render-toolbar{top:72px;left:14px}.preview-bottom-bar{left:14px;right:14px;bottom:14px}.preview-icon-button{height:30px;padding-inline:9px}.preview-status small{display:none}.configurator .view-angle-control{display:none}
+}
+@media(max-width:600px){
+  body:has(#configurator:target){background:#f5f5f7}body:has(#configurator:target) .announcement{display:none}body:has(#configurator:target) .site-header{height:60px;padding:0 12px;background:rgba(255,255,255,.96);position:sticky;top:0;z-index:40}body:has(#configurator:target) .site-header .brand{position:absolute;left:50%;transform:translateX(-50%)}body:has(#configurator:target) .site-header .brand-mark{width:24px;height:24px}body:has(#configurator:target) .site-header .brand b{font-size:12px}body:has(#configurator:target) .site-header .brand small{display:none}body:has(#configurator:target) .site-header .menu-toggle{display:flex;align-items:center;height:30px;padding:0 9px;border:1px solid #dedee2;border-radius:16px;font-size:9px}body:has(#configurator:target) .site-header .header-ai{display:none}body:has(#configurator:target) .header-order{height:30px;padding:0 10px;border:1px solid #dedee2;border-radius:16px;font-size:9px}body:has(#configurator:target) main>.hero,body:has(#configurator:target) main>.collection,body:has(#configurator:target) main>.service,body:has(#configurator:target) main>.stores{display:none}body:has(#configurator:target) .configurator.section-pad{display:block;padding:0;background:#f5f5f7}.configurator .config-layout{display:flex;flex-direction:column;height:auto;min-height:0}.configurator .preview-wrap{height:56vh;min-height:430px;order:0}.configurator .config-panel{height:auto;max-height:none;order:1;padding:22px 16px 32px;border-left:0;border-top:1px solid #e2e2e5}.preview-context-bar{height:54px;padding-inline:12px}.context-icon{width:28px;height:28px;font-size:14px}.preview-context-actions{gap:5px}.preview-context-actions.right strong{font-size:13px}.preview-price-label,.context-primary{display:none}.configurator .door-stage{padding:64px 38px 82px 6px}.configurator .render-toolbar{top:64px;left:10px;transform:scale(.92);transform-origin:left top}.preview-bottom-bar{left:10px;right:10px;bottom:10px}.preview-status{padding-inline:8px}.preview-status span:not(.status-dot),.preview-status small{display:none}.preview-icon-button span{display:none}.configurator .scene-sliders label:first-child{min-width:150px!important;width:calc(var(--door-width) * .72)!important;grid-template-columns:30px minmax(60px,1fr) 48px!important}.configurator .scene-sliders label:last-child{right:8px!important;width:42px!important}.configurator [data-group="type"] .option-options{grid-template-columns:repeat(3,minmax(0,1fr))}.configurator .dimension-inputs input{width:54px}
+}

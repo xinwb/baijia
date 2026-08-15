@@ -1,4 +1,15 @@
 .DS_Store
+Thumbs.db
 .vscode/
+ai-config.js
 audit/
 AGENTS.md
+tmp/
+{}
+assets/source/
+database/*.sqlite
+__pycache__/
+*.pyc
+*.blend1
+*.lck
+*.bak

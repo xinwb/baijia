@@ -1,0 +1,634 @@
+/*
+ * Configuration panel v2
+ * A single visual system for K80 and D90.  This file intentionally only
+ * changes the ordering panel; the GLB scene and its state classes remain
+ * untouched.
+ */
+:root {
+  --panel-bg: #151413;
+  --panel-surface: #1d1b19;
+  --panel-surface-raised: #24211e;
+  --panel-rule: rgba(255, 255, 255, .105);
+  --panel-rule-strong: rgba(255, 255, 255, .17);
+  --panel-text: #f1ece6;
+  --panel-text-soft: #c0b8b0;
+  --panel-muted: #898079;
+  --panel-dim: #6e6761;
+  --panel-accent: #d8a16f;
+  --panel-accent-soft: rgba(216, 161, 111, .14);
+}
+
+.glb-shell {
+  grid-template-columns: minmax(0, 1fr) minmax(400px, 420px);
+}
+
+.glb-panel {
+  padding: 24px 24px 32px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(216, 161, 111, .055), transparent 31%),
+    linear-gradient(180deg, #1b1918 0%, var(--panel-bg) 68%, #121110 100%);
+  scrollbar-gutter: stable;
+}
+
+.panel-intro {
+  padding: 7px 0 21px;
+  border-bottom-color: var(--panel-rule-strong);
+}
+
+.panel-intro h1 {
+  margin: 12px 0 11px;
+  font-size: 30px;
+  line-height: 1.04;
+  letter-spacing: -.045em;
+}
+
+.panel-intro p {
+  max-width: 350px;
+  color: var(--panel-muted);
+  font-size: 10px;
+  line-height: 1.85;
+}
+
+.panel-intro .eyebrow {
+  color: #a38b76;
+  font-size: 8px;
+  letter-spacing: .22em;
+}
+
+.config-progress {
+  gap: 6px;
+  margin-top: 17px;
+}
+
+.config-progress span {
+  min-height: 27px;
+  display: grid;
+  place-items: center;
+  padding: 0 4px;
+  border: 1px solid rgba(255, 255, 255, .065);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, .025);
+  color: var(--panel-dim);
+  font-size: 8px;
+}
+
+.config-progress span.active {
+  border-color: rgba(216, 161, 111, .35);
+  background: var(--panel-accent-soft);
+  color: #e6bb92;
+}
+
+.config-accordion {
+  border-bottom-color: var(--panel-rule);
+}
+
+.config-accordion > summary {
+  min-height: 68px;
+  gap: 10px;
+}
+
+.config-accordion > summary > span {
+  gap: 10px;
+  color: var(--panel-text);
+  font-size: 13px;
+  letter-spacing: -.015em;
+}
+
+.config-accordion > summary > span i {
+  width: 29px;
+  height: 29px;
+  border: 1px solid rgba(255, 255, 255, .075);
+  background: rgba(255, 255, 255, .045);
+  color: #a9a097;
+  font-size: 9px;
+}
+
+.config-accordion[open] > summary > span i {
+  border-color: transparent;
+  background: #e5dcd2;
+  color: #28221e;
+}
+
+.config-accordion > summary > small {
+  max-width: 145px;
+  color: var(--panel-muted);
+  font-size: 9px;
+  letter-spacing: .015em;
+}
+
+.config-accordion > summary:after {
+  margin-left: 2px;
+  color: #83786f;
+  font-size: 18px;
+}
+
+.config-accordion[open] > summary:after {
+  color: var(--panel-accent);
+}
+
+.accordion-body {
+  padding: 0 0 25px;
+}
+
+.product-lock-card {
+  min-height: 82px;
+  margin-bottom: 12px;
+  padding: 10px;
+  border-color: rgba(216, 161, 111, .43);
+  border-radius: 11px;
+  background: linear-gradient(135deg, rgba(190, 129, 76, .17), rgba(255, 255, 255, .035) 72%);
+}
+
+.product-lock-thumb {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+}
+
+.product-lock-card b {
+  color: #f5eee8;
+  font-size: 13px;
+}
+
+.product-lock-card small {
+  margin-top: 5px;
+  color: #aaa097;
+  font-size: 9px;
+  line-height: 1.45;
+}
+
+.product-lock-card i {
+  padding: 5px 8px;
+  border: 1px solid rgba(216, 161, 111, .28);
+  background: rgba(216, 161, 111, .12);
+  color: #e0b184;
+  font-size: 8px;
+}
+
+.face-switch {
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.face-tab {
+  height: 38px;
+  border-color: rgba(255, 255, 255, .09);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, .035);
+  color: #979089;
+  font-size: 10px;
+}
+
+.face-tab.selected {
+  border-color: rgba(216, 161, 111, .66);
+  background: var(--panel-accent-soft);
+  color: #f0dfd0;
+}
+
+.colorway-heading,
+.block-title {
+  margin-bottom: 10px;
+}
+
+.colorway-heading {
+  margin-top: 0;
+  color: var(--panel-text-soft);
+  font-size: 11px;
+}
+
+.colorway-heading small,
+.block-title small {
+  color: var(--panel-dim);
+  font-size: 9px;
+}
+
+.colorway-grid {
+  gap: 8px;
+}
+
+.colorway-card {
+  min-height: 72px;
+  padding: 8px;
+  border-color: rgba(255, 255, 255, .09);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, .032);
+}
+
+.colorway-card:hover,
+.colorway-card.selected {
+  border-color: var(--panel-accent);
+}
+
+.colorway-card.selected {
+  background: var(--panel-accent-soft);
+  box-shadow: inset 0 0 0 1px rgba(216, 161, 111, .14);
+}
+
+.colorway-swatch {
+  height: 31px;
+  margin-bottom: 7px;
+  border-radius: 6px;
+}
+
+.colorway-card b {
+  color: #e8e0d9;
+  font-size: 9px;
+}
+
+.advanced-drawer {
+  margin-top: 12px;
+  border-color: rgba(255, 255, 255, .095);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, .025);
+}
+
+.advanced-drawer > summary {
+  min-height: 41px;
+  padding: 0 12px;
+  color: #b7aaa0;
+  font-size: 10px;
+}
+
+.advanced-drawer > summary small {
+  color: #84776e;
+  font-size: 9px;
+}
+
+.field-heading {
+  margin: 20px 0 10px;
+  color: var(--panel-text-soft);
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+.field-heading:first-child {
+  margin-top: 0;
+}
+
+.field-heading small {
+  color: var(--panel-dim);
+  font-size: 9px;
+  font-weight: 400;
+}
+
+.choice-grid,
+.mini-choice-grid,
+.hardware-grid,
+.d90-option-grid {
+  gap: 8px;
+}
+
+.choice,
+.finish-card,
+.hardware-card,
+.color-choice,
+.segmented button {
+  border-color: rgba(255, 255, 255, .09);
+  border-radius: 10px;
+  background: var(--panel-surface);
+}
+
+.choice {
+  min-height: 70px;
+  height: 70px;
+  padding: 10px 7px;
+}
+
+.choice:hover,
+.finish-card:hover,
+.hardware-card:hover,
+.color-choice:hover {
+  border-color: rgba(216, 161, 111, .63);
+  background: #28231f;
+  transform: translateY(-1px);
+}
+
+.choice.selected,
+.finish-card.selected,
+.hardware-card.selected,
+.color-choice.selected {
+  border-color: var(--panel-accent);
+  background: var(--panel-accent-soft);
+  box-shadow: inset 0 0 0 1px rgba(216, 161, 111, .17);
+}
+
+.choice b {
+  color: #f0e9e2;
+  font-size: 12px;
+}
+
+.choice small {
+  margin-top: 6px;
+  color: var(--panel-muted);
+  font-size: 9px;
+}
+
+.choice.selected small {
+  color: #c9a88c;
+}
+
+.mini-choice {
+  min-height: 45px;
+  padding: 8px 9px;
+  border-color: rgba(255, 255, 255, .085);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, .032);
+  color: #aaa19a;
+  font-size: 10px;
+  line-height: 1.35;
+}
+
+.mini-choice.selected {
+  border-color: rgba(216, 161, 111, .78);
+  background: var(--panel-accent-soft);
+  color: #f0e3d7;
+}
+
+.field-note,
+.dimension-note,
+.hardware-note,
+.d90-note {
+  margin: 11px 0 0;
+  padding: 9px 11px;
+  border-left: 2px solid rgba(216, 161, 111, .52);
+  border-radius: 0 8px 8px 0;
+  background: rgba(216, 161, 111, .055);
+  color: #93877d;
+  font-size: 9px;
+  line-height: 1.75;
+}
+
+.dimension-calcs,
+.spec-grid {
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.spec-grid {
+  margin-bottom: 14px;
+}
+
+.dimension-calcs span,
+.spec-grid span {
+  min-height: 53px;
+  padding: 10px;
+  border-color: rgba(255, 255, 255, .08);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, .028);
+}
+
+.dimension-calcs small,
+.spec-grid small {
+  color: var(--panel-dim);
+  font-size: 8px;
+}
+
+.dimension-calcs b,
+.spec-grid b {
+  margin-top: 6px;
+  color: #ddd3cb;
+  font-size: 10px;
+}
+
+.config-accordion .range-row {
+  grid-template-columns: 48px minmax(0, 1fr) 82px;
+  gap: 11px;
+  min-height: 43px;
+  height: 43px;
+  color: #9c938b;
+  font-size: 10px;
+}
+
+.config-accordion .range-row input {
+  height: 18px;
+  accent-color: var(--panel-accent);
+}
+
+.config-accordion .range-row output {
+  color: #e2d8d0;
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+}
+
+.texture-tools {
+  padding: 3px 11px 12px;
+}
+
+.texture-tools p {
+  margin: 8px 0 0;
+  color: #847a71;
+  font-size: 9px;
+  line-height: 1.7;
+}
+
+.texture-tool-reset {
+  min-height: 32px;
+  padding: 0 11px;
+  border: 1px solid rgba(255, 255, 255, .1);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, .035);
+  color: #b5aaa1;
+  font: inherit;
+  font-size: 9px;
+  cursor: pointer;
+}
+
+.texture-tool-reset:hover {
+  border-color: rgba(216, 161, 111, .55);
+  color: #ecd7c5;
+}
+
+.hardware-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.hardware-grid.handle-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.hardware-card {
+  min-height: 82px;
+  height: 82px;
+  grid-template-columns: 38px minmax(0, 1fr);
+  column-gap: 10px;
+  padding: 10px;
+}
+
+/* Product-specific options are toggled with the native hidden attribute.
+   This explicit rule wins over the card's grid display declaration. */
+.hardware-card[hidden],
+.d90-hardware-card[hidden] {
+  display: none !important;
+}
+
+.hardware-card b {
+  color: #ede5de;
+  font-size: 10px;
+  line-height: 1.25;
+}
+
+.hardware-card small {
+  margin-top: 3px;
+  color: var(--panel-muted);
+  font-size: 9px;
+  line-height: 1.3;
+}
+
+.handle-preview.long {
+  width: 18px;
+  height: 54px;
+}
+
+.handle-preview.smart {
+  width: 22px;
+  height: 43px;
+}
+
+.handle-preview.concealed {
+  width: 34px;
+  height: 34px;
+}
+
+.handle-preview.none {
+  width: 27px;
+  height: 27px;
+}
+
+.d90-product-grid {
+  gap: 9px;
+}
+
+.d90-product-card,
+.d90-hardware-card {
+  border-color: rgba(255, 255, 255, .09);
+  border-radius: 11px;
+  background: var(--panel-surface);
+}
+
+.d90-product-card:hover,
+.d90-hardware-card:hover {
+  border-color: rgba(216, 161, 111, .63);
+  background: #28231f;
+}
+
+.d90-product-card.selected,
+.d90-hardware-card.selected {
+  border-color: var(--panel-accent);
+  background: var(--panel-accent-soft);
+  box-shadow: inset 0 0 0 1px rgba(216, 161, 111, .14);
+}
+
+.d90-product-card img {
+  height: 96px;
+  border-bottom: 1px solid rgba(255, 255, 255, .065);
+}
+
+.d90-product-card b {
+  margin-top: 9px;
+  padding-inline: 10px;
+  color: #f0e7df;
+  font-size: 11px;
+}
+
+.d90-product-card small {
+  padding-inline: 10px;
+  color: var(--panel-muted);
+  font-size: 9px;
+}
+
+.d90-option-grid.four {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.d90-hardware-card {
+  min-height: 124px;
+  padding-bottom: 11px;
+}
+
+.d90-hardware-card img {
+  height: 68px;
+  border-bottom: 1px solid rgba(255, 255, 255, .065);
+  background: #151616;
+}
+
+.d90-hardware-card b {
+  margin-top: 8px;
+  color: #eee6df;
+  font-size: 10px;
+}
+
+.d90-hardware-card small {
+  margin-top: 4px;
+  color: var(--panel-muted);
+  font-size: 9px;
+}
+
+.d90-source-tag {
+  margin-top: 10px;
+  color: #c59a75;
+  font-size: 9px;
+}
+
+.glb-panel-footer {
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, .065);
+  color: #746c65;
+  font-size: 8px;
+}
+
+button:focus-visible,
+summary:focus-visible,
+input:focus-visible {
+  outline: 2px solid rgba(216, 161, 111, .82);
+  outline-offset: 2px;
+}
+
+@media (max-width: 1200px) {
+  .glb-shell {
+    grid-template-columns: minmax(0, 1fr) 390px;
+  }
+
+  .glb-panel {
+    padding-inline: 20px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .glb-shell {
+    grid-template-columns: minmax(0, 1fr) 370px;
+  }
+
+  .panel-intro h1 {
+    font-size: 28px;
+  }
+
+  .config-accordion > summary > small {
+    max-width: 124px;
+  }
+
+  .d90-product-card img {
+    height: 78px;
+  }
+
+  .d90-hardware-card img {
+    height: 62px;
+  }
+}
+
+@media (max-width: 760px) {
+  .glb-shell {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .glb-panel {
+    padding: 22px 16px 28px;
+  }
+
+  .panel-intro h1 {
+    font-size: 26px;
+  }
+
+  .d90-option-grid.four {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
